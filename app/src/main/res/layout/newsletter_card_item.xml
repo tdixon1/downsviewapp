@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A CardView that contains a TextView -->
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_gravity="top"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    card_view:cardCornerRadius="0dp"
+    android:layout_marginBottom="6dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_card_drawee"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="top"
+            fresco:placeholderImage="@drawable/pic0old"
+            android:padding="0dp" />
+        <TextView
+            android:id="@+id/text_card_title"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:gravity="right|bottom"
+            android:layout_marginRight="16dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            />
+        <ProgressBar
+            android:id="@+id/Progressbar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_marginTop="160dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

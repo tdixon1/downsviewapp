@@ -1,0 +1,33 @@
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">downsviewapp</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <!-- Account type (for sync-adapter authenticator) -->
+    <!-- SyncAdapter related -->
+    <string name="sync_account_type">org.downsviewsda.account</string>
+    <string name="content_authority">org.downsviewsda.downsviewapp</string>
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <string name="today">Today</string>
+    <!-- Date label when displaying tomorrow's weather forecast [CHAR LIMIT=20] -->
+    <string name="tomorrow">Tomorrow</string>
+    <!-- Date format for displaying day of week and date (i.e. Mon Jun 1) [CHAR LIMIT=20] -->
+    <string name="format_full_friendly_date"><xliff:g id="day">%1$s</xliff:g>, <xliff:g id="date">%2$s</xliff:g></string>
+    <string name="title_activity_event">Upcoming Events</string>
+    <string name="title_activity_news_detail">NewsDetailActivity</string>
+    <string name="title_activity_newsletter_detail">NewsletterDetailActivity</string>
+    <string name="title_activity_sermon_detail">SermonDetailActivity</string>
+
+    <string name="error_player">Youtube Player Error</string>
+    <string name="title_activity_newsletter">NewsletterActivity</string>
+</resources>

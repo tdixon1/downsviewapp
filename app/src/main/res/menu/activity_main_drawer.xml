@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_camara" android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="Latest News" />
+        <item android:id="@+id/nav_gallery" android:icon="@android:drawable/ic_menu_gallery"
+            android:title="Newsletter" />
+        <item android:id="@+id/nav_slideshow" android:icon="@android:drawable/ic_dialog_info"
+            android:title="Who We Are" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item android:id="@+id/nav_send" android:icon="@android:drawable/ic_dialog_email"
+                android:title="Contact" />
+        </menu>
+    </item>
+
+</menu>

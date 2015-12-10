@@ -1,0 +1,13 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.downsviewsda.downsviewapp.NewsletterFragment">
+
+    <com.android.photos.views.HeaderGridView
+        android:id="@+id/grid_view_newsletters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="auto_fit"/>
+
+</FrameLayout>
