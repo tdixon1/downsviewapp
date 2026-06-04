@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "693738640170",
+    "project_id": "downsviewapp",
+    "storage_bucket": "downsviewapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693738640170:android:0db9f72e22274146f44453",
+        "android_client_info": {
+          "package_name": "org.downsviewsda.church"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADgVAcdQC8jildwMZpShEM3rdpPG9bNzc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

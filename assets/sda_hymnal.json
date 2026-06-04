@@ -1,0 +1,4867 @@
+﻿[
+    {
+        "number":  1,
+        "title":  "Praise to the Lord",
+        "category":  "Worship",
+        "firstLine":  "Praise to the Lord, the Almighty, the King of creation!",
+        "publicDomain":  false
+    },
+    {
+        "number":  2,
+        "title":  "All creatures of our God and King",
+        "category":  "Worship",
+        "firstLine":  "All creatures of our God and King,",
+        "publicDomain":  false
+    },
+    {
+        "number":  3,
+        "title":  "God Himself Is With Us",
+        "category":  "Worship",
+        "firstLine":  "God Himself is with us; Let us all adore Him,",
+        "publicDomain":  false
+    },
+    {
+        "number":  4,
+        "title":  "Praise, My Soul, the King of Heaven",
+        "category":  "Worship",
+        "firstLine":  "Praise, my soul, the King of heaven;",
+        "publicDomain":  false
+    },
+    {
+        "number":  5,
+        "title":  "All My Hope on God is Founded",
+        "category":  "Worship",
+        "firstLine":  "All my hope on God is founded;",
+        "publicDomain":  false
+    },
+    {
+        "number":  6,
+        "title":  "O Worship the Lord",
+        "category":  "Worship",
+        "firstLine":  "O worship the Lord in the beauty of holiness,",
+        "publicDomain":  false
+    },
+    {
+        "number":  7,
+        "title":  "The Lord in Zion Reigneth",
+        "category":  "Worship",
+        "firstLine":  "The Lord in Zion reigneth, let all the world rejoice,",
+        "publicDomain":  false
+    },
+    {
+        "number":  8,
+        "title":  "We Gather Together",
+        "category":  "Worship",
+        "firstLine":  "We gather together to ask the Lord\u0027s blessing;",
+        "publicDomain":  false
+    },
+    {
+        "number":  9,
+        "title":  "Let All the World in Every Corner Sing",
+        "category":  "Worship",
+        "firstLine":  "Let all the world in every corner sing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  10,
+        "title":  "Come, Christians, Join to Sing",
+        "category":  "Worship",
+        "firstLine":  "Come, Christians, join to sing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  11,
+        "title":  "The God of Abraham Praise",
+        "category":  "Worship",
+        "firstLine":  "The God of Abraham praise,",
+        "publicDomain":  false
+    },
+    {
+        "number":  12,
+        "title":  "Joyful, Joyful, We Adore Thee",
+        "category":  "Worship",
+        "firstLine":  "Joyful, joyful, we adore Thee,",
+        "publicDomain":  false
+    },
+    {
+        "number":  13,
+        "title":  "New Songs of Celebration Render",
+        "category":  "Worship",
+        "firstLine":  "New songs of celebration render",
+        "publicDomain":  false
+    },
+    {
+        "number":  14,
+        "title":  "Let Us Praise the Name of the Lord",
+        "category":  "Worship",
+        "firstLine":  "Let us praise the name of the Lord!",
+        "publicDomain":  false
+    },
+    {
+        "number":  15,
+        "title":  "My Maker and My King",
+        "category":  "Worship",
+        "firstLine":  "My Maker and my King,",
+        "publicDomain":  false
+    },
+    {
+        "number":  16,
+        "title":  "All People That on Earth Do Well",
+        "category":  "Worship",
+        "firstLine":  "All people that on earth do dwell,",
+        "publicDomain":  false
+    },
+    {
+        "number":  17,
+        "title":  "Lord of All Being, Throned Afar",
+        "category":  "Worship",
+        "firstLine":  "Lord of all being, throned afar,",
+        "publicDomain":  false
+    },
+    {
+        "number":  18,
+        "title":  "O Morning Star, How Fair and Bright",
+        "category":  "Worship",
+        "firstLine":  "O Morning Star, how fair and bright!",
+        "publicDomain":  false
+    },
+    {
+        "number":  19,
+        "title":  "O Sing a New Song to the Lord",
+        "category":  "Worship",
+        "firstLine":  "O sing a new song to the Lord",
+        "publicDomain":  false
+    },
+    {
+        "number":  20,
+        "title":  "O Praise Ye the Lord",
+        "category":  "Worship",
+        "firstLine":  "O praise ye the Lord!",
+        "publicDomain":  false
+    },
+    {
+        "number":  21,
+        "title":  "Immortal, Invisible, God Only Wise",
+        "category":  "Worship",
+        "firstLine":  "Immortal, invisible, God only wise,",
+        "publicDomain":  false
+    },
+    {
+        "number":  22,
+        "title":  "God Is Our Song",
+        "category":  "Worship",
+        "firstLine":  "God is our Song, and every singer blest",
+        "publicDomain":  false
+    },
+    {
+        "number":  23,
+        "title":  "Now the Joyful Bells A-Ringing",
+        "category":  "Worship",
+        "firstLine":  "Now the joyful bells a-ringing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  24,
+        "title":  "Every Star Shall Sing a Carol",
+        "category":  "Worship",
+        "firstLine":  "Every star shall sing a carol;",
+        "publicDomain":  false
+    },
+    {
+        "number":  25,
+        "title":  "Praise the Lord, His Glories Show",
+        "category":  "Worship",
+        "firstLine":  "Praise the Lord, His glories show, Alleluia!",
+        "publicDomain":  false
+    },
+    {
+        "number":  26,
+        "title":  "Praise the Lord! You Heavens Adore Him",
+        "category":  "Worship",
+        "firstLine":  "Praise the Lord: you heavens, adore Him;",
+        "publicDomain":  false
+    },
+    {
+        "number":  27,
+        "title":  "Rejoice, Ye Pure in Heart!",
+        "category":  "Worship",
+        "firstLine":  "Rejoice ye pure in heart!",
+        "publicDomain":  false
+    },
+    {
+        "number":  28,
+        "title":  "Praise We the Lord",
+        "category":  "Worship",
+        "firstLine":  "Praise we the Lord, who made all beauty",
+        "publicDomain":  false
+    },
+    {
+        "number":  29,
+        "title":  "Sing Praise to God",
+        "category":  "Worship",
+        "firstLine":  "Sing praise to God who reigns above,",
+        "publicDomain":  false
+    },
+    {
+        "number":  30,
+        "title":  "Holy God, We Praise Your Name",
+        "category":  "Worship",
+        "firstLine":  "Holy God, we praise Your name;",
+        "publicDomain":  false
+    },
+    {
+        "number":  31,
+        "title":  "Tell Out, My Soul",
+        "category":  "Worship",
+        "firstLine":  "Tell out, my soul, the greatness of the Lord:",
+        "publicDomain":  false
+    },
+    {
+        "number":  32,
+        "title":  "When in Our Music God is Glorified",
+        "category":  "Worship",
+        "firstLine":  "When in our music God is glorified,",
+        "publicDomain":  false
+    },
+    {
+        "number":  33,
+        "title":  "Sing a New Song to the Lord",
+        "category":  "Worship",
+        "firstLine":  "Sing a new song to the Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  34,
+        "title":  "Wake the Song",
+        "category":  "Worship",
+        "firstLine":  "Wake the song of joy and gladness;",
+        "publicDomain":  false
+    },
+    {
+        "number":  35,
+        "title":  "With Songs and Honors",
+        "category":  "Worship",
+        "firstLine":  "With songs and honors sounding loud,",
+        "publicDomain":  false
+    },
+    {
+        "number":  36,
+        "title":  "O Thou in Whose Presence",
+        "category":  "Worship",
+        "firstLine":  "O Thou in whose presence my soul takes delight,",
+        "publicDomain":  false
+    },
+    {
+        "number":  37,
+        "title":  "O Sing, My Soul, Your Maker\u0027s Praise",
+        "category":  "Worship",
+        "firstLine":  "O sing my soul, your Maker\u0027s praise",
+        "publicDomain":  false
+    },
+    {
+        "number":  38,
+        "title":  "Arise, My Soul, Arise!",
+        "category":  "Worship",
+        "firstLine":  "Arise, my soul, arise! Stretch forth to things eternal",
+        "publicDomain":  false
+    },
+    {
+        "number":  39,
+        "title":  "Lord, in the Morning",
+        "category":  "Worship",
+        "firstLine":  "Lord, in the morning Thou shalt hear",
+        "publicDomain":  false
+    },
+    {
+        "number":  40,
+        "title":  "The Dawn of God\u0027s Dear Sabbath",
+        "category":  "Worship",
+        "firstLine":  "The dawn of God\u0027s dear Sabbath",
+        "publicDomain":  false
+    },
+    {
+        "number":  41,
+        "title":  "O Splendor of God\u0027s Glory Bright",
+        "category":  "Worship",
+        "firstLine":  "O splendor of God\u0027s glory bright,",
+        "publicDomain":  false
+    },
+    {
+        "number":  42,
+        "title":  "Now That the Daylight Fills the Sky",
+        "category":  "Worship",
+        "firstLine":  "Now that the daylight fills the sky,",
+        "publicDomain":  false
+    },
+    {
+        "number":  43,
+        "title":  "When Morning Gilds the Skies",
+        "category":  "Worship",
+        "firstLine":  "When morning gilds the skies my heart awaking cries,",
+        "publicDomain":  false
+    },
+    {
+        "number":  44,
+        "title":  "Morning Has Broken",
+        "category":  "Worship",
+        "firstLine":  "Morning has broken like the first morning,",
+        "publicDomain":  false
+    },
+    {
+        "number":  45,
+        "title":  "Open Now Thy Gates of Beauty",
+        "category":  "Worship",
+        "firstLine":  "Open now thy gates of beauty,",
+        "publicDomain":  false
+    },
+    {
+        "number":  46,
+        "title":  "Abide With Me, \u0027Tis Eventide",
+        "category":  "Worship",
+        "firstLine":  "Abide with me, \u0027tis eventide!",
+        "publicDomain":  false
+    },
+    {
+        "number":  47,
+        "title":  "God, Who Made the Earth and Heaven",
+        "category":  "Worship",
+        "firstLine":  "God, who made the earth and heaven, Darkness and light:",
+        "publicDomain":  false
+    },
+    {
+        "number":  48,
+        "title":  "Softly Now the Light of Day",
+        "category":  "Worship",
+        "firstLine":  "Softly now the light of day",
+        "publicDomain":  false
+    },
+    {
+        "number":  49,
+        "title":  "Savior, Breathe an Evening Blessing",
+        "category":  "Worship",
+        "firstLine":  "Savior, breathe an evening blessing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  50,
+        "title":  "Abide With Me",
+        "category":  "Worship",
+        "firstLine":  "Abide with me; fast falls the eventide;",
+        "publicDomain":  false
+    },
+    {
+        "number":  51,
+        "title":  "Day Is Dying in the West",
+        "category":  "Worship",
+        "firstLine":  "Day is dying in the west;",
+        "publicDomain":  false
+    },
+    {
+        "number":  52,
+        "title":  "Now the Day Is Over",
+        "category":  "Worship",
+        "firstLine":  "Now the day is over,",
+        "publicDomain":  false
+    },
+    {
+        "number":  53,
+        "title":  "All Praise to Thee",
+        "category":  "Worship",
+        "firstLine":  "All praise to thee, my God, this night,",
+        "publicDomain":  false
+    },
+    {
+        "number":  54,
+        "title":  "O Gladsome Light",
+        "category":  "Worship",
+        "firstLine":  "O gladsome light, O grace",
+        "publicDomain":  false
+    },
+    {
+        "number":  55,
+        "title":  "Jesus, Tender Shepherd, Hear Me",
+        "category":  "Worship",
+        "firstLine":  "Jesus, tender Shepherd, hear me,",
+        "publicDomain":  false
+    },
+    {
+        "number":  56,
+        "title":  "The Day Thou Gavest",
+        "category":  "Worship",
+        "firstLine":  "The day Thou gavest, Lord, is ended;",
+        "publicDomain":  false
+    },
+    {
+        "number":  57,
+        "title":  "Now All the Woods Are Sleeping",
+        "category":  "Worship",
+        "firstLine":  "Now all the woods are sleeping,",
+        "publicDomain":  false
+    },
+    {
+        "number":  58,
+        "title":  "Hark, the Vesper Hymn Is Stealing",
+        "category":  "Worship",
+        "firstLine":  "Hark! the vesper hymn is stealing",
+        "publicDomain":  false
+    },
+    {
+        "number":  59,
+        "title":  "Great Our Joy as Now We Gather",
+        "category":  "Worship",
+        "firstLine":  "Great our joy as now we gather",
+        "publicDomain":  false
+    },
+    {
+        "number":  60,
+        "title":  "Blessed Jesus at Thy Word",
+        "category":  "Worship",
+        "firstLine":  "Blessed Jesus, at Thy word,",
+        "publicDomain":  false
+    },
+    {
+        "number":  61,
+        "title":  "God Is Here!",
+        "category":  "Worship",
+        "firstLine":  "God is here as we his people",
+        "publicDomain":  false
+    },
+    {
+        "number":  62,
+        "title":  "How Lovely Is Thy Dwelling Place",
+        "category":  "Worship",
+        "firstLine":  "How lovely is Thy dwelling place,",
+        "publicDomain":  false
+    },
+    {
+        "number":  63,
+        "title":  "O Come, Let Us Sing to the Lord",
+        "category":  "Worship",
+        "firstLine":  "O come, let us sing to the Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  64,
+        "title":  "Lord, Dismiss Us With Thy Blessing",
+        "category":  "Worship",
+        "firstLine":  "Lord, dismiss us with thy blessing;",
+        "publicDomain":  false
+    },
+    {
+        "number":  65,
+        "title":  "God Be With You",
+        "category":  "Worship",
+        "firstLine":  "God be with you till we meet again;",
+        "publicDomain":  false
+    },
+    {
+        "number":  66,
+        "title":  "God Be With You",
+        "category":  "Worship",
+        "firstLine":  "God be with you till we meet again;",
+        "publicDomain":  false
+    },
+    {
+        "number":  67,
+        "title":  "O Lord, Now Let Your Servant",
+        "category":  "Worship",
+        "firstLine":  "O Lord, now let Your servant",
+        "publicDomain":  false
+    },
+    {
+        "number":  68,
+        "title":  "On Our Way Rejoicing",
+        "category":  "Worship",
+        "firstLine":  "On our way rejoicing",
+        "publicDomain":  false
+    },
+    {
+        "number":  69,
+        "title":  "Lord, Make Us More Holy",
+        "category":  "Worship",
+        "firstLine":  "Lord, make us more holy;",
+        "publicDomain":  false
+    },
+    {
+        "number":  70,
+        "title":  "Praise Ye the Father",
+        "category":  "Trinity",
+        "firstLine":  "Praise ye the Father for His loving kindness,",
+        "publicDomain":  false
+    },
+    {
+        "number":  71,
+        "title":  "Come Thou Almighty King",
+        "category":  "Trinity",
+        "firstLine":  "Come, Thou almighty King,",
+        "publicDomain":  false
+    },
+    {
+        "number":  72,
+        "title":  "Creator of the Stars of Night",
+        "category":  "Trinity",
+        "firstLine":  "Creator of the stars of night,",
+        "publicDomain":  false
+    },
+    {
+        "number":  73,
+        "title":  "Holy, Holy, Holy",
+        "category":  "Trinity",
+        "firstLine":  "Holy, holy, holy! Lord God Almighty!",
+        "publicDomain":  false
+    },
+    {
+        "number":  74,
+        "title":  "Like a River Glorious",
+        "category":  "God the Father",
+        "firstLine":  "Like a river glorious, is God\u0027s perfect peace,",
+        "publicDomain":  false
+    },
+    {
+        "number":  75,
+        "title":  "The Wonder of It All",
+        "category":  "God the Father",
+        "firstLine":  "There\u0027s the wonder of sunset at evening,",
+        "publicDomain":  false
+    },
+    {
+        "number":  76,
+        "title":  "O Love That Wilt Not Let Me Go",
+        "category":  "God the Father",
+        "firstLine":  "O Love that wilt not let me go,",
+        "publicDomain":  false
+    },
+    {
+        "number":  77,
+        "title":  "O Love of God Most Full",
+        "category":  "God the Father",
+        "firstLine":  "O love of God most full,",
+        "publicDomain":  false
+    },
+    {
+        "number":  78,
+        "title":  "For God So Loved Us",
+        "category":  "God the Father",
+        "firstLine":  "For God so loved us,",
+        "publicDomain":  false
+    },
+    {
+        "number":  79,
+        "title":  "O Love of God, How Strong and True!",
+        "category":  "God the Father",
+        "firstLine":  "O love of God, how strong and true!",
+        "publicDomain":  false
+    },
+    {
+        "number":  80,
+        "title":  "O World of God",
+        "category":  "God the Father",
+        "firstLine":  "O world of God, so vast and strange,",
+        "publicDomain":  false
+    },
+    {
+        "number":  81,
+        "title":  "Though I Speak With Tongues",
+        "category":  "God the Father",
+        "firstLine":  "Though I speak with tongues of men and angels,",
+        "publicDomain":  false
+    },
+    {
+        "number":  82,
+        "title":  "Before Jehovah\u0027s Awful Throne",
+        "category":  "God the Father",
+        "firstLine":  "Before Jehovah\u0027s awful throne,",
+        "publicDomain":  false
+    },
+    {
+        "number":  83,
+        "title":  "O Worship the King",
+        "category":  "God the Father",
+        "firstLine":  "O worship the King, all glorious above,",
+        "publicDomain":  false
+    },
+    {
+        "number":  84,
+        "title":  "God the Omnipotent",
+        "category":  "God the Father",
+        "firstLine":  "God the Omnipotent! King, who ordainest",
+        "publicDomain":  false
+    },
+    {
+        "number":  85,
+        "title":  "Eternal Father Strong to Save",
+        "category":  "God the Father",
+        "firstLine":  "Eternal Father, strong to save,",
+        "publicDomain":  false
+    },
+    {
+        "number":  86,
+        "title":  "How Great Thou Art",
+        "category":  "God the Father",
+        "firstLine":  "O Lord my God",
+        "publicDomain":  false
+    },
+    {
+        "number":  87,
+        "title":  "God Who Spoke in the Beginning",
+        "category":  "God the Father",
+        "firstLine":  "God who spoke in the beginning,",
+        "publicDomain":  false
+    },
+    {
+        "number":  88,
+        "title":  "I Sing the Mighty Power of God",
+        "category":  "God the Father",
+        "firstLine":  "I sing the almighty power of God,",
+        "publicDomain":  false
+    },
+    {
+        "number":  89,
+        "title":  "Let All on Earth Their Voices Raise",
+        "category":  "God the Father",
+        "firstLine":  "Let all the earth their voices raise,",
+        "publicDomain":  false
+    },
+    {
+        "number":  90,
+        "title":  "Eternal God, Whose Power Upholds",
+        "category":  "God the Father",
+        "firstLine":  "Eternal God, whose power upholds Both flower and flaming star,",
+        "publicDomain":  false
+    },
+    {
+        "number":  91,
+        "title":  "Ye Watchers and Ye Holy Ones",
+        "category":  "God the Father",
+        "firstLine":  "Ye watchers and ye holy ones,",
+        "publicDomain":  false
+    },
+    {
+        "number":  92,
+        "title":  "This Is My Father\u0027s World",
+        "category":  "God the Father",
+        "firstLine":  "This is my Father\u0027s world,",
+        "publicDomain":  false
+    },
+    {
+        "number":  93,
+        "title":  "All Things Bright and Beautiful",
+        "category":  "God the Father",
+        "firstLine":  "Each little flow\u0027r that opens",
+        "publicDomain":  false
+    },
+    {
+        "number":  94,
+        "title":  "Nature With Open Volume Stands",
+        "category":  "God the Father",
+        "firstLine":  "Nature with open volume stands,",
+        "publicDomain":  false
+    },
+    {
+        "number":  95,
+        "title":  "Spring Has Now Unwrapped the Flowers",
+        "category":  "God the Father",
+        "firstLine":  "Spring has now unwrapped the flowers,",
+        "publicDomain":  false
+    },
+    {
+        "number":  96,
+        "title":  "The Spacious Firmament",
+        "category":  "God the Father",
+        "firstLine":  "The spacious firmament on high,",
+        "publicDomain":  false
+    },
+    {
+        "number":  97,
+        "title":  "Lord of the Boundless Curves of Space",
+        "category":  "God the Father",
+        "firstLine":  "Lord of the boundless curves of space",
+        "publicDomain":  false
+    },
+    {
+        "number":  98,
+        "title":  "Can You Count the Stars?",
+        "category":  "God the Father",
+        "firstLine":  "Can you count the stars that brightly",
+        "publicDomain":  false
+    },
+    {
+        "number":  99,
+        "title":  "God Will Take Care of You",
+        "category":  "God the Father",
+        "firstLine":  "Be not dismayed whate\u0027er betide,",
+        "publicDomain":  false
+    },
+    {
+        "number":  100,
+        "title":  "Great Is Thy Faithfulness",
+        "category":  "God the Father",
+        "firstLine":  "Great is Thy faithfulness, O God my Father;",
+        "publicDomain":  false
+    },
+    {
+        "number":  101,
+        "title":  "Children of the Heavenly Father",
+        "category":  "God the Father",
+        "firstLine":  "Children of the heavenly Father",
+        "publicDomain":  false
+    },
+    {
+        "number":  102,
+        "title":  "Unto the Hills",
+        "category":  "God the Father",
+        "firstLine":  "Unto the hills around shall I lift up my longing eyes?",
+        "publicDomain":  false
+    },
+    {
+        "number":  103,
+        "title":  "O God, Our Help",
+        "category":  "God the Father",
+        "firstLine":  "O God, our help in ages past,",
+        "publicDomain":  false
+    },
+    {
+        "number":  104,
+        "title":  "My Shepherd Will Supply My Need",
+        "category":  "God the Father",
+        "firstLine":  "My Shepherd will supply my need,",
+        "publicDomain":  false
+    },
+    {
+        "number":  105,
+        "title":  "Sing to the Great Jehovah\u0027s Praise",
+        "category":  "God the Father",
+        "firstLine":  "Sing to the great Jehovah\u0027s praise!",
+        "publicDomain":  false
+    },
+    {
+        "number":  106,
+        "title":  "Give to Our god Immortal Praise",
+        "category":  "God the Father",
+        "firstLine":  "Give to our God immortal praise;",
+        "publicDomain":  false
+    },
+    {
+        "number":  107,
+        "title":  "God Moves in a Mysterious Way",
+        "category":  "God the Father",
+        "firstLine":  "God moves in a mysterious way",
+        "publicDomain":  false
+    },
+    {
+        "number":  108,
+        "title":  "Amazing Grace",
+        "category":  "God the Father",
+        "firstLine":  "Amazing grace! How sweet the sound",
+        "publicDomain":  false
+    },
+    {
+        "number":  109,
+        "title":  "Marvelous Grace",
+        "category":  "God the Father",
+        "firstLine":  "Marvelous grace of our loving Lord.",
+        "publicDomain":  false
+    },
+    {
+        "number":  110,
+        "title":  "God\u0027s Free Mercy Streameth",
+        "category":  "God the Father",
+        "firstLine":  "God\u0027s free mercy streameth over all the world,",
+        "publicDomain":  false
+    },
+    {
+        "number":  111,
+        "title":  "It Took a Miracle",
+        "category":  "God the Father",
+        "firstLine":  "My Father is omnipotent",
+        "publicDomain":  false
+    },
+    {
+        "number":  112,
+        "title":  "Let Us With a Gladsome Mind",
+        "category":  "God the Father",
+        "firstLine":  "Let us with a gladsome mind",
+        "publicDomain":  false
+    },
+    {
+        "number":  113,
+        "title":  "As Pants the Hart",
+        "category":  "God the Father",
+        "firstLine":  "As pants the hart for cooling streams",
+        "publicDomain":  false
+    },
+    {
+        "number":  114,
+        "title":  "There\u0027s a Wideness",
+        "category":  "God the Father",
+        "firstLine":  "There\u0027s a wideness, in God\u0027s mercy,",
+        "publicDomain":  false
+    },
+    {
+        "number":  115,
+        "title":  "O Come, O Come, Immanuel",
+        "category":  "Jesus Christ",
+        "firstLine":  "O come, O come, Emmanuel,",
+        "publicDomain":  false
+    },
+    {
+        "number":  116,
+        "title":  "Of the Father\u0027s Love Begotten",
+        "category":  "Jesus Christ",
+        "firstLine":  "Of the Father\u0027s love begotten,",
+        "publicDomain":  false
+    },
+    {
+        "number":  117,
+        "title":  "The Advent of Our God",
+        "category":  "Jesus Christ",
+        "firstLine":  "The advent of our God",
+        "publicDomain":  false
+    },
+    {
+        "number":  118,
+        "title":  "The First Noel",
+        "category":  "Jesus Christ",
+        "firstLine":  "The first noel the angel did say",
+        "publicDomain":  false
+    },
+    {
+        "number":  119,
+        "title":  "Angels From the Realms of Glory",
+        "category":  "Jesus Christ",
+        "firstLine":  "Angels from the realms of glory,",
+        "publicDomain":  false
+    },
+    {
+        "number":  120,
+        "title":  "There\u0027s a Song in the Air",
+        "category":  "Jesus Christ",
+        "firstLine":  "There\u0027s a song in the air!",
+        "publicDomain":  false
+    },
+    {
+        "number":  121,
+        "title":  "Go, Tell It On the Mountain",
+        "category":  "Jesus Christ",
+        "firstLine":  "While shepherds kept their watching",
+        "publicDomain":  false
+    },
+    {
+        "number":  122,
+        "title":  "Hark! the Herald Angels Sing",
+        "category":  "Jesus Christ",
+        "firstLine":  "Hark! the herald angels sing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  123,
+        "title":  "As With Gladness Men of Old",
+        "category":  "Jesus Christ",
+        "firstLine":  "As with gladness men of old",
+        "publicDomain":  false
+    },
+    {
+        "number":  124,
+        "title":  "Away in a Manger",
+        "category":  "Jesus Christ",
+        "firstLine":  "Away in a manger, no crib for a bed,",
+        "publicDomain":  false
+    },
+    {
+        "number":  125,
+        "title":  "Joy to the World",
+        "category":  "Jesus Christ",
+        "firstLine":  "Joy to the world, the Lord is come!",
+        "publicDomain":  false
+    },
+    {
+        "number":  126,
+        "title":  "In the Bleak Midwinter",
+        "category":  "Jesus Christ",
+        "firstLine":  "In the bleak midwinter Frosty wind made moan;",
+        "publicDomain":  false
+    },
+    {
+        "number":  127,
+        "title":  "Infant Holy, Infant Lowly",
+        "category":  "Jesus Christ",
+        "firstLine":  "Infant holy, infant lowly,",
+        "publicDomain":  false
+    },
+    {
+        "number":  128,
+        "title":  "Break Forth, O Beauteous Heavenly Light",
+        "category":  "Jesus Christ",
+        "firstLine":  "Break forth, O beauteous heavenly light,",
+        "publicDomain":  false
+    },
+    {
+        "number":  129,
+        "title":  "As It Fell Upon a Night",
+        "category":  "Jesus Christ",
+        "firstLine":  "As it fell upon a night",
+        "publicDomain":  false
+    },
+    {
+        "number":  130,
+        "title":  "It Came Upon the Midnight Clear",
+        "category":  "Jesus Christ",
+        "firstLine":  "It came upon the midnight clear,",
+        "publicDomain":  false
+    },
+    {
+        "number":  131,
+        "title":  "Lo, How a Rose E\u0027er Blooming",
+        "category":  "Jesus Christ",
+        "firstLine":  "Lo, how a rose e\u0027re blooming",
+        "publicDomain":  false
+    },
+    {
+        "number":  132,
+        "title":  "O Come, All Ye Faithful",
+        "category":  "Jesus Christ",
+        "firstLine":  "O come, all ye faithful, joyful and triumphant,",
+        "publicDomain":  false
+    },
+    {
+        "number":  133,
+        "title":  "Now Is Born the Divine Christ Child",
+        "category":  "Jesus Christ",
+        "firstLine":  "He was born in a stable bare,",
+        "publicDomain":  false
+    },
+    {
+        "number":  134,
+        "title":  "O Jesus Sweet",
+        "category":  "Jesus Christ",
+        "firstLine":  "O Jesus sweet, O Jesus mild,",
+        "publicDomain":  false
+    },
+    {
+        "number":  135,
+        "title":  "O Little Town of Bethlehem",
+        "category":  "Jesus Christ",
+        "firstLine":  "O little town of Bethlehem, how still we see thee lie!",
+        "publicDomain":  false
+    },
+    {
+        "number":  136,
+        "title":  "Good Christians, Now Rejoice",
+        "category":  "Jesus Christ",
+        "firstLine":  "Good Christians, now rejoice,",
+        "publicDomain":  false
+    },
+    {
+        "number":  137,
+        "title":  "We Three Kings",
+        "category":  "Jesus Christ",
+        "firstLine":  "We three kings of Orient are;",
+        "publicDomain":  false
+    },
+    {
+        "number":  138,
+        "title":  "Rise Up, Shepherd, and Follow",
+        "category":  "Jesus Christ",
+        "firstLine":  "There\u0027s a star in the east on Christmas morn.",
+        "publicDomain":  false
+    },
+    {
+        "number":  139,
+        "title":  "While Shepherds Watched Their Flocks",
+        "category":  "Jesus Christ",
+        "firstLine":  "While shepherds watched their flocks by night,",
+        "publicDomain":  false
+    },
+    {
+        "number":  140,
+        "title":  "Thou Didst Leave Thy Throne",
+        "category":  "Jesus Christ",
+        "firstLine":  "Thou didst leave Thy throne",
+        "publicDomain":  false
+    },
+    {
+        "number":  141,
+        "title":  "What Child Is This?",
+        "category":  "Jesus Christ",
+        "firstLine":  "What child is this, who, laid to rest,",
+        "publicDomain":  false
+    },
+    {
+        "number":  142,
+        "title":  "Angels We Have Heard on High",
+        "category":  "Jesus Christ",
+        "firstLine":  "Angels we have heard on high",
+        "publicDomain":  false
+    },
+    {
+        "number":  143,
+        "title":  "Silent Night, Holy Night",
+        "category":  "Jesus Christ",
+        "firstLine":  "Silent night! holy night!",
+        "publicDomain":  false
+    },
+    {
+        "number":  144,
+        "title":  "O Sing a Song of Bethlehem",
+        "category":  "Jesus Christ",
+        "firstLine":  "O sing a song of Bethlehem,",
+        "publicDomain":  false
+    },
+    {
+        "number":  145,
+        "title":  "Songs of Thankfulness and Praise",
+        "category":  "Jesus Christ",
+        "firstLine":  "Songs of thankfulness and praise,",
+        "publicDomain":  false
+    },
+    {
+        "number":  146,
+        "title":  "I Think When I Read That Sweet Story",
+        "category":  "Jesus Christ",
+        "firstLine":  "I think when I read that sweet story of old,",
+        "publicDomain":  false
+    },
+    {
+        "number":  147,
+        "title":  "Christ Upon the Mountain Peak",
+        "category":  "Jesus Christ",
+        "firstLine":  "Christ upon the mountain peak",
+        "publicDomain":  false
+    },
+    {
+        "number":  148,
+        "title":  "O Love, How Deep, How Broad",
+        "category":  "Jesus Christ",
+        "firstLine":  "O love, how deep, how broad, how high,",
+        "publicDomain":  false
+    },
+    {
+        "number":  149,
+        "title":  "Once in Royal David\u0027s City",
+        "category":  "Jesus Christ",
+        "firstLine":  "Once in royal David\u0027s city",
+        "publicDomain":  false
+    },
+    {
+        "number":  150,
+        "title":  "Who Is He in Yonder Stall?",
+        "category":  "Jesus Christ",
+        "firstLine":  "Who is He in yonder stall,",
+        "publicDomain":  false
+    },
+    {
+        "number":  151,
+        "title":  "Jesus Walked This Lonesome Valley",
+        "category":  "Jesus Christ",
+        "firstLine":  "Jesus walked this lonesome valley;",
+        "publicDomain":  false
+    },
+    {
+        "number":  152,
+        "title":  "Tell Me the Story of Jesus",
+        "category":  "Jesus Christ",
+        "firstLine":  "Tell me the story of Jesus,",
+        "publicDomain":  false
+    },
+    {
+        "number":  153,
+        "title":  "Prince of Peace, Control My Will",
+        "category":  "Jesus Christ",
+        "firstLine":  "Prince of Peace, control my will,",
+        "publicDomain":  false
+    },
+    {
+        "number":  154,
+        "title":  "When I Survey the Wondrous Cross",
+        "category":  "Jesus Christ",
+        "firstLine":  "When I survey the wondrous cross",
+        "publicDomain":  false
+    },
+    {
+        "number":  155,
+        "title":  "When I Survey the Wondrous Cross",
+        "category":  "Jesus Christ",
+        "firstLine":  "When I survey the wondrous cross",
+        "publicDomain":  false
+    },
+    {
+        "number":  156,
+        "title":  "O Sacred Head Now Wounded",
+        "category":  "Jesus Christ",
+        "firstLine":  "O sacred Head, now wounded,",
+        "publicDomain":  false
+    },
+    {
+        "number":  157,
+        "title":  "Go to Dark Gethsemane",
+        "category":  "Jesus Christ",
+        "firstLine":  "Go to dark Gethsemane,",
+        "publicDomain":  false
+    },
+    {
+        "number":  158,
+        "title":  "Were You There?",
+        "category":  "Jesus Christ",
+        "firstLine":  "Were you there when they crucified my Lord?",
+        "publicDomain":  false
+    },
+    {
+        "number":  159,
+        "title":  "The Old Rugged Cross",
+        "category":  "Jesus Christ",
+        "firstLine":  "On a hill far away stood an old rugged cross,",
+        "publicDomain":  false
+    },
+    {
+        "number":  160,
+        "title":  "Ride On in Majesty",
+        "category":  "Jesus Christ",
+        "firstLine":  "Ride on! ride on in majesty!",
+        "publicDomain":  false
+    },
+    {
+        "number":  161,
+        "title":  "Throned Upon the Awful Tree",
+        "category":  "Jesus Christ",
+        "firstLine":  "Throned upon the awful tree,",
+        "publicDomain":  false
+    },
+    {
+        "number":  162,
+        "title":  "Wondrous Love",
+        "category":  "Jesus Christ",
+        "firstLine":  "What wondrous love is this, O my soul, O my soul?",
+        "publicDomain":  false
+    },
+    {
+        "number":  163,
+        "title":  "At the Cross",
+        "category":  "Jesus Christ",
+        "firstLine":  "Alas! and did my Savior bleed,",
+        "publicDomain":  false
+    },
+    {
+        "number":  164,
+        "title":  "There Is a Green Hill Far Away",
+        "category":  "Jesus Christ",
+        "firstLine":  "There is a green hill far away,",
+        "publicDomain":  false
+    },
+    {
+        "number":  165,
+        "title":  "Look, You Saints! the Sight Is Glorious",
+        "category":  "Jesus Christ",
+        "firstLine":  "Look, you saints, the sight is glorious,",
+        "publicDomain":  false
+    },
+    {
+        "number":  166,
+        "title":  "Christ the Lord Is Risen Today",
+        "category":  "Jesus Christ",
+        "firstLine":  "Christ the Lord is risen today, Alleluia!",
+        "publicDomain":  false
+    },
+    {
+        "number":  167,
+        "title":  "Alleluia! Sing to Jesus!",
+        "category":  "Jesus Christ",
+        "firstLine":  "Alleluia! sing to Jesus! His the scepter, His the throne.",
+        "publicDomain":  false
+    },
+    {
+        "number":  168,
+        "title":  "And Have the Bright Immensities",
+        "category":  "Jesus Christ",
+        "firstLine":  "And have the bright immensities",
+        "publicDomain":  false
+    },
+    {
+        "number":  169,
+        "title":  "Come, You Faithful",
+        "category":  "Jesus Christ",
+        "firstLine":  "Come, you faithful, raise the strain",
+        "publicDomain":  false
+    },
+    {
+        "number":  170,
+        "title":  "Come, You Faithful",
+        "category":  "Jesus Christ",
+        "firstLine":  "Come, you faithful, raise the strain",
+        "publicDomain":  false
+    },
+    {
+        "number":  171,
+        "title":  "Thine Is the Glory",
+        "category":  "Jesus Christ",
+        "firstLine":  "Thine is the glory, Risen, conquering Son;",
+        "publicDomain":  false
+    },
+    {
+        "number":  172,
+        "title":  "The Strife Is O\u0027er",
+        "category":  "Jesus Christ",
+        "firstLine":  "The strife is o\u0027er, the battle done;",
+        "publicDomain":  false
+    },
+    {
+        "number":  173,
+        "title":  "Good Christian Friends, Rejoice!",
+        "category":  "Jesus Christ",
+        "firstLine":  "Good Christian friends, rejoice and sing!",
+        "publicDomain":  false
+    },
+    {
+        "number":  174,
+        "title":  "Star of Our Hope",
+        "category":  "Jesus Christ",
+        "firstLine":  "Star of our hope! He\u0027ll soon appear,",
+        "publicDomain":  false
+    },
+    {
+        "number":  175,
+        "title":  "Now the Green Blade Rises",
+        "category":  "Jesus Christ",
+        "firstLine":  "Now the green blade rises from the buried grain,",
+        "publicDomain":  false
+    },
+    {
+        "number":  176,
+        "title":  "Hail the Day That Sees Him Rise",
+        "category":  "Jesus Christ",
+        "firstLine":  "Hail the day that sees Him rise, Alleluia!",
+        "publicDomain":  false
+    },
+    {
+        "number":  177,
+        "title":  "Jesus, Your Blood and Righteousness",
+        "category":  "Jesus Christ",
+        "firstLine":  "Jesus, your blood and righteousness",
+        "publicDomain":  false
+    },
+    {
+        "number":  178,
+        "title":  "The Unveiled Christ",
+        "category":  "Jesus Christ",
+        "firstLine":  "Once our blessed Christ of beauty",
+        "publicDomain":  false
+    },
+    {
+        "number":  179,
+        "title":  "The Wonders of Redeeming Love",
+        "category":  "Jesus Christ",
+        "firstLine":  "The wonders of redeeming love",
+        "publicDomain":  false
+    },
+    {
+        "number":  180,
+        "title":  "O Listen to Our Wondrous Story",
+        "category":  "Jesus Christ",
+        "firstLine":  "O listen to our wondrous story,",
+        "publicDomain":  false
+    },
+    {
+        "number":  181,
+        "title":  "Does Jesus Care?",
+        "category":  "Jesus Christ",
+        "firstLine":  "Does Jesus care when my heart is pained",
+        "publicDomain":  false
+    },
+    {
+        "number":  182,
+        "title":  "Christ Is Alive",
+        "category":  "Jesus Christ",
+        "firstLine":  "Christ is alive!",
+        "publicDomain":  false
+    },
+    {
+        "number":  183,
+        "title":  "I Will Sing of Jesus\u0027 Love",
+        "category":  "Jesus Christ",
+        "firstLine":  "I Will sing of Jesus love,",
+        "publicDomain":  false
+    },
+    {
+        "number":  184,
+        "title":  "Jesus Paid It All",
+        "category":  "Jesus Christ",
+        "firstLine":  "I hear the Savior say,",
+        "publicDomain":  false
+    },
+    {
+        "number":  185,
+        "title":  "Jesus Is All the World to Me",
+        "category":  "Jesus Christ",
+        "firstLine":  "Jesus is all the world to me,",
+        "publicDomain":  false
+    },
+    {
+        "number":  186,
+        "title":  "I\u0027ve Found a Friend",
+        "category":  "Jesus Christ",
+        "firstLine":  "I\u0027ve found a Friend; oh, such a Friend!",
+        "publicDomain":  false
+    },
+    {
+        "number":  187,
+        "title":  "Jesus, What a Friend for Sinners",
+        "category":  "Jesus Christ",
+        "firstLine":  "Jesus! what a Friend for sinners!",
+        "publicDomain":  false
+    },
+    {
+        "number":  188,
+        "title":  "My Song Is Love Unknown",
+        "category":  "Jesus Christ",
+        "firstLine":  "My song is love unknown,",
+        "publicDomain":  false
+    },
+    {
+        "number":  189,
+        "title":  "All That Thrills My Soul",
+        "category":  "Jesus Christ",
+        "firstLine":  "Who can cheer the heart like Jesus,",
+        "publicDomain":  false
+    },
+    {
+        "number":  190,
+        "title":  "Jesus Loves Me",
+        "category":  "Jesus Christ",
+        "firstLine":  "Jesus loves me! this I know,",
+        "publicDomain":  false
+    },
+    {
+        "number":  191,
+        "title":  "Love Divine",
+        "category":  "Jesus Christ",
+        "firstLine":  "Love divine, all loves excelling,",
+        "publicDomain":  false
+    },
+    {
+        "number":  192,
+        "title":  "O Shepherd Divine",
+        "category":  "Jesus Christ",
+        "firstLine":  "O Shepherd divine, I know Thou art mine;",
+        "publicDomain":  false
+    },
+    {
+        "number":  193,
+        "title":  "Savior, Teach Me",
+        "category":  "Jesus Christ",
+        "firstLine":  "Savior, teach me day by day,",
+        "publicDomain":  false
+    },
+    {
+        "number":  194,
+        "title":  "Sing We of the Modern City",
+        "category":  "Jesus Christ",
+        "firstLine":  "Sing we of the modern city,",
+        "publicDomain":  false
+    },
+    {
+        "number":  195,
+        "title":  "Showers of Blessing",
+        "category":  "Jesus Christ",
+        "firstLine":  "\"There shall be showers of blessing;\"",
+        "publicDomain":  false
+    },
+    {
+        "number":  196,
+        "title":  "Tell Me the Old, Old Story",
+        "category":  "Jesus Christ",
+        "firstLine":  "Tell me the old, old story of unseen things above,",
+        "publicDomain":  false
+    },
+    {
+        "number":  197,
+        "title":  "The King of Love My Shepherd Is",
+        "category":  "Jesus Christ",
+        "firstLine":  "The King of love my Shepherd is,",
+        "publicDomain":  false
+    },
+    {
+        "number":  198,
+        "title":  "And Can It Be?",
+        "category":  "Jesus Christ",
+        "firstLine":  "And can it be that I should gain",
+        "publicDomain":  false
+    },
+    {
+        "number":  199,
+        "title":  "The Head That Once Was Crowned",
+        "category":  "Jesus Christ",
+        "firstLine":  "The head that once was crowned with thorns",
+        "publicDomain":  false
+    },
+    {
+        "number":  200,
+        "title":  "The Lord Is Coming",
+        "category":  "Jesus Christ",
+        "firstLine":  "The Lord is coming, let this be",
+        "publicDomain":  false
+    },
+    {
+        "number":  201,
+        "title":  "Christ Is Coming",
+        "category":  "Jesus Christ",
+        "firstLine":  "Christ is coming! let creation",
+        "publicDomain":  false
+    },
+    {
+        "number":  202,
+        "title":  "Hail Him the King of Glory",
+        "category":  "Jesus Christ",
+        "firstLine":  "Tell it to every kindred and nation,",
+        "publicDomain":  false
+    },
+    {
+        "number":  203,
+        "title":  "This Is the Threefold Truth",
+        "category":  "Jesus Christ",
+        "firstLine":  "This is the threefold truth",
+        "publicDomain":  false
+    },
+    {
+        "number":  204,
+        "title":  "Come, Thou Long Expected Jesus",
+        "category":  "Jesus Christ",
+        "firstLine":  "Come, thou long expected Jesus!",
+        "publicDomain":  false
+    },
+    {
+        "number":  205,
+        "title":  "Gleams of the Golden Morning",
+        "category":  "Jesus Christ",
+        "firstLine":  "The golden morning is fast approaching;",
+        "publicDomain":  false
+    },
+    {
+        "number":  206,
+        "title":  "Face to Face",
+        "category":  "Jesus Christ",
+        "firstLine":  "Face to face with Christ my Savior,",
+        "publicDomain":  false
+    },
+    {
+        "number":  207,
+        "title":  "It May Be at Morn",
+        "category":  "Jesus Christ",
+        "firstLine":  "It may be at morn, when the day is awaking,",
+        "publicDomain":  false
+    },
+    {
+        "number":  208,
+        "title":  "There\u0027ll Be No Dark Valley",
+        "category":  "Jesus Christ",
+        "firstLine":  "There\u0027ll be no dark valleys when Jesus comes,",
+        "publicDomain":  false
+    },
+    {
+        "number":  209,
+        "title":  "That Glorious Day Is Coming",
+        "category":  "Jesus Christ",
+        "firstLine":  "That glorious day is coming,",
+        "publicDomain":  false
+    },
+    {
+        "number":  210,
+        "title":  "Wake, Awake for the Night Is Flying",
+        "category":  "Jesus Christ",
+        "firstLine":  "Wake, awake, for night is flying,",
+        "publicDomain":  false
+    },
+    {
+        "number":  211,
+        "title":  "Lo! He Comes",
+        "category":  "Jesus Christ",
+        "firstLine":  "Lo! He comes, with clouds descending,",
+        "publicDomain":  false
+    },
+    {
+        "number":  212,
+        "title":  "\u0027Tis Almost Time for the Lord to Come",
+        "category":  "Jesus Christ",
+        "firstLine":  "\u0027Tis almost time for the Lord to come,",
+        "publicDomain":  false
+    },
+    {
+        "number":  213,
+        "title":  "Jesus Is Coming Again",
+        "category":  "Jesus Christ",
+        "firstLine":  "Lift up the trumpet, and loud let it ring:",
+        "publicDomain":  false
+    },
+    {
+        "number":  214,
+        "title":  "We Have This Hope",
+        "category":  "Jesus Christ",
+        "firstLine":  "We have this hope that burns within our heart,",
+        "publicDomain":  false
+    },
+    {
+        "number":  215,
+        "title":  "The King Shall Come",
+        "category":  "Jesus Christ",
+        "firstLine":  "The King shall come when morning dawns",
+        "publicDomain":  false
+    },
+    {
+        "number":  216,
+        "title":  "When the Roll Is Called Up Yonder",
+        "category":  "Jesus Christ",
+        "firstLine":  "When the trumpet of the Lord shall sound,",
+        "publicDomain":  false
+    },
+    {
+        "number":  217,
+        "title":  "The Church Has Waited Long",
+        "category":  "Jesus Christ",
+        "firstLine":  "The church has waited long",
+        "publicDomain":  false
+    },
+    {
+        "number":  218,
+        "title":  "When He Cometh",
+        "category":  "Jesus Christ",
+        "firstLine":  "When He cometh, when He cometh",
+        "publicDomain":  false
+    },
+    {
+        "number":  219,
+        "title":  "When Jesus Comes in Glory",
+        "category":  "Jesus Christ",
+        "firstLine":  "When Jesus comes in glory,",
+        "publicDomain":  false
+    },
+    {
+        "number":  220,
+        "title":  "When He Comes",
+        "category":  "Jesus Christ",
+        "firstLine":  "When He comes, When He comes,",
+        "publicDomain":  false
+    },
+    {
+        "number":  221,
+        "title":  "Rejoice, the Lord Is King",
+        "category":  "Jesus Christ",
+        "firstLine":  "Rejoice, the Lord is King! Your Lord and King adore!",
+        "publicDomain":  false
+    },
+    {
+        "number":  222,
+        "title":  "Hark! Ten Thousand Harps and Voices",
+        "category":  "Jesus Christ",
+        "firstLine":  "Hark! ten thousand harps and voices",
+        "publicDomain":  false
+    },
+    {
+        "number":  223,
+        "title":  "Crown Him With Many Crowns",
+        "category":  "Jesus Christ",
+        "firstLine":  "Crown him with many crowns,",
+        "publicDomain":  false
+    },
+    {
+        "number":  224,
+        "title":  "Seek Ye First the Kingdom",
+        "category":  "Jesus Christ",
+        "firstLine":  "Seek ye first the kingdom, \u0027Tis your Father\u0027s will.",
+        "publicDomain":  false
+    },
+    {
+        "number":  225,
+        "title":  "God Is Working His Purpose Out",
+        "category":  "Jesus Christ",
+        "firstLine":  "God is working His purpose out",
+        "publicDomain":  false
+    },
+    {
+        "number":  226,
+        "title":  "Lift Up Your Heads",
+        "category":  "Jesus Christ",
+        "firstLine":  "Lift up your heads, ye mighty gates!",
+        "publicDomain":  false
+    },
+    {
+        "number":  227,
+        "title":  "Jesus Shall Reign",
+        "category":  "Jesus Christ",
+        "firstLine":  "Jesus shall reign where\u0027er the sun",
+        "publicDomain":  false
+    },
+    {
+        "number":  228,
+        "title":  "A Hymn of Glory Let Us Sing",
+        "category":  "Jesus Christ",
+        "firstLine":  "A hymn of glory let us sing;",
+        "publicDomain":  false
+    },
+    {
+        "number":  229,
+        "title":  "All Hail the Power of Jesus\u0027 Name",
+        "category":  "Jesus Christ",
+        "firstLine":  "All hail the power of Jesus\u0027 name! Let angels prostrate fall;",
+        "publicDomain":  false
+    },
+    {
+        "number":  230,
+        "title":  "All Glory, Laud, and Honor",
+        "category":  "Jesus Christ",
+        "firstLine":  "All glory, laud, and honor,",
+        "publicDomain":  false
+    },
+    {
+        "number":  231,
+        "title":  "Blest Be the King",
+        "category":  "Jesus Christ",
+        "firstLine":  "Blest be the King whose coming",
+        "publicDomain":  false
+    },
+    {
+        "number":  232,
+        "title":  "At the Name of Jesus",
+        "category":  "Jesus Christ",
+        "firstLine":  "At the name of Jesus every knee shall bow,",
+        "publicDomain":  false
+    },
+    {
+        "number":  233,
+        "title":  "Christ, Whose Glory Fills the Skies",
+        "category":  "Jesus Christ",
+        "firstLine":  "Christ, whose glory fills the skies,",
+        "publicDomain":  false
+    },
+    {
+        "number":  234,
+        "title":  "Christ Is the World\u0027s Light",
+        "category":  "Jesus Christ",
+        "firstLine":  "Christ is the world\u0027s Light,",
+        "publicDomain":  false
+    },
+    {
+        "number":  235,
+        "title":  "Christ Is Made the Sure Foundation",
+        "category":  "Jesus Christ",
+        "firstLine":  "Christ is made the sure foundation,",
+        "publicDomain":  false
+    },
+    {
+        "number":  236,
+        "title":  "I Love Thee",
+        "category":  "Jesus Christ",
+        "firstLine":  "I love Thee, I love Thee, I love Thee,my Lord;",
+        "publicDomain":  false
+    },
+    {
+        "number":  237,
+        "title":  "In the Cross of Christ I Glory",
+        "category":  "Jesus Christ",
+        "firstLine":  "In the cross of Christ I glory,",
+        "publicDomain":  false
+    },
+    {
+        "number":  238,
+        "title":  "How Sweet the Name!",
+        "category":  "Jesus Christ",
+        "firstLine":  "How sweet the name of Jesus sounds",
+        "publicDomain":  false
+    },
+    {
+        "number":  239,
+        "title":  "Jesus, Priceless Treasure",
+        "category":  "Jesus Christ",
+        "firstLine":  "Jesus, priceless Treasure, Source of purest pleasure, Truest Friend to me:",
+        "publicDomain":  false
+    },
+    {
+        "number":  240,
+        "title":  "Fairest Lord Jesus",
+        "category":  "Jesus Christ",
+        "firstLine":  "Fairest Lord Jesus, ruler of all nature,",
+        "publicDomain":  false
+    },
+    {
+        "number":  241,
+        "title":  "Jesus, the Very Thought of Thee",
+        "category":  "Jesus Christ",
+        "firstLine":  "Jesus, the very thought of thee",
+        "publicDomain":  false
+    },
+    {
+        "number":  242,
+        "title":  "Jesus, Thou Joy of Loving Hearts",
+        "category":  "Jesus Christ",
+        "firstLine":  "Jesus, Thou joy of loving hearts!",
+        "publicDomain":  false
+    },
+    {
+        "number":  243,
+        "title":  "King of Glory, King of Peace",
+        "category":  "Jesus Christ",
+        "firstLine":  "King of glory, King of peace, I will love Thee;",
+        "publicDomain":  false
+    },
+    {
+        "number":  244,
+        "title":  "My Song Shall Be of Jesus",
+        "category":  "Jesus Christ",
+        "firstLine":  "My song shall be of Jesus;",
+        "publicDomain":  false
+    },
+    {
+        "number":  245,
+        "title":  "More About Jesus",
+        "category":  "Jesus Christ",
+        "firstLine":  "More about Jesus, I would know,",
+        "publicDomain":  false
+    },
+    {
+        "number":  246,
+        "title":  "Worthy, Worthy Is the Lamb",
+        "category":  "Jesus Christ",
+        "firstLine":  "Worthy, worthy is the Lamb,",
+        "publicDomain":  false
+    },
+    {
+        "number":  247,
+        "title":  "Come, My Way",
+        "category":  "Jesus Christ",
+        "firstLine":  "There is a name I love to hear,",
+        "publicDomain":  false
+    },
+    {
+        "number":  248,
+        "title":  "O, How I Love Jesus",
+        "category":  "Jesus Christ",
+        "firstLine":  "There is a Name I love to hear,",
+        "publicDomain":  false
+    },
+    {
+        "number":  249,
+        "title":  "Praise Him! Praise Him!",
+        "category":  "Jesus Christ",
+        "firstLine":  "Praise Him! praise Him! Jesus, our blessed Redeemer!",
+        "publicDomain":  false
+    },
+    {
+        "number":  250,
+        "title":  "O for a Thousand Tongues to Sing",
+        "category":  "Jesus Christ",
+        "firstLine":  "O for a thousand tongues to sing",
+        "publicDomain":  false
+    },
+    {
+        "number":  251,
+        "title":  "He Lives",
+        "category":  "Jesus Christ",
+        "firstLine":  "I serve a risen Savior,",
+        "publicDomain":  false
+    },
+    {
+        "number":  252,
+        "title":  "Come, Let Us Sing",
+        "category":  "Jesus Christ",
+        "firstLine":  "Come, let us sing the song of songs-",
+        "publicDomain":  false
+    },
+    {
+        "number":  253,
+        "title":  "There\u0027s No Other Name Like Jesus",
+        "category":  "Jesus Christ",
+        "firstLine":  "There\u0027s no other name like Jesus,",
+        "publicDomain":  false
+    },
+    {
+        "number":  254,
+        "title":  "The Great Physician Now is Near",
+        "category":  "Jesus Christ",
+        "firstLine":  "The great Physician now is near,",
+        "publicDomain":  false
+    },
+    {
+        "number":  255,
+        "title":  "I Cannot Tell Why",
+        "category":  "Jesus Christ",
+        "firstLine":  "I cannot tell why He whom angels worship",
+        "publicDomain":  false
+    },
+    {
+        "number":  256,
+        "title":  "Ye Servants of God",
+        "category":  "Jesus Christ",
+        "firstLine":  "Ye servants of God, your Master proclaim,",
+        "publicDomain":  false
+    },
+    {
+        "number":  257,
+        "title":  "Come Down, O Love Divine",
+        "category":  "Holy Spirit",
+        "firstLine":  "Come down, O Love divine, seek thou this soul of mine",
+        "publicDomain":  false
+    },
+    {
+        "number":  258,
+        "title":  "Baptize Us Anew",
+        "category":  "Holy Spirit",
+        "firstLine":  "Baptize us anew With power from on high,",
+        "publicDomain":  false
+    },
+    {
+        "number":  259,
+        "title":  "Draw Us in the Spirit\u0027s Tether",
+        "category":  "Holy Spirit",
+        "firstLine":  "Draw us in the Spirit\u0027s tether,",
+        "publicDomain":  false
+    },
+    {
+        "number":  260,
+        "title":  "Hover O\u0027er Me, Holy Spirit",
+        "category":  "Holy Spirit",
+        "firstLine":  "Hover o\u0027er me, Holy Spirit,",
+        "publicDomain":  false
+    },
+    {
+        "number":  261,
+        "title":  "The Spirit of the Lord Revealed",
+        "category":  "Holy Spirit",
+        "firstLine":  "The Spirit of the Lord revealed",
+        "publicDomain":  false
+    },
+    {
+        "number":  262,
+        "title":  "Sweet, Sweet Spirit",
+        "category":  "Holy Spirit",
+        "firstLine":  "There\u0027s a sweet, sweet spirit in this place,",
+        "publicDomain":  false
+    },
+    {
+        "number":  263,
+        "title":  "Fire of God, Thou Sacred Flame",
+        "category":  "Holy Spirit",
+        "firstLine":  "Fire of God, Thou sacred flame,",
+        "publicDomain":  false
+    },
+    {
+        "number":  264,
+        "title":  "O for That Flame of Living Fire",
+        "category":  "Holy Spirit",
+        "firstLine":  "O for that flame of living fire",
+        "publicDomain":  false
+    },
+    {
+        "number":  265,
+        "title":  "Breathe on Me, Breath of God",
+        "category":  "Holy Spirit",
+        "firstLine":  "Breathe on me, breath of God,",
+        "publicDomain":  false
+    },
+    {
+        "number":  266,
+        "title":  "Spirit of God",
+        "category":  "Holy Spirit",
+        "firstLine":  "Spirit of God, descend upon my heart;",
+        "publicDomain":  false
+    },
+    {
+        "number":  267,
+        "title":  "Spirit Divine",
+        "category":  "Holy Spirit",
+        "firstLine":  "Spirit divine, attend our prayers,",
+        "publicDomain":  false
+    },
+    {
+        "number":  268,
+        "title":  "Holy Spirit, Light Divine",
+        "category":  "Holy Spirit",
+        "firstLine":  "Holy Spirit, light divine,",
+        "publicDomain":  false
+    },
+    {
+        "number":  269,
+        "title":  "Come, Holy Spirit",
+        "category":  "Holy Spirit",
+        "firstLine":  "Come, Holy Spirit, heavenly Dove,",
+        "publicDomain":  false
+    },
+    {
+        "number":  270,
+        "title":  "O Holy Dove of God Descending",
+        "category":  "Holy Spirit",
+        "firstLine":  "O holy Dove of God descending,",
+        "publicDomain":  false
+    },
+    {
+        "number":  271,
+        "title":  "Break Thou the Bread of Life",
+        "category":  "Holy Scriptures",
+        "firstLine":  "Break thou the bread of life, dear Lord, to me,",
+        "publicDomain":  false
+    },
+    {
+        "number":  272,
+        "title":  "Give Me the Bible",
+        "category":  "Holy Scriptures",
+        "firstLine":  "Give me the Bible,",
+        "publicDomain":  false
+    },
+    {
+        "number":  273,
+        "title":  "Lord, I Have Made Thy Word My Choice",
+        "category":  "Holy Scriptures",
+        "firstLine":  "Lord, I have made Thy word my choice,",
+        "publicDomain":  false
+    },
+    {
+        "number":  274,
+        "title":  "O Word of God Incarnate",
+        "category":  "Holy Scriptures",
+        "firstLine":  "O Word of God incarnate,",
+        "publicDomain":  false
+    },
+    {
+        "number":  275,
+        "title":  "O God of Light",
+        "category":  "Holy Scriptures",
+        "firstLine":  "O God of light, Your Word, a lamp unfailing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  276,
+        "title":  "Thanks to God",
+        "category":  "Holy Scriptures",
+        "firstLine":  "Thanks to God whose Word was spoken",
+        "publicDomain":  false
+    },
+    {
+        "number":  277,
+        "title":  "For Your Holy Book We Thank You",
+        "category":  "Holy Scriptures",
+        "firstLine":  "For Your holy book we thank You,",
+        "publicDomain":  false
+    },
+    {
+        "number":  278,
+        "title":  "Lord Jesus, Once You Spoke to Men",
+        "category":  "Holy Scriptures",
+        "firstLine":  "Lord Jesus, once You spoke to men",
+        "publicDomain":  false
+    },
+    {
+        "number":  279,
+        "title":  "Only Trust Him",
+        "category":  "Gospel",
+        "firstLine":  "Come, every soul by sin oppressed,",
+        "publicDomain":  false
+    },
+    {
+        "number":  280,
+        "title":  "Come, Ye Sinners",
+        "category":  "Gospel",
+        "firstLine":  "Come, ye sinners poor and needy,",
+        "publicDomain":  false
+    },
+    {
+        "number":  281,
+        "title":  "I Gave My Life for Thee",
+        "category":  "Gospel",
+        "firstLine":  "I gave my life for thee,",
+        "publicDomain":  false
+    },
+    {
+        "number":  282,
+        "title":  "I Hear Thy Welcome Voice",
+        "category":  "Gospel",
+        "firstLine":  "I hear Thy welcome voice,",
+        "publicDomain":  false
+    },
+    {
+        "number":  283,
+        "title":  "O Jesus, Thou Art Standing",
+        "category":  "Gospel",
+        "firstLine":  "O Jesus, thou art standing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  284,
+        "title":  "For You I Am Praying",
+        "category":  "Gospel",
+        "firstLine":  "I have a Savior, He\u0027s pleading in glory,",
+        "publicDomain":  false
+    },
+    {
+        "number":  285,
+        "title":  "Jesus Calls Us",
+        "category":  "Gospel",
+        "firstLine":  "Jesus calls us o\u0027er the tumult",
+        "publicDomain":  false
+    },
+    {
+        "number":  286,
+        "title":  "Wonderful Words of Life",
+        "category":  "Gospel",
+        "firstLine":  "Sing them over again to me,",
+        "publicDomain":  false
+    },
+    {
+        "number":  287,
+        "title":  "Softly and Tenderly",
+        "category":  "Gospel",
+        "firstLine":  "Softly and tenderly Jesus is calling,",
+        "publicDomain":  false
+    },
+    {
+        "number":  288,
+        "title":  "I Am Going to Calvary",
+        "category":  "Gospel",
+        "firstLine":  "I am going to Calvary.",
+        "publicDomain":  false
+    },
+    {
+        "number":  289,
+        "title":  "The Savior Is Waiting",
+        "category":  "Gospel",
+        "firstLine":  "The Savior is waiting to enter your heart",
+        "publicDomain":  false
+    },
+    {
+        "number":  290,
+        "title":  "Turn Your Eyes Upon Jesus",
+        "category":  "Gospel",
+        "firstLine":  "O soul, are you weary and troubled?",
+        "publicDomain":  false
+    },
+    {
+        "number":  291,
+        "title":  "We Have Not Known Thee",
+        "category":  "Gospel",
+        "firstLine":  "We have not known Thee as we ought,",
+        "publicDomain":  false
+    },
+    {
+        "number":  292,
+        "title":  "Jesus, I Come",
+        "category":  "Gospel",
+        "firstLine":  "Out of my bondage, sorrow and night,",
+        "publicDomain":  false
+    },
+    {
+        "number":  293,
+        "title":  "Heavenly Father, Bless Us Now",
+        "category":  "Gospel",
+        "firstLine":  "Heavenly Father, bless us now;",
+        "publicDomain":  false
+    },
+    {
+        "number":  294,
+        "title":  "Power in the Blood",
+        "category":  "Gospel",
+        "firstLine":  "Would you be free from the burden of sin?",
+        "publicDomain":  false
+    },
+    {
+        "number":  295,
+        "title":  "Chief of Sinners",
+        "category":  "Gospel",
+        "firstLine":  "Chief of sinners though I be,",
+        "publicDomain":  false
+    },
+    {
+        "number":  296,
+        "title":  "Lord, I\u0027m Coming Home",
+        "category":  "Gospel",
+        "firstLine":  "I\u0027ve wandered far away from God,",
+        "publicDomain":  false
+    },
+    {
+        "number":  297,
+        "title":  "God Be Merciful to Me",
+        "category":  "Gospel",
+        "firstLine":  "God, be merciful to me,",
+        "publicDomain":  false
+    },
+    {
+        "number":  298,
+        "title":  "I Lay My Sins on Jesus",
+        "category":  "Gospel",
+        "firstLine":  "I lay my sins on Jesus,",
+        "publicDomain":  false
+    },
+    {
+        "number":  299,
+        "title":  "Forgive Our Sins as We Forgive",
+        "category":  "Gospel",
+        "firstLine":  "\"Forgive our sins as we forgive,\"",
+        "publicDomain":  false
+    },
+    {
+        "number":  300,
+        "title":  "Rock of Ages",
+        "category":  "Gospel",
+        "firstLine":  "Rock of Ages, cleft for me,",
+        "publicDomain":  false
+    },
+    {
+        "number":  301,
+        "title":  "Near, Still Nearer",
+        "category":  "Gospel",
+        "firstLine":  "Nearer, still nearer, close to Thy heart,",
+        "publicDomain":  false
+    },
+    {
+        "number":  302,
+        "title":  "Deeper Yet",
+        "category":  "Gospel",
+        "firstLine":  "In the blood from the cross,",
+        "publicDomain":  false
+    },
+    {
+        "number":  303,
+        "title":  "Beneath the Cross of Jesus",
+        "category":  "Gospel",
+        "firstLine":  "Beneath the cross of Jesus",
+        "publicDomain":  false
+    },
+    {
+        "number":  304,
+        "title":  "Faith of Our Fathers",
+        "category":  "Gospel",
+        "firstLine":  "Faith of our fathers, living still,",
+        "publicDomain":  false
+    },
+    {
+        "number":  305,
+        "title":  "Give Me Jesus",
+        "category":  "Gospel",
+        "firstLine":  "In the morning, when I rise",
+        "publicDomain":  false
+    },
+    {
+        "number":  306,
+        "title":  "Draw Me Nearer",
+        "category":  "Gospel",
+        "firstLine":  "I am thine, O Lord, I have heard thy voice,",
+        "publicDomain":  false
+    },
+    {
+        "number":  307,
+        "title":  "I Am Coming to the Cross",
+        "category":  "Gospel",
+        "firstLine":  "I am coming to the cross;",
+        "publicDomain":  false
+    },
+    {
+        "number":  308,
+        "title":  "Wholly Thine",
+        "category":  "Gospel",
+        "firstLine":  "I would be, dear Savior, wholly Thine;",
+        "publicDomain":  false
+    },
+    {
+        "number":  309,
+        "title":  "I Surrender All",
+        "category":  "Gospel",
+        "firstLine":  "All to Jesus I surrender;",
+        "publicDomain":  false
+    },
+    {
+        "number":  310,
+        "title":  "I Would Draw Nearer to Jesus",
+        "category":  "Gospel",
+        "firstLine":  "I would draw nearer to Jesus, In His sweet presence abide,",
+        "publicDomain":  false
+    },
+    {
+        "number":  311,
+        "title":  "I Would Be Like Jesus",
+        "category":  "Gospel",
+        "firstLine":  "Earthly pleasures vainly call me;",
+        "publicDomain":  false
+    },
+    {
+        "number":  312,
+        "title":  "Near the Cross",
+        "category":  "Gospel",
+        "firstLine":  "Jesus, keep me near the cross;",
+        "publicDomain":  false
+    },
+    {
+        "number":  313,
+        "title":  "Just as I Am",
+        "category":  "Gospel",
+        "firstLine":  "Just as I am, without one plea,",
+        "publicDomain":  false
+    },
+    {
+        "number":  314,
+        "title":  "Just as I Am",
+        "category":  "Gospel",
+        "firstLine":  "Just as I am, without one plea,",
+        "publicDomain":  false
+    },
+    {
+        "number":  315,
+        "title":  "O for a Closer Walk!",
+        "category":  "Gospel",
+        "firstLine":  "O for a closer walk with God,",
+        "publicDomain":  false
+    },
+    {
+        "number":  316,
+        "title":  "Live Out Thy Life Within Me",
+        "category":  "Gospel",
+        "firstLine":  "Live out Thy life within me, O Jesus, King of kings!",
+        "publicDomain":  false
+    },
+    {
+        "number":  317,
+        "title":  "Lead Me to Calvary",
+        "category":  "Gospel",
+        "firstLine":  "King of my life, I crown Thee now,",
+        "publicDomain":  false
+    },
+    {
+        "number":  318,
+        "title":  "Whiter Than Snow",
+        "category":  "Gospel",
+        "firstLine":  "Lord Jesus, I long to be perfectly whole;",
+        "publicDomain":  false
+    },
+    {
+        "number":  319,
+        "title":  "Lord, I Want to Be a Christian",
+        "category":  "Gospel",
+        "firstLine":  "Lord, I want to be a Christian in my heart, in my heart,",
+        "publicDomain":  false
+    },
+    {
+        "number":  320,
+        "title":  "Lord of Creation",
+        "category":  "Gospel",
+        "firstLine":  "Lord of creation, to you be all praise!",
+        "publicDomain":  false
+    },
+    {
+        "number":  321,
+        "title":  "My Jesus, I Love Thee",
+        "category":  "Gospel",
+        "firstLine":  "My Jesus, I love thee, I know thou art mine;",
+        "publicDomain":  false
+    },
+    {
+        "number":  322,
+        "title":  "Nothing Between",
+        "category":  "Gospel",
+        "firstLine":  "Nothing between my soul and my Savior,",
+        "publicDomain":  false
+    },
+    {
+        "number":  323,
+        "title":  "O for a Heart to Praise My God!",
+        "category":  "Gospel",
+        "firstLine":  "O for a heart to praise my God,",
+        "publicDomain":  false
+    },
+    {
+        "number":  324,
+        "title":  "Just as I Am, Thine Own to Be",
+        "category":  "Gospel",
+        "firstLine":  "Just as I am, Thine own to be,",
+        "publicDomain":  false
+    },
+    {
+        "number":  325,
+        "title":  "Jesus, I My Cross Have Taken",
+        "category":  "Gospel",
+        "firstLine":  "Jesus, I my cross have taken, all to leave and follow Thee.",
+        "publicDomain":  false
+    },
+    {
+        "number":  326,
+        "title":  "Open My Eyes That I May See",
+        "category":  "Gospel",
+        "firstLine":  "Open my eyes, that I may see",
+        "publicDomain":  false
+    },
+    {
+        "number":  327,
+        "title":  "I\u0027d Rather Have Jesus",
+        "category":  "Gospel",
+        "firstLine":  "I\u0027d rather have Jesus than silver or gold;",
+        "publicDomain":  false
+    },
+    {
+        "number":  328,
+        "title":  "Must Jesus Bear the Cross Alone",
+        "category":  "Gospel",
+        "firstLine":  "Must Jesus bear the cross alone,",
+        "publicDomain":  false
+    },
+    {
+        "number":  329,
+        "title":  "Take the World, but Give Me Jesus",
+        "category":  "Gospel",
+        "firstLine":  "Take the world, but give me Jesus;",
+        "publicDomain":  false
+    },
+    {
+        "number":  330,
+        "title":  "Take My Life and Let It Be",
+        "category":  "Gospel",
+        "firstLine":  "Take my life, and let it be",
+        "publicDomain":  false
+    },
+    {
+        "number":  331,
+        "title":  "O Jesus, I Have Promised",
+        "category":  "Gospel",
+        "firstLine":  "O Jesus, I have promised",
+        "publicDomain":  false
+    },
+    {
+        "number":  332,
+        "title":  "The Cleansing Wave",
+        "category":  "Gospel",
+        "firstLine":  "Oh now I see the crimson wave,",
+        "publicDomain":  false
+    },
+    {
+        "number":  333,
+        "title":  "On Jordan\u0027s Banks the Baptist\u0027s Cry",
+        "category":  "Gospel",
+        "firstLine":  "On Jordan\u0027s banks the Baptist\u0027s cry",
+        "publicDomain":  false
+    },
+    {
+        "number":  334,
+        "title":  "Come, Thou Fount of Every Blessing",
+        "category":  "Gospel",
+        "firstLine":  "Come, thou Fount of every blessing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  335,
+        "title":  "What a Wonderful Savior",
+        "category":  "Gospel",
+        "firstLine":  "Christ has for sin atonement made,",
+        "publicDomain":  false
+    },
+    {
+        "number":  336,
+        "title":  "There Is a Fountain",
+        "category":  "Gospel",
+        "firstLine":  "There is a fountain filled with blood drawn from Emmanuel\u0027s veins;",
+        "publicDomain":  false
+    },
+    {
+        "number":  337,
+        "title":  "Redeemed!",
+        "category":  "Gospel",
+        "firstLine":  "Redeemed, how I love to proclaim it!",
+        "publicDomain":  false
+    },
+    {
+        "number":  338,
+        "title":  "Redeemed!",
+        "category":  "Gospel",
+        "firstLine":  "Redeemed, how I love to proclaim it!",
+        "publicDomain":  false
+    },
+    {
+        "number":  339,
+        "title":  "God Is My Strong Salvation",
+        "category":  "Gospel",
+        "firstLine":  "God is my strong salvation,",
+        "publicDomain":  false
+    },
+    {
+        "number":  340,
+        "title":  "Jesus Saves",
+        "category":  "Gospel",
+        "firstLine":  "We have heard a joyful sound,",
+        "publicDomain":  false
+    },
+    {
+        "number":  341,
+        "title":  "To God Be the Glory",
+        "category":  "Gospel",
+        "firstLine":  "To God be the glory, great things he hath done!",
+        "publicDomain":  false
+    },
+    {
+        "number":  342,
+        "title":  "Is This a Day of New Beginnings?",
+        "category":  "Gospel",
+        "firstLine":  "Is this a day of new beginnings,",
+        "publicDomain":  false
+    },
+    {
+        "number":  343,
+        "title":  "I Will Sing of My Redeemer",
+        "category":  "Gospel",
+        "firstLine":  "I will sing of my Redeemer,",
+        "publicDomain":  false
+    },
+    {
+        "number":  344,
+        "title":  "I Love Your Kingdom, Lord",
+        "category":  "Christian Church",
+        "firstLine":  "I love thy kingdom, Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  345,
+        "title":  "Christ Is the World\u0027s True Light",
+        "category":  "Christian Church",
+        "firstLine":  "Christ is the world\u0027s true light,",
+        "publicDomain":  false
+    },
+    {
+        "number":  346,
+        "title":  "Lord, Who Dost Give to Thy Church",
+        "category":  "Christian Church",
+        "firstLine":  "Lord, who dost give to Thy church for its healing",
+        "publicDomain":  false
+    },
+    {
+        "number":  347,
+        "title":  "Built on the Rock",
+        "category":  "Christian Church",
+        "firstLine":  "Built on the Rock the Church shall stand,",
+        "publicDomain":  false
+    },
+    {
+        "number":  348,
+        "title":  "The Church Has One Foundation",
+        "category":  "Christian Church",
+        "firstLine":  "The church\u0027s one foundation",
+        "publicDomain":  false
+    },
+    {
+        "number":  349,
+        "title":  "God is Love",
+        "category":  "Christian Church",
+        "firstLine":  "Here in Christ we gather,",
+        "publicDomain":  false
+    },
+    {
+        "number":  350,
+        "title":  "Blest Be the Tie That Binds",
+        "category":  "Christian Church",
+        "firstLine":  "Blest be the tie that binds",
+        "publicDomain":  false
+    },
+    {
+        "number":  351,
+        "title":  "Thy Hand, O God Has Guided",
+        "category":  "Christian Church",
+        "firstLine":  "Thy hand, O God, has guided",
+        "publicDomain":  false
+    },
+    {
+        "number":  352,
+        "title":  "This Is My Will",
+        "category":  "Christian Church",
+        "firstLine":  "This is My will, My one command,",
+        "publicDomain":  false
+    },
+    {
+        "number":  353,
+        "title":  "Father, Help Your People",
+        "category":  "Christian Church",
+        "firstLine":  "Father, help Your people in this world to build",
+        "publicDomain":  false
+    },
+    {
+        "number":  354,
+        "title":  "Thy Love, O God",
+        "category":  "Christian Church",
+        "firstLine":  "Thy love, O God, has all mankind created,",
+        "publicDomain":  false
+    },
+    {
+        "number":  355,
+        "title":  "Where Cross the Crowded Ways of Life",
+        "category":  "Christian Church",
+        "firstLine":  "Where cross the crowded ways of life,",
+        "publicDomain":  false
+    },
+    {
+        "number":  356,
+        "title":  "All Who Love and Serve Your City",
+        "category":  "Christian Church",
+        "firstLine":  "All who love and serve your city,",
+        "publicDomain":  false
+    },
+    {
+        "number":  357,
+        "title":  "Come, Labor On",
+        "category":  "Christian Church",
+        "firstLine":  "Come, labor on.",
+        "publicDomain":  false
+    },
+    {
+        "number":  358,
+        "title":  "Far and Near the Fields Are Teeming",
+        "category":  "Christian Church",
+        "firstLine":  "Far and near the fields are teeming",
+        "publicDomain":  false
+    },
+    {
+        "number":  359,
+        "title":  "Hark! the Voice of Jesus Calling",
+        "category":  "Christian Church",
+        "firstLine":  "Hark! the voice of Jesus calling,",
+        "publicDomain":  false
+    },
+    {
+        "number":  360,
+        "title":  "From the Eastern Mountains",
+        "category":  "Christian Church",
+        "firstLine":  "From the eastern mountains Pressing on they come,",
+        "publicDomain":  false
+    },
+    {
+        "number":  361,
+        "title":  "Hark! \u0027Tis the Shepherd\u0027s Voice I Hear",
+        "category":  "Christian Church",
+        "firstLine":  "Hark! \u0027tis the Shepherd\u0027s voice I hear,",
+        "publicDomain":  false
+    },
+    {
+        "number":  362,
+        "title":  "Lift High the Cross",
+        "category":  "Christian Church",
+        "firstLine":  "Come, Christians, follow where our Captain trod,",
+        "publicDomain":  false
+    },
+    {
+        "number":  363,
+        "title":  "Lord, Whose Love in Humble Service",
+        "category":  "Christian Church",
+        "firstLine":  "Lord, whose love in humble service",
+        "publicDomain":  false
+    },
+    {
+        "number":  364,
+        "title":  "O Jesus Christ, to You",
+        "category":  "Christian Church",
+        "firstLine":  "O Jesus Christ, to You may hymns be rising",
+        "publicDomain":  false
+    },
+    {
+        "number":  365,
+        "title":  "O Zion, Haste",
+        "category":  "Christian Church",
+        "firstLine":  "O Zion, haste, thy mission high fulfilling,",
+        "publicDomain":  false
+    },
+    {
+        "number":  366,
+        "title":  "O Where Are the Reapers?",
+        "category":  "Christian Church",
+        "firstLine":  "O where are the reapers that garner in",
+        "publicDomain":  false
+    },
+    {
+        "number":  367,
+        "title":  "Rescue the Perishing",
+        "category":  "Christian Church",
+        "firstLine":  "Rescue the perishing, care for the dying,",
+        "publicDomain":  false
+    },
+    {
+        "number":  368,
+        "title":  "Watchman, Blow the Gospel Trumpet",
+        "category":  "Christian Church",
+        "firstLine":  "Watchman, blow the gospel trumpet,",
+        "publicDomain":  false
+    },
+    {
+        "number":  369,
+        "title":  "Bringing in the Sheaves",
+        "category":  "Christian Church",
+        "firstLine":  "Sowing in the morning, sowing seeds of kindness,",
+        "publicDomain":  false
+    },
+    {
+        "number":  370,
+        "title":  "Christ for the World",
+        "category":  "Christian Church",
+        "firstLine":  "Christ for the world we sing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  371,
+        "title":  "Lift Him Up",
+        "category":  "Christian Church",
+        "firstLine":  "Lift Him up, \u0027tis He that bids you,",
+        "publicDomain":  false
+    },
+    {
+        "number":  372,
+        "title":  "How Beauteous Are Their Feet",
+        "category":  "Christian Church",
+        "firstLine":  "How beauteous are their feet",
+        "publicDomain":  false
+    },
+    {
+        "number":  373,
+        "title":  "Seeking the Lost",
+        "category":  "Christian Church",
+        "firstLine":  "Seeking the lost, yes, kindly entreating",
+        "publicDomain":  false
+    },
+    {
+        "number":  374,
+        "title":  "Jesus, With Thy Church Abide",
+        "category":  "Christian Church",
+        "firstLine":  "Jesus, with Thy church abide;",
+        "publicDomain":  false
+    },
+    {
+        "number":  375,
+        "title":  "Work, for the Night Is Coming",
+        "category":  "Christian Church",
+        "firstLine":  "Work for the night is coming,",
+        "publicDomain":  false
+    },
+    {
+        "number":  376,
+        "title":  "All Things Are Thine",
+        "category":  "Christian Church",
+        "firstLine":  "All things are Thine; no gift have we,",
+        "publicDomain":  false
+    },
+    {
+        "number":  377,
+        "title":  "Go Forth, Go Forth With Christ",
+        "category":  "Christian Church",
+        "firstLine":  "Go forth, go forth with Christ,",
+        "publicDomain":  false
+    },
+    {
+        "number":  378,
+        "title":  "Go, Preach My Gospel",
+        "category":  "Christian Church",
+        "firstLine":  "\"Go, preach My gospel,\" saith the Lord;",
+        "publicDomain":  false
+    },
+    {
+        "number":  379,
+        "title":  "We Give This Child to You",
+        "category":  "Christian Church",
+        "firstLine":  "We give this child to You,",
+        "publicDomain":  false
+    },
+    {
+        "number":  380,
+        "title":  "Welcome, Day of Sweet Repose",
+        "category":  "Doctrines",
+        "firstLine":  "Welcome, day of sweet repose!",
+        "publicDomain":  false
+    },
+    {
+        "number":  381,
+        "title":  "Holy Sabbath Day of Rest",
+        "category":  "Doctrines",
+        "firstLine":  "Holy Sabbath day of rest,",
+        "publicDomain":  false
+    },
+    {
+        "number":  382,
+        "title":  "O Day of Rest and Gladness",
+        "category":  "Doctrines",
+        "firstLine":  "O day of rest and gladness,",
+        "publicDomain":  false
+    },
+    {
+        "number":  383,
+        "title":  "O Day of Rest and Gladness",
+        "category":  "Doctrines",
+        "firstLine":  "O day of rest and gladness,",
+        "publicDomain":  false
+    },
+    {
+        "number":  384,
+        "title":  "Safely Through Another Week",
+        "category":  "Doctrines",
+        "firstLine":  "Safely through another week",
+        "publicDomain":  false
+    },
+    {
+        "number":  385,
+        "title":  "Crowning Jewel of Creation",
+        "category":  "Doctrines",
+        "firstLine":  "Crowning jewel of creation,",
+        "publicDomain":  false
+    },
+    {
+        "number":  386,
+        "title":  "The Sacred Anthem",
+        "category":  "Doctrines",
+        "firstLine":  "The sacred anthem slowly rang",
+        "publicDomain":  false
+    },
+    {
+        "number":  387,
+        "title":  "Come, O Sabbath Day",
+        "category":  "Doctrines",
+        "firstLine":  "Peace and healing on thy wing;",
+        "publicDomain":  false
+    },
+    {
+        "number":  388,
+        "title":  "Don\u0027t Forget the Sabbath",
+        "category":  "Doctrines",
+        "firstLine":  "Don\u0027t forget the Sabbath,",
+        "publicDomain":  false
+    },
+    {
+        "number":  389,
+        "title":  "Light of Light, Enlighten Me",
+        "category":  "Doctrines",
+        "firstLine":  "Light of light, enlighten me,",
+        "publicDomain":  false
+    },
+    {
+        "number":  390,
+        "title":  "We Love Thy Sabbath, Lord",
+        "category":  "Doctrines",
+        "firstLine":  "We love Thy Sabbath, Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  391,
+        "title":  "Welcome, Welcome, Day of Rest",
+        "category":  "Doctrines",
+        "firstLine":  "To the world in kindness given;",
+        "publicDomain":  false
+    },
+    {
+        "number":  392,
+        "title":  "Dear Lord, We Come at Set of Sun",
+        "category":  "Doctrines",
+        "firstLine":  "Dear Lord, we come at set of sun,",
+        "publicDomain":  false
+    },
+    {
+        "number":  393,
+        "title":  "Lord of the Sabbath",
+        "category":  "Doctrines",
+        "firstLine":  "Lord of the Sabbath and its light,",
+        "publicDomain":  false
+    },
+    {
+        "number":  394,
+        "title":  "Far From All Care",
+        "category":  "Doctrines",
+        "firstLine":  "Far from all care we hail the Sabbath morning;",
+        "publicDomain":  false
+    },
+    {
+        "number":  395,
+        "title":  "As Birds Unto the Genial Homeland",
+        "category":  "Doctrines",
+        "firstLine":  "As birds unto the genial homeland fly,",
+        "publicDomain":  false
+    },
+    {
+        "number":  396,
+        "title":  "Lord God, Your Love Has Called Us Here",
+        "category":  "Doctrines",
+        "firstLine":  "Lord God, Your love has called us here,",
+        "publicDomain":  false
+    },
+    {
+        "number":  397,
+        "title":  "An Upper Room",
+        "category":  "Doctrines",
+        "firstLine":  "An upper room did our Lord prepare",
+        "publicDomain":  false
+    },
+    {
+        "number":  398,
+        "title":  "Bread of the World",
+        "category":  "Doctrines",
+        "firstLine":  "Bread of the world in mercy broken,",
+        "publicDomain":  false
+    },
+    {
+        "number":  399,
+        "title":  "Beneath the Forms of Outward Rite",
+        "category":  "Doctrines",
+        "firstLine":  "Beneath the forms of outward rite",
+        "publicDomain":  false
+    },
+    {
+        "number":  400,
+        "title":  "I Come With Joy",
+        "category":  "Doctrines",
+        "firstLine":  "I come with joy to meet my Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  401,
+        "title":  "In Imitation, Lord of Thee",
+        "category":  "Doctrines",
+        "firstLine":  "In imitation, Lord, of Thee,",
+        "publicDomain":  false
+    },
+    {
+        "number":  402,
+        "title":  "By Christ Redeemed",
+        "category":  "Doctrines",
+        "firstLine":  "By Christ redeemed, In Christ restored,",
+        "publicDomain":  false
+    },
+    {
+        "number":  403,
+        "title":  "Let Us Break Bread Together",
+        "category":  "Doctrines",
+        "firstLine":  "Let us break bread together on our knees,",
+        "publicDomain":  false
+    },
+    {
+        "number":  404,
+        "title":  "Now Let Us From This Table Rise",
+        "category":  "Doctrines",
+        "firstLine":  "Now let us from this table rise",
+        "publicDomain":  false
+    },
+    {
+        "number":  405,
+        "title":  "O God, Unseen, Yet Ever Near",
+        "category":  "Doctrines",
+        "firstLine":  "O God, unseen, yet ever near,",
+        "publicDomain":  false
+    },
+    {
+        "number":  406,
+        "title":  "Love Consecrates the Humblest Act",
+        "category":  "Doctrines",
+        "firstLine":  "Love consecrates the humblest act",
+        "publicDomain":  false
+    },
+    {
+        "number":  407,
+        "title":  "Sent Forth by God\u0027s Blessing",
+        "category":  "Doctrines",
+        "firstLine":  "Sent forth by God\u0027s blessing, Our true faith confessing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  408,
+        "title":  "Lord, Enthroned in Heavenly Splendor",
+        "category":  "Doctrines",
+        "firstLine":  "Lord, enthroned in heav\u0027nly splendor,",
+        "publicDomain":  false
+    },
+    {
+        "number":  409,
+        "title":  "Jesus Invites His Saints",
+        "category":  "Doctrines",
+        "firstLine":  "Jesus invites His saints",
+        "publicDomain":  false
+    },
+    {
+        "number":  410,
+        "title":  "Thy Broken Body, Gracious Lord",
+        "category":  "Doctrines",
+        "firstLine":  "Thy broken body, gracious Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  411,
+        "title":  "The Son of God Proclaim",
+        "category":  "Doctrines",
+        "firstLine":  "The Son of God proclaim,",
+        "publicDomain":  false
+    },
+    {
+        "number":  412,
+        "title":  "Cover With His Life",
+        "category":  "Doctrines",
+        "firstLine":  "Look upon Jesus, sinless is He;",
+        "publicDomain":  false
+    },
+    {
+        "number":  413,
+        "title":  "God Has Spoken by His Prophets",
+        "category":  "Doctrines",
+        "firstLine":  "God has spoken by His prophets,",
+        "publicDomain":  false
+    },
+    {
+        "number":  414,
+        "title":  "Fruitful Trees, the Spirit\u0027s Sowing",
+        "category":  "Doctrines",
+        "firstLine":  "Fruitful trees, the Spirit\u0027s sowing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  415,
+        "title":  "Christ the Lord, All Power Possessing",
+        "category":  "Doctrines",
+        "firstLine":  "Christ, the Lord, all power possessing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  416,
+        "title":  "The Judgment Has Set",
+        "category":  "Doctrines",
+        "firstLine":  "The judgment has set, the books have been opened;",
+        "publicDomain":  false
+    },
+    {
+        "number":  417,
+        "title":  "O Solemn Thought",
+        "category":  "Doctrines",
+        "firstLine":  "O solemn thought and can it be",
+        "publicDomain":  false
+    },
+    {
+        "number":  418,
+        "title":  "Day of Judgment, Day of Wonders!",
+        "category":  "Doctrines",
+        "firstLine":  "Day of judgement, day of wonders!",
+        "publicDomain":  false
+    },
+    {
+        "number":  419,
+        "title":  "Soon Shall the Trump of God",
+        "category":  "Doctrines",
+        "firstLine":  "Soon shall the trump of God",
+        "publicDomain":  false
+    },
+    {
+        "number":  420,
+        "title":  "Jerusalem, My Happy Home",
+        "category":  "Doctrines",
+        "firstLine":  "Jerusalem, my happy home,",
+        "publicDomain":  false
+    },
+    {
+        "number":  421,
+        "title":  "For All the Saints",
+        "category":  "Doctrines",
+        "firstLine":  "For all the saints",
+        "publicDomain":  false
+    },
+    {
+        "number":  422,
+        "title":  "Marching to Zion",
+        "category":  "Doctrines",
+        "firstLine":  "Come, we that love the Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  423,
+        "title":  "Glorious Things of Thee Are Spoken",
+        "category":  "Doctrines",
+        "firstLine":  "Glorious things of thee are spoken,",
+        "publicDomain":  false
+    },
+    {
+        "number":  424,
+        "title":  "For Thee, O Dear, Dear Country",
+        "category":  "Doctrines",
+        "firstLine":  "For thee, O dear country,",
+        "publicDomain":  false
+    },
+    {
+        "number":  425,
+        "title":  "Holy, Holy, Is What the Angels Sing",
+        "category":  "Doctrines",
+        "firstLine":  "There is singing up in heaven",
+        "publicDomain":  false
+    },
+    {
+        "number":  426,
+        "title":  "I Shall See the King",
+        "category":  "Doctrines",
+        "firstLine":  "I shall see the King where the angels sing,",
+        "publicDomain":  false
+    },
+    {
+        "number":  427,
+        "title":  "No Night There",
+        "category":  "Doctrines",
+        "firstLine":  "In the land of fadeless day",
+        "publicDomain":  false
+    },
+    {
+        "number":  428,
+        "title":  "Sweet By and By",
+        "category":  "Doctrines",
+        "firstLine":  "There\u0027s a land that is fairer than day,",
+        "publicDomain":  false
+    },
+    {
+        "number":  429,
+        "title":  "Jerusalem the Golden",
+        "category":  "Doctrines",
+        "firstLine":  "Jerusalem the golden,",
+        "publicDomain":  false
+    },
+    {
+        "number":  430,
+        "title":  "Joy By and By",
+        "category":  "Doctrines",
+        "firstLine":  "O there\u0027ll be joy when the work is done,",
+        "publicDomain":  false
+    },
+    {
+        "number":  431,
+        "title":  "Over Yonder",
+        "category":  "Doctrines",
+        "firstLine":  "Come let us sing of homeland,",
+        "publicDomain":  false
+    },
+    {
+        "number":  432,
+        "title":  "Shall We Gather at the River",
+        "category":  "Doctrines",
+        "firstLine":  "Shall we gather at the river,",
+        "publicDomain":  false
+    },
+    {
+        "number":  433,
+        "title":  "Ten Thousand Times Ten Thousand",
+        "category":  "Doctrines",
+        "firstLine":  "Ten thousand times ten thousand,",
+        "publicDomain":  false
+    },
+    {
+        "number":  434,
+        "title":  "We Speak of the Realms",
+        "category":  "Doctrines",
+        "firstLine":  "We speak of the realms of the blest,",
+        "publicDomain":  false
+    },
+    {
+        "number":  435,
+        "title":  "The Glory Song",
+        "category":  "Doctrines",
+        "firstLine":  "When all my labors and trails are o\u0027er,",
+        "publicDomain":  false
+    },
+    {
+        "number":  436,
+        "title":  "The Homeland",
+        "category":  "Doctrines",
+        "firstLine":  "The homeland! O the homeland!",
+        "publicDomain":  false
+    },
+    {
+        "number":  437,
+        "title":  "I\u0027m Going Home",
+        "category":  "Doctrines",
+        "firstLine":  "My heav\u0027nly home is bright and fair,",
+        "publicDomain":  false
+    },
+    {
+        "number":  438,
+        "title":  "You Will See Your Lord A-Coming",
+        "category":  "Early Advent",
+        "firstLine":  "You will see your Lord acoming,",
+        "publicDomain":  false
+    },
+    {
+        "number":  439,
+        "title":  "How Far From Home?",
+        "category":  "Early Advent",
+        "firstLine":  "How far from? I asked, as on",
+        "publicDomain":  false
+    },
+    {
+        "number":  440,
+        "title":  "How Cheering Is the Christian\u0027s Hope",
+        "category":  "Early Advent",
+        "firstLine":  "How cheering is the Christian\u0027s hope,",
+        "publicDomain":  false
+    },
+    {
+        "number":  441,
+        "title":  "I Saw One Weary",
+        "category":  "Early Advent",
+        "firstLine":  "I saw one weary, sad, and torn,",
+        "publicDomain":  false
+    },
+    {
+        "number":  442,
+        "title":  "How Sweet Are the Tidings",
+        "category":  "Early Advent",
+        "firstLine":  "How sweet  are the tidings that greet the pilgrim\u0027s ear,",
+        "publicDomain":  false
+    },
+    {
+        "number":  443,
+        "title":  "There\u0027ll Be No Sorrow There",
+        "category":  "Early Advent",
+        "firstLine":  "There\u0027ll be no night in heaven,",
+        "publicDomain":  false
+    },
+    {
+        "number":  444,
+        "title":  "I\u0027m a Pilgrim",
+        "category":  "Early Advent",
+        "firstLine":  "I\u0027m a pilgrim, and I\u0027m a stranger;",
+        "publicDomain":  false
+    },
+    {
+        "number":  445,
+        "title":  "I\u0027m But a Stranger Here",
+        "category":  "Early Advent",
+        "firstLine":  "I\u0027m but a stranger here,",
+        "publicDomain":  false
+    },
+    {
+        "number":  446,
+        "title":  "Lo, What a Glorious Sight Appears",
+        "category":  "Early Advent",
+        "firstLine":  "Lo, what a glorious sight appears",
+        "publicDomain":  false
+    },
+    {
+        "number":  447,
+        "title":  "Long Upon the Mountains",
+        "category":  "Early Advent",
+        "firstLine":  "Long upon the mountains weary,",
+        "publicDomain":  false
+    },
+    {
+        "number":  448,
+        "title":  "O, When Shall I See Jesus",
+        "category":  "Early Advent",
+        "firstLine":  "O, when shall I see Jesus and reign with Him above,",
+        "publicDomain":  false
+    },
+    {
+        "number":  449,
+        "title":  "Never Part Again",
+        "category":  "Early Advent",
+        "firstLine":  "There is a land of pure delight,",
+        "publicDomain":  false
+    },
+    {
+        "number":  450,
+        "title":  "Beautiful Zion",
+        "category":  "Early Advent",
+        "firstLine":  "Beautiful Zion, built above,",
+        "publicDomain":  false
+    },
+    {
+        "number":  451,
+        "title":  "Together Let Us Sweetly Live",
+        "category":  "Early Advent",
+        "firstLine":  "Together let us sweetly live,",
+        "publicDomain":  false
+    },
+    {
+        "number":  452,
+        "title":  "What Heavenly Music",
+        "category":  "Early Advent",
+        "firstLine":  "What heavenly music steals over the sea!",
+        "publicDomain":  false
+    },
+    {
+        "number":  453,
+        "title":  "We Have Heard",
+        "category":  "Early Advent",
+        "firstLine":  "We have heard from the bright, the holy, land;",
+        "publicDomain":  false
+    },
+    {
+        "number":  454,
+        "title":  "Don\u0027t You See My Jesus Coming",
+        "category":  "Early Advent",
+        "firstLine":  "Don\u0027t you see my Jesus coming,",
+        "publicDomain":  false
+    },
+    {
+        "number":  455,
+        "title":  "Immortal Love, Forever Full",
+        "category":  "Christian Life",
+        "firstLine":  "Immortal Love, forever full,",
+        "publicDomain":  false
+    },
+    {
+        "number":  456,
+        "title":  "My Lord and I",
+        "category":  "Christian Life",
+        "firstLine":  "I have a Friend so precious,",
+        "publicDomain":  false
+    },
+    {
+        "number":  457,
+        "title":  "I Love to Tell the Story",
+        "category":  "Christian Life",
+        "firstLine":  "I love to tell the story",
+        "publicDomain":  false
+    },
+    {
+        "number":  458,
+        "title":  "More Love to Thee",
+        "category":  "Christian Life",
+        "firstLine":  "More love to thee, O Christ, more love to thee!",
+        "publicDomain":  false
+    },
+    {
+        "number":  459,
+        "title":  "As the Bridegroom to His Chosen",
+        "category":  "Christian Life",
+        "firstLine":  "As the bridegroom to his chosen,",
+        "publicDomain":  false
+    },
+    {
+        "number":  460,
+        "title":  "As Water to the Thirsty",
+        "category":  "Christian Life",
+        "firstLine":  "As water to the thirsty,",
+        "publicDomain":  false
+    },
+    {
+        "number":  461,
+        "title":  "Be Still, My Soul",
+        "category":  "Christian Life",
+        "firstLine":  "Be still, my soul: the Lord is on thy side;",
+        "publicDomain":  false
+    },
+    {
+        "number":  462,
+        "title":  "Blessed Assurance, Jesus is Mine!",
+        "category":  "Christian Life",
+        "firstLine":  "Blessed assurance, Jesus is mine!",
+        "publicDomain":  false
+    },
+    {
+        "number":  463,
+        "title":  "Peace, Perfect Peace",
+        "category":  "Christian Life",
+        "firstLine":  "Peace, perfect peace, in this dark world of sin?",
+        "publicDomain":  false
+    },
+    {
+        "number":  464,
+        "title":  "When I Can Read My Title Clear",
+        "category":  "Christian Life",
+        "firstLine":  "When I can read my title clear",
+        "publicDomain":  false
+    },
+    {
+        "number":  465,
+        "title":  "I Heard the Voice of Jesus",
+        "category":  "Christian Life",
+        "firstLine":  "I heard the voice of Jesus say,",
+        "publicDomain":  false
+    },
+    {
+        "number":  466,
+        "title":  "Wonderful Peace",
+        "category":  "Christian Life",
+        "firstLine":  "Far away in the depths of my spirit tonight,",
+        "publicDomain":  false
+    },
+    {
+        "number":  467,
+        "title":  "Life Is Great! So Sing About It",
+        "category":  "Christian Life",
+        "firstLine":  "Life is great! So sing about it,",
+        "publicDomain":  false
+    },
+    {
+        "number":  468,
+        "title":  "A Child of the King",
+        "category":  "Christian Life",
+        "firstLine":  "My Father is rich in houses and lands,",
+        "publicDomain":  false
+    },
+    {
+        "number":  469,
+        "title":  "Leaning on the Everlasting Arms",
+        "category":  "Christian Life",
+        "firstLine":  "What a fellowship, what a joy divine,",
+        "publicDomain":  false
+    },
+    {
+        "number":  470,
+        "title":  "There\u0027s Sunshine in My Soul Today",
+        "category":  "Christian Life",
+        "firstLine":  "There\u0027s sunshine in my soul today,",
+        "publicDomain":  false
+    },
+    {
+        "number":  471,
+        "title":  "Grant Us Your Peace",
+        "category":  "Christian Life",
+        "firstLine":  "Dona nobis pacem, pacem; Dona nobis pacem.",
+        "publicDomain":  false
+    },
+    {
+        "number":  472,
+        "title":  "A Song of Heaven and Homeland",
+        "category":  "Christian Life",
+        "firstLine":  "Sometimes I hear strange music,",
+        "publicDomain":  false
+    },
+    {
+        "number":  473,
+        "title":  "Nearer My God, to Thee",
+        "category":  "Christian Life",
+        "firstLine":  "Nearer, my God, to thee, nearer to thee!",
+        "publicDomain":  false
+    },
+    {
+        "number":  474,
+        "title":  "Take the Name of Jesus With You",
+        "category":  "Christian Life",
+        "firstLine":  "Take the Name of Jesus with you,",
+        "publicDomain":  false
+    },
+    {
+        "number":  475,
+        "title":  "Balm in Gilead",
+        "category":  "Christian Life",
+        "firstLine":  "There is a balm in Gilead",
+        "publicDomain":  false
+    },
+    {
+        "number":  476,
+        "title":  "Burdens Are Lifted at Calvary",
+        "category":  "Christian Life",
+        "firstLine":  "Days are filled with sorrow and care,",
+        "publicDomain":  false
+    },
+    {
+        "number":  477,
+        "title":  "Come, Ye Disconsolate",
+        "category":  "Christian Life",
+        "firstLine":  "Come, ye disconsolate, where\u0027er ye languish.",
+        "publicDomain":  false
+    },
+    {
+        "number":  478,
+        "title":  "Sweet Hour of Prayer",
+        "category":  "Christian Life",
+        "firstLine":  "Sweet hour of prayer! sweet hour of prayer!",
+        "publicDomain":  false
+    },
+    {
+        "number":  479,
+        "title":  "Tread Softly",
+        "category":  "Christian Life",
+        "firstLine":  "Be silent, be silent,",
+        "publicDomain":  false
+    },
+    {
+        "number":  480,
+        "title":  "Dear Lord and Father",
+        "category":  "Christian Life",
+        "firstLine":  "Dear Lord and Father of mankind,",
+        "publicDomain":  false
+    },
+    {
+        "number":  481,
+        "title":  "Dear Lord and Father",
+        "category":  "Christian Life",
+        "firstLine":  "Dear Lord and Father of mankind,",
+        "publicDomain":  false
+    },
+    {
+        "number":  482,
+        "title":  "Father, Lead Me Day by Day",
+        "category":  "Christian Life",
+        "firstLine":  "Father, lead me day by day,",
+        "publicDomain":  false
+    },
+    {
+        "number":  483,
+        "title":  "I Need Thee Every Hour",
+        "category":  "Christian Life",
+        "firstLine":  "I need thee every hour, most gracious Lord;",
+        "publicDomain":  false
+    },
+    {
+        "number":  484,
+        "title":  "I Need Thee, Precious Jesus",
+        "category":  "Christian Life",
+        "firstLine":  "I need Thee precious Jesus, for I am very poor;",
+        "publicDomain":  false
+    },
+    {
+        "number":  485,
+        "title":  "I Must Tell Jesus",
+        "category":  "Christian Life",
+        "firstLine":  "I must tell Jesus all of my trials,",
+        "publicDomain":  false
+    },
+    {
+        "number":  486,
+        "title":  "I Do Believe",
+        "category":  "Christian Life",
+        "firstLine":  "Father, I stretch my hands to Thee;",
+        "publicDomain":  false
+    },
+    {
+        "number":  487,
+        "title":  "In the Garden",
+        "category":  "Christian Life",
+        "firstLine":  "I come to the garden alone,",
+        "publicDomain":  false
+    },
+    {
+        "number":  488,
+        "title":  "At First I Prayed for Light",
+        "category":  "Christian Life",
+        "firstLine":  "At first I prayed for light:",
+        "publicDomain":  false
+    },
+    {
+        "number":  489,
+        "title":  "Jesus, Lover of My Soul",
+        "category":  "Christian Life",
+        "firstLine":  "Jesus, lover of my soul,",
+        "publicDomain":  false
+    },
+    {
+        "number":  490,
+        "title":  "Jesus, Lover of My Soul",
+        "category":  "Christian Life",
+        "firstLine":  "Jesus, lover of my soul, let me to Thy bosom fly,",
+        "publicDomain":  false
+    },
+    {
+        "number":  491,
+        "title":  "In the Hour of Trial",
+        "category":  "Christian Life",
+        "firstLine":  "In the hour of trial, Jesus, plead for me,",
+        "publicDomain":  false
+    },
+    {
+        "number":  492,
+        "title":  "Like Jesus",
+        "category":  "Christian Life",
+        "firstLine":  "Teach, me, Father, what to say;",
+        "publicDomain":  false
+    },
+    {
+        "number":  493,
+        "title":  "Fill My Cup, Lord",
+        "category":  "Christian Life",
+        "firstLine":  "Like the woman at the well I was seeking",
+        "publicDomain":  false
+    },
+    {
+        "number":  494,
+        "title":  "We Would See Jesus",
+        "category":  "Christian Life",
+        "firstLine":  "\"We would see Jesus;\" for the shadows lengthen",
+        "publicDomain":  false
+    },
+    {
+        "number":  495,
+        "title":  "Near to the Heart of God",
+        "category":  "Christian Life",
+        "firstLine":  "There is a place of quiet rest,",
+        "publicDomain":  false
+    },
+    {
+        "number":  496,
+        "title":  "Eternal Love, We Have No Good",
+        "category":  "Christian Life",
+        "firstLine":  "Eternal Love, we have no good to bring Thee,",
+        "publicDomain":  false
+    },
+    {
+        "number":  497,
+        "title":  "O Gracious Father of Mankind",
+        "category":  "Christian Life",
+        "firstLine":  "O gracious Father of mankind,",
+        "publicDomain":  false
+    },
+    {
+        "number":  498,
+        "title":  "Still, Still With Thee",
+        "category":  "Christian Life",
+        "firstLine":  "Still, still with Thee, when purple morning breaketh,",
+        "publicDomain":  false
+    },
+    {
+        "number":  499,
+        "title":  "What a Friend We Have in Jesus",
+        "category":  "Christian Life",
+        "firstLine":  "What a friend we have in Jesus,",
+        "publicDomain":  false
+    },
+    {
+        "number":  500,
+        "title":  "Take Time to Be Holy",
+        "category":  "Christian Life",
+        "firstLine":  "Take time to be holy,",
+        "publicDomain":  false
+    },
+    {
+        "number":  501,
+        "title":  "\u0027Tis the Blessed Hour of Prayer",
+        "category":  "Christian Life",
+        "firstLine":  "\u0027Tis the blessed hour of prayer, when our hearts lowly bend,",
+        "publicDomain":  false
+    },
+    {
+        "number":  502,
+        "title":  "Sun of My Soul",
+        "category":  "Christian Life",
+        "firstLine":  "Sun of my soul, O Savior dear!",
+        "publicDomain":  false
+    },
+    {
+        "number":  503,
+        "title":  "A Quiet Place",
+        "category":  "Christian Life",
+        "firstLine":  "There is a quiet place,",
+        "publicDomain":  false
+    },
+    {
+        "number":  504,
+        "title":  "Lord Jesus, Think on Me",
+        "category":  "Christian Life",
+        "firstLine":  "Lord Jesus, think on me, And purge away my sin;",
+        "publicDomain":  false
+    },
+    {
+        "number":  505,
+        "title":  "I Need the Prayers",
+        "category":  "Christian Life",
+        "firstLine":  "I need the prayers of those I love,",
+        "publicDomain":  false
+    },
+    {
+        "number":  506,
+        "title":  "A Mighty Fortress",
+        "category":  "Christian Life",
+        "firstLine":  "A mighty fortress is our God,",
+        "publicDomain":  false
+    },
+    {
+        "number":  507,
+        "title":  "Moment by Moment",
+        "category":  "Christian Life",
+        "firstLine":  "Dying with Jesus, by death reckoned mine,",
+        "publicDomain":  false
+    },
+    {
+        "number":  508,
+        "title":  "Anywhere With Jesus",
+        "category":  "Christian Life",
+        "firstLine":  "Anywhere with Jesus I can safely go,",
+        "publicDomain":  false
+    },
+    {
+        "number":  509,
+        "title":  "How Firm a Foundation",
+        "category":  "Christian Life",
+        "firstLine":  "How firm a foundation, ye saints of the Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  510,
+        "title":  "If You But Trust in God to Guide You",
+        "category":  "Christian Life",
+        "firstLine":  "If you but trust in God to guide you",
+        "publicDomain":  false
+    },
+    {
+        "number":  511,
+        "title":  "I Know Whom I Have Believed",
+        "category":  "Christian Life",
+        "firstLine":  "I know not why God\u0027s wondrous grace To me He hath made known,",
+        "publicDomain":  false
+    },
+    {
+        "number":  512,
+        "title":  "Just When I Need Him Most",
+        "category":  "Christian Life",
+        "firstLine":  "Just when I need Him, Jesus is near,",
+        "publicDomain":  false
+    },
+    {
+        "number":  513,
+        "title":  "In Heavenly Love Abiding",
+        "category":  "Christian Life",
+        "firstLine":  "In heavenly love abiding, No change my heart shall fear;",
+        "publicDomain":  false
+    },
+    {
+        "number":  514,
+        "title":  "Lord of Our Life",
+        "category":  "Christian Life",
+        "firstLine":  "Lord of our life, and God of our salvation,",
+        "publicDomain":  false
+    },
+    {
+        "number":  515,
+        "title":  "The Lord Is My Light",
+        "category":  "Christian Life",
+        "firstLine":  "The Lord is my light; then why should I fear?",
+        "publicDomain":  false
+    },
+    {
+        "number":  516,
+        "title":  "All the Way",
+        "category":  "Christian Life",
+        "firstLine":  "All the way my Savior leads me;",
+        "publicDomain":  false
+    },
+    {
+        "number":  517,
+        "title":  "My Faith Looks Up to Thee",
+        "category":  "Christian Life",
+        "firstLine":  "My faith looks up to thee,",
+        "publicDomain":  false
+    },
+    {
+        "number":  518,
+        "title":  "Standing on the Promises",
+        "category":  "Christian Life",
+        "firstLine":  "Standing on the promises of Christ my King,",
+        "publicDomain":  false
+    },
+    {
+        "number":  519,
+        "title":  "Give to the Winds Your Fears",
+        "category":  "Christian Life",
+        "firstLine":  "Give to the winds your fears;",
+        "publicDomain":  false
+    },
+    {
+        "number":  520,
+        "title":  "He Hideth My Soul",
+        "category":  "Christian Life",
+        "firstLine":  "A wonderful Savior is Jesus my Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  521,
+        "title":  "Depth of Mercy",
+        "category":  "Christian Life",
+        "firstLine":  "Depth of mercy!--can there be",
+        "publicDomain":  false
+    },
+    {
+        "number":  522,
+        "title":  "My Hope Is Built on Nothing Less",
+        "category":  "Christian Life",
+        "firstLine":  "My hope is built on nothing less",
+        "publicDomain":  false
+    },
+    {
+        "number":  523,
+        "title":  "My Faith Has Found a Resting Place",
+        "category":  "Christian Life",
+        "firstLine":  "My faith has found a resting place,",
+        "publicDomain":  false
+    },
+    {
+        "number":  524,
+        "title":  "\u0027Tis So Sweet to Trust in Jesus",
+        "category":  "Christian Life",
+        "firstLine":  "\u0027Tis so sweet to trust in Jesus,",
+        "publicDomain":  false
+    },
+    {
+        "number":  525,
+        "title":  "Hiding in Thee",
+        "category":  "Christian Life",
+        "firstLine":  "O safe to the Rock that is higher than I,",
+        "publicDomain":  false
+    },
+    {
+        "number":  526,
+        "title":  "Because He Lives",
+        "category":  "Christian Life",
+        "firstLine":  "God sent His Son, they called His Jesus,",
+        "publicDomain":  false
+    },
+    {
+        "number":  527,
+        "title":  "From Every Stormy Wind",
+        "category":  "Christian Life",
+        "firstLine":  "From every stormy wind that blows, From every swelling tide of woes,",
+        "publicDomain":  false
+    },
+    {
+        "number":  528,
+        "title":  "A Shelter in the Time of Storm",
+        "category":  "Christian Life",
+        "firstLine":  "The Lord\u0027s our Rock, in Him we hide,",
+        "publicDomain":  false
+    },
+    {
+        "number":  529,
+        "title":  "Under His Wings",
+        "category":  "Christian Life",
+        "firstLine":  "Under His wings I am safely abiding;",
+        "publicDomain":  false
+    },
+    {
+        "number":  530,
+        "title":  "It Is Well With My Soul",
+        "category":  "Christian Life",
+        "firstLine":  "When peace, like a river, attendeth my way,",
+        "publicDomain":  false
+    },
+    {
+        "number":  531,
+        "title":  "We\u0027ll Build on the Rock",
+        "category":  "Christian Life",
+        "firstLine":  "We\u0027ll build on the Rock, the living Rock,",
+        "publicDomain":  false
+    },
+    {
+        "number":  532,
+        "title":  "Day by Day",
+        "category":  "Christian Life",
+        "firstLine":  "Day by day, and with each passing moment,",
+        "publicDomain":  false
+    },
+    {
+        "number":  533,
+        "title":  "O for a Faith",
+        "category":  "Christian Life",
+        "firstLine":  "O, for a faith that will not shrink,",
+        "publicDomain":  false
+    },
+    {
+        "number":  534,
+        "title":  "Will Your Anchor Hold",
+        "category":  "Christian Life",
+        "firstLine":  "Will your anchor hold in the storms of life,",
+        "publicDomain":  false
+    },
+    {
+        "number":  535,
+        "title":  "I Am Trusting Thee, Lord Jesus",
+        "category":  "Christian Life",
+        "firstLine":  "I am trusting Thee, Lord Jesus,",
+        "publicDomain":  false
+    },
+    {
+        "number":  536,
+        "title":  "God, Who Stretched the Spangled Heavens",
+        "category":  "Christian Life",
+        "firstLine":  "Infinite in time and place,",
+        "publicDomain":  false
+    },
+    {
+        "number":  537,
+        "title":  "He Leadeth Me",
+        "category":  "Christian Life",
+        "firstLine":  "He leadeth me: O blessed thought!",
+        "publicDomain":  false
+    },
+    {
+        "number":  538,
+        "title":  "Guide Me, O Thou Great Jehovah",
+        "category":  "Christian Life",
+        "firstLine":  "Guide me, O thou great Jehovah,",
+        "publicDomain":  false
+    },
+    {
+        "number":  539,
+        "title":  "I Will Early Seek the Savior",
+        "category":  "Christian Life",
+        "firstLine":  "I will early seek the Savior,",
+        "publicDomain":  false
+    },
+    {
+        "number":  540,
+        "title":  "Gentle Jesus, Meek and Mild",
+        "category":  "Christian Life",
+        "firstLine":  "Gentle Jesus, meek and mild,",
+        "publicDomain":  false
+    },
+    {
+        "number":  541,
+        "title":  "Lord, Speak to Me",
+        "category":  "Christian Life",
+        "firstLine":  "Lord, speak to me, that I may speak",
+        "publicDomain":  false
+    },
+    {
+        "number":  542,
+        "title":  "Jesus, Friend So Kind",
+        "category":  "Christian Life",
+        "firstLine":  "Jesus, Friend, so kind and gentle,",
+        "publicDomain":  false
+    },
+    {
+        "number":  543,
+        "title":  "Jesus, Friend of Little Children",
+        "category":  "Christian Life",
+        "firstLine":  "Jesus, Friend of little children,",
+        "publicDomain":  false
+    },
+    {
+        "number":  544,
+        "title":  "Jesus, Son of Blessed Mary",
+        "category":  "Christian Life",
+        "firstLine":  "Jesus, Son of blessed Mary,",
+        "publicDomain":  false
+    },
+    {
+        "number":  545,
+        "title":  "Savior, Like a Shepherd",
+        "category":  "Christian Life",
+        "firstLine":  "Savior, like a shepherd lead us,",
+        "publicDomain":  false
+    },
+    {
+        "number":  546,
+        "title":  "The Lord\u0027s My Shepherd",
+        "category":  "Christian Life",
+        "firstLine":  "The Lord\u0027s my shepherd, I\u0027ll not want",
+        "publicDomain":  false
+    },
+    {
+        "number":  547,
+        "title":  "Be Thou My Vision",
+        "category":  "Christian Life",
+        "firstLine":  "Be Thou my Vision, O Lord of my heart;",
+        "publicDomain":  false
+    },
+    {
+        "number":  548,
+        "title":  "Now Praise the Hidden God of Love",
+        "category":  "Christian Life",
+        "firstLine":  "Now praise the hidden God of love",
+        "publicDomain":  false
+    },
+    {
+        "number":  549,
+        "title":  "Loving Shepherd of Thy Sheep",
+        "category":  "Christian Life",
+        "firstLine":  "Loving Shepherd of Thy sheep,",
+        "publicDomain":  false
+    },
+    {
+        "number":  550,
+        "title":  "Every Flower That Grows",
+        "category":  "Christian Life",
+        "firstLine":  "Every flow\u0027r that grows, Every brook that flows,",
+        "publicDomain":  false
+    },
+    {
+        "number":  551,
+        "title":  "Jesus, Savior, Pilot Me",
+        "category":  "Christian Life",
+        "firstLine":  "Jesus, Savior, pilot me",
+        "publicDomain":  false
+    },
+    {
+        "number":  552,
+        "title":  "The Lord\u0027s My Shepherd",
+        "category":  "Christian Life",
+        "firstLine":  "The Lord\u0027s my Shepherd, I\u0027ll not want.",
+        "publicDomain":  false
+    },
+    {
+        "number":  553,
+        "title":  "Jesus, Guide Our Way",
+        "category":  "Christian Life",
+        "firstLine":  "Jesus, guide our way",
+        "publicDomain":  false
+    },
+    {
+        "number":  554,
+        "title":  "O Let Me Walk With Thee",
+        "category":  "Christian Life",
+        "firstLine":  "O let me walk with Thee, my God,",
+        "publicDomain":  false
+    },
+    {
+        "number":  555,
+        "title":  "Shepherd of Tender Youth",
+        "category":  "Christian Life",
+        "firstLine":  "Shepherd of tender you,",
+        "publicDomain":  false
+    },
+    {
+        "number":  556,
+        "title":  "As Saints of Old",
+        "category":  "Christian Life",
+        "firstLine":  "As saints of old their first fruits brought",
+        "publicDomain":  false
+    },
+    {
+        "number":  557,
+        "title":  "Come, Ye Thankful People",
+        "category":  "Christian Life",
+        "firstLine":  "Come, ye thankful people, come,",
+        "publicDomain":  false
+    },
+    {
+        "number":  558,
+        "title":  "For the Fruits of His Creation",
+        "category":  "Christian Life",
+        "firstLine":  "For the fruits of His creation, thanks be to God;",
+        "publicDomain":  false
+    },
+    {
+        "number":  559,
+        "title":  "Now Thank We All Our God",
+        "category":  "Christian Life",
+        "firstLine":  "Now thank we all our God",
+        "publicDomain":  false
+    },
+    {
+        "number":  560,
+        "title":  "Let All Things Now Living",
+        "category":  "Christian Life",
+        "firstLine":  "Let all things now living a song of thanksgiving",
+        "publicDomain":  false
+    },
+    {
+        "number":  561,
+        "title":  "We Plow the Fields",
+        "category":  "Christian Life",
+        "firstLine":  "We plow the fields, and scatter the good seed on the land,",
+        "publicDomain":  false
+    },
+    {
+        "number":  562,
+        "title":  "Come, Sing a Song of Harvest",
+        "category":  "Christian Life",
+        "firstLine":  "Come, sing a song of harvest, Of thanks for daily food!",
+        "publicDomain":  false
+    },
+    {
+        "number":  563,
+        "title":  "Praise and Thanksgiving",
+        "category":  "Christian Life",
+        "firstLine":  "Praise and thanksgiving let everyone bring",
+        "publicDomain":  false
+    },
+    {
+        "number":  564,
+        "title":  "For Sunrise Hope and Sunset Calm",
+        "category":  "Christian Life",
+        "firstLine":  "For sunrise hope and sunset calm, and all that lies between,",
+        "publicDomain":  false
+    },
+    {
+        "number":  565,
+        "title":  "For the Beauty of the Earth",
+        "category":  "Christian Life",
+        "firstLine":  "For the beauty of the earth,",
+        "publicDomain":  false
+    },
+    {
+        "number":  566,
+        "title":  "Father, We Thank You",
+        "category":  "Christian Life",
+        "firstLine":  "Father, we thank You for the light that shines all the day;",
+        "publicDomain":  false
+    },
+    {
+        "number":  567,
+        "title":  "Have Thine Own Way, Lord",
+        "category":  "Christian Life",
+        "firstLine":  "Have thine own way, Lord! Have thine own way!",
+        "publicDomain":  false
+    },
+    {
+        "number":  568,
+        "title":  "Make Me a Captive, Lord",
+        "category":  "Christian Life",
+        "firstLine":  "Make me a captive, Lord, and then I shall be free;",
+        "publicDomain":  false
+    },
+    {
+        "number":  569,
+        "title":  "Pass Me Not, O Gentle Savior",
+        "category":  "Christian Life",
+        "firstLine":  "Pass me not, O gentle Savior,",
+        "publicDomain":  false
+    },
+    {
+        "number":  570,
+        "title":  "Not I, But Christ",
+        "category":  "Christian Life",
+        "firstLine":  "Not I, but Christ, be honored, loved, exalted;",
+        "publicDomain":  false
+    },
+    {
+        "number":  571,
+        "title":  "What Does the Lord Require?",
+        "category":  "Christian Life",
+        "firstLine":  "What does the Lord require for praise and offering?",
+        "publicDomain":  false
+    },
+    {
+        "number":  572,
+        "title":  "Give of Your Best to the Master",
+        "category":  "Christian Life",
+        "firstLine":  "Give of your best to the master,",
+        "publicDomain":  false
+    },
+    {
+        "number":  573,
+        "title":  "I\u0027ll Go Where You Want Me to Go",
+        "category":  "Christian Life",
+        "firstLine":  "It may not be on the mountain height",
+        "publicDomain":  false
+    },
+    {
+        "number":  574,
+        "title":  "O Master, Let Me Walk With Thee",
+        "category":  "Christian Life",
+        "firstLine":  "O Master, let me walk with thee",
+        "publicDomain":  false
+    },
+    {
+        "number":  575,
+        "title":  "Let Your Heart Be Broken",
+        "category":  "Christian Life",
+        "firstLine":  "Let your heart be broken for a world in need:",
+        "publicDomain":  false
+    },
+    {
+        "number":  576,
+        "title":  "Awake, Awake to Love and Work",
+        "category":  "Christian Life",
+        "firstLine":  "Awake, awake to love and work!",
+        "publicDomain":  false
+    },
+    {
+        "number":  577,
+        "title":  "In the Heart of Jesus",
+        "category":  "Christian Life",
+        "firstLine":  "In the heart of Jesus there is love for you,",
+        "publicDomain":  false
+    },
+    {
+        "number":  578,
+        "title":  "So Send I You",
+        "category":  "Christian Life",
+        "firstLine":  "So sent I you- by grace made strong to triumph",
+        "publicDomain":  false
+    },
+    {
+        "number":  579,
+        "title":  "\u0027Tis Love That Makes Us Happy",
+        "category":  "Christian Life",
+        "firstLine":  "\u0027Tis love that makes us happy,",
+        "publicDomain":  false
+    },
+    {
+        "number":  580,
+        "title":  "This Little Light of Mine",
+        "category":  "Christian Life",
+        "firstLine":  "This little light of mine, I\u0027m going to let it shine, (shine)",
+        "publicDomain":  false
+    },
+    {
+        "number":  581,
+        "title":  "When the Church of Jesus",
+        "category":  "Christian Life",
+        "firstLine":  "When the church of Jesus shuts its outer door,",
+        "publicDomain":  false
+    },
+    {
+        "number":  582,
+        "title":  "Working, O Christ, With Thee",
+        "category":  "Christian Life",
+        "firstLine":  "Working, O Christ, with Thee, working with Thee,",
+        "publicDomain":  false
+    },
+    {
+        "number":  583,
+        "title":  "You That Know the Lord",
+        "category":  "Christian Life",
+        "firstLine":  "You that know the Lord is gracious,",
+        "publicDomain":  false
+    },
+    {
+        "number":  584,
+        "title":  "There\u0027s a Spirit in the Air",
+        "category":  "Christian Life",
+        "firstLine":  "There\u0027s a Spirit in the air, telling Christians everywhere",
+        "publicDomain":  false
+    },
+    {
+        "number":  585,
+        "title":  "When Christ Was Lifted From the Earth",
+        "category":  "Christian Life",
+        "firstLine":  "When Christ was lifted from the earth His arms stretched out above",
+        "publicDomain":  false
+    },
+    {
+        "number":  586,
+        "title":  "What Joy It Is to Worship Here",
+        "category":  "Christian Life",
+        "firstLine":  "What joy it is to worship here,",
+        "publicDomain":  false
+    },
+    {
+        "number":  587,
+        "title":  "In Christ There Is No East nor West",
+        "category":  "Christian Life",
+        "firstLine":  "In Christ there is no east nor west,",
+        "publicDomain":  false
+    },
+    {
+        "number":  588,
+        "title":  "Lord of All Nations",
+        "category":  "Christian Life",
+        "firstLine":  "Lord of all nations, grant me grace",
+        "publicDomain":  false
+    },
+    {
+        "number":  589,
+        "title":  "Holy Spirit, Gracious Guest",
+        "category":  "Christian Life",
+        "firstLine":  "Holy Spirit, gracious guest,",
+        "publicDomain":  false
+    },
+    {
+        "number":  590,
+        "title":  "Trust and Obey",
+        "category":  "Christian Life",
+        "firstLine":  "When we walk with the Lord",
+        "publicDomain":  false
+    },
+    {
+        "number":  591,
+        "title":  "In Our Work and in Our Play",
+        "category":  "Christian Life",
+        "firstLine":  "In our work and in our play,",
+        "publicDomain":  false
+    },
+    {
+        "number":  592,
+        "title":  "Watchman, Tell Us of the Night",
+        "category":  "Christian Life",
+        "firstLine":  "Watchman, tell us of the night what its signs of promise are.",
+        "publicDomain":  false
+    },
+    {
+        "number":  593,
+        "title":  "In Times Like These",
+        "category":  "Christian Life",
+        "firstLine":  "In times like these you need a Savior,",
+        "publicDomain":  false
+    },
+    {
+        "number":  594,
+        "title":  "Heir of the Kingdom",
+        "category":  "Christian Life",
+        "firstLine":  "Heir of the kingdom, O why dost thou slumber?",
+        "publicDomain":  false
+    },
+    {
+        "number":  595,
+        "title":  "Let Every Lamp Be Burning",
+        "category":  "Christian Life",
+        "firstLine":  "Let every lamp be burning bright,",
+        "publicDomain":  false
+    },
+    {
+        "number":  596,
+        "title":  "Look for the Waymarks",
+        "category":  "Christian Life",
+        "firstLine":  "Look for the way-marks as you journey on,",
+        "publicDomain":  false
+    },
+    {
+        "number":  597,
+        "title":  "Ye Servants of the Lord",
+        "category":  "Christian Life",
+        "firstLine":  "Ye servants of the Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  598,
+        "title":  "Watch, Ye Saints",
+        "category":  "Christian Life",
+        "firstLine":  "Watch, ye saints, with eyelids waking;",
+        "publicDomain":  false
+    },
+    {
+        "number":  599,
+        "title":  "Rejoice, Rejoice, Believers",
+        "category":  "Christian Life",
+        "firstLine":  "Rejoice, rejoice, believers, and let your lights appear:",
+        "publicDomain":  false
+    },
+    {
+        "number":  600,
+        "title":  "Hold Fast Till I Come",
+        "category":  "Christian Life",
+        "firstLine":  "Sweet promise is given to all who believe--",
+        "publicDomain":  false
+    },
+    {
+        "number":  601,
+        "title":  "Watchmen, on the Walls of Zion",
+        "category":  "Christian Life",
+        "firstLine":  "Watchmen, on the walls of Zion,",
+        "publicDomain":  false
+    },
+    {
+        "number":  602,
+        "title":  "O Brother, Be Faithful",
+        "category":  "Christian Life",
+        "firstLine":  "O brother be faithful! soon Jesus will come,",
+        "publicDomain":  false
+    },
+    {
+        "number":  603,
+        "title":  "Christian, Seek Not Repose",
+        "category":  "Christian Life",
+        "firstLine":  "Christian, seek not yet repose, Cast thy dreams of ease away;",
+        "publicDomain":  false
+    },
+    {
+        "number":  604,
+        "title":  "We Know Not the Hour",
+        "category":  "Christian Life",
+        "firstLine":  "We know not the hour of the Master\u0027s appearing;",
+        "publicDomain":  false
+    },
+    {
+        "number":  605,
+        "title":  "My Soul, Be on Thy Guard",
+        "category":  "Christian Life",
+        "firstLine":  "My soul, be on they guard!",
+        "publicDomain":  false
+    },
+    {
+        "number":  606,
+        "title":  "Once to Every Man and Nation",
+        "category":  "Christian Life",
+        "firstLine":  "Once to every man and nation, comes the moment to decide,",
+        "publicDomain":  false
+    },
+    {
+        "number":  607,
+        "title":  "God of Grace and God of Glory",
+        "category":  "Christian Life",
+        "firstLine":  "God of grace and God of glory,",
+        "publicDomain":  false
+    },
+    {
+        "number":  608,
+        "title":  "Faith Is the Victory",
+        "category":  "Christian Life",
+        "firstLine":  "Encamped along the hills of light,",
+        "publicDomain":  false
+    },
+    {
+        "number":  609,
+        "title":  "Am I a Soldier of the Cross?",
+        "category":  "Christian Life",
+        "firstLine":  "Am I a soldier of the cross,",
+        "publicDomain":  false
+    },
+    {
+        "number":  610,
+        "title":  "Stand Like the Brave",
+        "category":  "Christian Life",
+        "firstLine":  "O Christian, awake! \u0027tis the Master\u0027s command;",
+        "publicDomain":  false
+    },
+    {
+        "number":  611,
+        "title":  "Awake, My Soul!",
+        "category":  "Christian Life",
+        "firstLine":  "Awake, my soul! stretch every nerve,",
+        "publicDomain":  false
+    },
+    {
+        "number":  612,
+        "title":  "Onward, Christian Soldiers!",
+        "category":  "Christian Life",
+        "firstLine":  "Onward, Christian soldiers, marching as to war,",
+        "publicDomain":  false
+    },
+    {
+        "number":  613,
+        "title":  "Fight the Good Fight",
+        "category":  "Christian Life",
+        "firstLine":  "Fight the good fight with all thy might;",
+        "publicDomain":  false
+    },
+    {
+        "number":  614,
+        "title":  "Sound the Battle Cry",
+        "category":  "Christian Life",
+        "firstLine":  "Sound the battle cry,",
+        "publicDomain":  false
+    },
+    {
+        "number":  615,
+        "title":  "Rise Up, O Church of God",
+        "category":  "Christian Life",
+        "firstLine":  "Rise up, O men of God!",
+        "publicDomain":  false
+    },
+    {
+        "number":  616,
+        "title":  "Soldiers of Christ, Arise",
+        "category":  "Christian Life",
+        "firstLine":  "Soldiers of Christ,arise,",
+        "publicDomain":  false
+    },
+    {
+        "number":  617,
+        "title":  "We Are Living, We Are Dwelling",
+        "category":  "Christian Life",
+        "firstLine":  "We are living, we are dwelling, In a grand and awful time,",
+        "publicDomain":  false
+    },
+    {
+        "number":  618,
+        "title":  "Stand Up! Stand Up for Jesus!",
+        "category":  "Christian Life",
+        "firstLine":  "Stand up, stand up for Jesus! ye soldiers of the cross;",
+        "publicDomain":  false
+    },
+    {
+        "number":  619,
+        "title":  "Lead On, O King Eternal",
+        "category":  "Christian Life",
+        "firstLine":  "Lead on, O King eternal,",
+        "publicDomain":  false
+    },
+    {
+        "number":  620,
+        "title":  "On Jordan\u0027s Stormy Banks",
+        "category":  "Christian Life",
+        "firstLine":  "On Jordan\u0027s stormy banks I stand,",
+        "publicDomain":  false
+    },
+    {
+        "number":  621,
+        "title":  "Gracious Father, Guard Thy Children",
+        "category":  "Christian Life",
+        "firstLine":  "Gracious Father, guard Thy children",
+        "publicDomain":  false
+    },
+    {
+        "number":  622,
+        "title":  "Come, Come, Ye Saints",
+        "category":  "Christian Life",
+        "firstLine":  "Come, come, ye saints, no toil nor labor fear;",
+        "publicDomain":  false
+    },
+    {
+        "number":  623,
+        "title":  "I Will Follow Thee",
+        "category":  "Christian Life",
+        "firstLine":  "I will follow Thee, my Savior,",
+        "publicDomain":  false
+    },
+    {
+        "number":  624,
+        "title":  "I Want Jesus to Walk With Me",
+        "category":  "Christian Life",
+        "firstLine":  "I want Jesus to walk with me.",
+        "publicDomain":  false
+    },
+    {
+        "number":  625,
+        "title":  "Higher Ground",
+        "category":  "Christian Life",
+        "firstLine":  "I\u0027m pressing on the upward way,",
+        "publicDomain":  false
+    },
+    {
+        "number":  626,
+        "title":  "In a Little While We\u0027re Going Home",
+        "category":  "Christian Life",
+        "firstLine":  "Let us sing a song that will cheer us by the way,",
+        "publicDomain":  false
+    },
+    {
+        "number":  627,
+        "title":  "Jacob\u0027s Ladder",
+        "category":  "Christian Life",
+        "firstLine":  "We are climbing Jacob\u0027s ladder,",
+        "publicDomain":  false
+    },
+    {
+        "number":  628,
+        "title":  "As Jacob With Travel Was Weary",
+        "category":  "Christian Life",
+        "firstLine":  "As Jacob with travel was weary one day,",
+        "publicDomain":  false
+    },
+    {
+        "number":  629,
+        "title":  "O Happy Band of Pilgrims",
+        "category":  "Christian Life",
+        "firstLine":  "O happy band of pilgrims,",
+        "publicDomain":  false
+    },
+    {
+        "number":  630,
+        "title":  "Rise, My Soul, and Stretch Thy Wings",
+        "category":  "Christian Life",
+        "firstLine":  "Rise, my soul, and stretch thy wings, thy better portion trace;",
+        "publicDomain":  false
+    },
+    {
+        "number":  631,
+        "title":  "When on Life a Darkness Falls",
+        "category":  "Christian Life",
+        "firstLine":  "When on life a darkness falls,",
+        "publicDomain":  false
+    },
+    {
+        "number":  632,
+        "title":  "Until Then",
+        "category":  "Christian Life",
+        "firstLine":  "My heart can sing when I pause to remember,",
+        "publicDomain":  false
+    },
+    {
+        "number":  633,
+        "title":  "When We All Get to Heaven",
+        "category":  "Christian Life",
+        "firstLine":  "Sing the wondrous love of Jesus;",
+        "publicDomain":  false
+    },
+    {
+        "number":  634,
+        "title":  "Come, All Christians, Be Committed",
+        "category":  "Christian Life",
+        "firstLine":  "Come, all Christians, be committed",
+        "publicDomain":  false
+    },
+    {
+        "number":  635,
+        "title":  "Lord of All Good",
+        "category":  "Christian Life",
+        "firstLine":  "Lord of all good, our gifts we bring You now;",
+        "publicDomain":  false
+    },
+    {
+        "number":  636,
+        "title":  "God, Whose Giving Knows No Ending",
+        "category":  "Christian Life",
+        "firstLine":  "God, whose giving knows no ending,",
+        "publicDomain":  false
+    },
+    {
+        "number":  637,
+        "title":  "Son of God, Eternal Savior",
+        "category":  "Christian Life",
+        "firstLine":  "Son of God, eternal Savior,",
+        "publicDomain":  false
+    },
+    {
+        "number":  638,
+        "title":  "The Wise May Bring Their Learning",
+        "category":  "Christian Life",
+        "firstLine":  "wise may bring their learning,",
+        "publicDomain":  false
+    },
+    {
+        "number":  639,
+        "title":  "A Diligent and Grateful Heart",
+        "category":  "Christian Life",
+        "firstLine":  "A diligent and grateful heart",
+        "publicDomain":  false
+    },
+    {
+        "number":  640,
+        "title":  "For Beauty of Meadows",
+        "category":  "Christian Life",
+        "firstLine":  "For beauty of meadows, for grandeur of trees,",
+        "publicDomain":  false
+    },
+    {
+        "number":  641,
+        "title":  "God in His Love for Us",
+        "category":  "Christian Life",
+        "firstLine":  "God in His love for us lent us this planet,",
+        "publicDomain":  false
+    },
+    {
+        "number":  642,
+        "title":  "We Praise Thee With Our Minds",
+        "category":  "Christian Life",
+        "firstLine":  "We praise Thee with our minds, O Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  643,
+        "title":  "Father, Who on Us Do Shower",
+        "category":  "Christian Life",
+        "firstLine":  "Father, who on us do shower",
+        "publicDomain":  false
+    },
+    {
+        "number":  644,
+        "title":  "O God, Whose Will Is Life and Good",
+        "category":  "Christian Life",
+        "firstLine":  "O God, whose will is life and good",
+        "publicDomain":  false
+    },
+    {
+        "number":  645,
+        "title":  "God of our fathers",
+        "category":  "Christian Life",
+        "firstLine":  "God of our fathers, Whose almighty hand",
+        "publicDomain":  false
+    },
+    {
+        "number":  646,
+        "title":  "To the Name That Brings Salvation",
+        "category":  "Christian Life",
+        "firstLine":  "To the name that brings salvation",
+        "publicDomain":  false
+    },
+    {
+        "number":  647,
+        "title":  "Mine Eyes Have Seen the Glory",
+        "category":  "Christian Life",
+        "firstLine":  "Mine eyes have seen the glory of the coming of the Lord;",
+        "publicDomain":  false
+    },
+    {
+        "number":  648,
+        "title":  "I Vow to Thee, My Country",
+        "category":  "Christian Life",
+        "firstLine":  "I vow to thee, my country, all earthly things above,",
+        "publicDomain":  false
+    },
+    {
+        "number":  649,
+        "title":  "Lord, While for All Mankind We Pray",
+        "category":  "Christian Life",
+        "firstLine":  "Lord, while for all mankind we pray",
+        "publicDomain":  false
+    },
+    {
+        "number":  650,
+        "title":  "Our Father, by Whose Name",
+        "category":  "Christian Home",
+        "firstLine":  "Our Father, by whose name,",
+        "publicDomain":  false
+    },
+    {
+        "number":  651,
+        "title":  "Happy the Home That Welcomes You",
+        "category":  "Christian Home",
+        "firstLine":  "Happy the home that welcomes You, Lord Jesus,",
+        "publicDomain":  false
+    },
+    {
+        "number":  652,
+        "title":  "Love at Home",
+        "category":  "Christian Home",
+        "firstLine":  "There is beauty all around, When there\u0027s love at home;",
+        "publicDomain":  false
+    },
+    {
+        "number":  653,
+        "title":  "Lead Them, My God, to Thee",
+        "category":  "Christian Home",
+        "firstLine":  "Lead them, my God, to Thee, Lead them to Thee,",
+        "publicDomain":  false
+    },
+    {
+        "number":  654,
+        "title":  "Lord, Bless Our Homes",
+        "category":  "Christian Home",
+        "firstLine":  "Lord, bless our homes with peace and love and laughter,",
+        "publicDomain":  false
+    },
+    {
+        "number":  655,
+        "title":  "Happy the Home",
+        "category":  "Christian Home",
+        "firstLine":  "Happy the home when God is there,",
+        "publicDomain":  false
+    },
+    {
+        "number":  656,
+        "title":  "O Perfect Love",
+        "category":  "Christian Home",
+        "firstLine":  "O perfect Love, all human thought transcending,",
+        "publicDomain":  false
+    },
+    {
+        "number":  657,
+        "title":  "O God, From Whom Mankind",
+        "category":  "Christian Home",
+        "firstLine":  "O God from whom mankind derives its name;",
+        "publicDomain":  false
+    },
+    {
+        "number":  658,
+        "title":  "Heavenly Father, Hear Our Prayer",
+        "category":  "Christian Home",
+        "firstLine":  "Heav\u0027nly Father, hear our prayer",
+        "publicDomain":  false
+    },
+    {
+        "number":  659,
+        "title":  "May the Grace of Christ Our Savior",
+        "category":  "Christian Home",
+        "firstLine":  "May the grace of Christ our Savior",
+        "publicDomain":  false
+    },
+    {
+        "number":  660,
+        "title":  "Glory Be to the Father",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Glory be to the Father,",
+        "publicDomain":  false
+    },
+    {
+        "number":  661,
+        "title":  "Holy, Holy, Holy",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Holy, holy, holy, Holy is the Lord!",
+        "publicDomain":  false
+    },
+    {
+        "number":  662,
+        "title":  "Let All Mortal Flesh Keep Silence",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Let all mortal flesh keep silence,",
+        "publicDomain":  false
+    },
+    {
+        "number":  663,
+        "title":  "Amens",
+        "category":  "Sentences and Responses",
+        "firstLine":  "A-men, A---men.",
+        "publicDomain":  false
+    },
+    {
+        "number":  664,
+        "title":  "Sevenfold Amen",
+        "category":  "Sentences and Responses",
+        "firstLine":  "A-men,",
+        "publicDomain":  false
+    },
+    {
+        "number":  665,
+        "title":  "All Things Come of Thee",
+        "category":  "Sentences and Responses",
+        "firstLine":  "All things come of thee, O Lord;",
+        "publicDomain":  false
+    },
+    {
+        "number":  666,
+        "title":  "Cast Thy Burden Upon the Lord",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Cast thy burden upon the Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  667,
+        "title":  "Lord, Bless Thy Word to Every Heart",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Lord, bless Thy word to every heart",
+        "publicDomain":  false
+    },
+    {
+        "number":  668,
+        "title":  "O Thou Who Hearest",
+        "category":  "Sentences and Responses",
+        "firstLine":  "O Thou who hearest every heartfelt prayer,",
+        "publicDomain":  false
+    },
+    {
+        "number":  669,
+        "title":  "The Lord Bless You and Keep You",
+        "category":  "Sentences and Responses",
+        "firstLine":  "The Lord bless you and keep you,",
+        "publicDomain":  false
+    },
+    {
+        "number":  670,
+        "title":  "We Give Thee But Thine Own",
+        "category":  "Sentences and Responses",
+        "firstLine":  "We give Thee but Thine own,",
+        "publicDomain":  false
+    },
+    {
+        "number":  671,
+        "title":  "Now, Dear Lord, As We Pray",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Now, dear Lord, as we pray,",
+        "publicDomain":  false
+    },
+    {
+        "number":  672,
+        "title":  "Spirit of the Living God",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Spirit of the living God,",
+        "publicDomain":  false
+    },
+    {
+        "number":  673,
+        "title":  "May God Be With You",
+        "category":  "Sentences and Responses",
+        "firstLine":  "May God be with you Till we meet again,",
+        "publicDomain":  false
+    },
+    {
+        "number":  674,
+        "title":  "Shalom",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Shalom, good friends,",
+        "publicDomain":  false
+    },
+    {
+        "number":  675,
+        "title":  "May the Lord Bless and Keep You",
+        "category":  "Sentences and Responses",
+        "firstLine":  "May the Lord bless you and keep you",
+        "publicDomain":  false
+    },
+    {
+        "number":  676,
+        "title":  "Thy Word Is a Lantern",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Thy Word is a lantern unto my feet,",
+        "publicDomain":  false
+    },
+    {
+        "number":  677,
+        "title":  "Heavenly Father, to Thee We Pray",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Heavenly Father, to Thee we pray,",
+        "publicDomain":  false
+    },
+    {
+        "number":  678,
+        "title":  "God Be in My Head",
+        "category":  "Sentences and Responses",
+        "firstLine":  "God be in my head, and in my understanding;",
+        "publicDomain":  false
+    },
+    {
+        "number":  679,
+        "title":  "God Be in My Head",
+        "category":  "Sentences and Responses",
+        "firstLine":  "God be in my head,",
+        "publicDomain":  false
+    },
+    {
+        "number":  680,
+        "title":  "Holy Spirit, Hear Us",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Holy Spirit, hear us;",
+        "publicDomain":  false
+    },
+    {
+        "number":  681,
+        "title":  "This Is the Day the Lord Hath Made",
+        "category":  "Sentences and Responses",
+        "firstLine":  "This is the day the Lord hath made;",
+        "publicDomain":  false
+    },
+    {
+        "number":  682,
+        "title":  "As You Have Promised, Lord",
+        "category":  "Sentences and Responses",
+        "firstLine":  "As You have promised, Lord, today,",
+        "publicDomain":  false
+    },
+    {
+        "number":  683,
+        "title":  "Jesus, Stand Among Us",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Jesus, stand among us",
+        "publicDomain":  false
+    },
+    {
+        "number":  684,
+        "title":  "Hear Our Prayer, O Lord",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Hear Our Prayer, O Lord,",
+        "publicDomain":  false
+    },
+    {
+        "number":  685,
+        "title":  "Cause Me to Hear",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Cause me to hear Thy loving kindness in the morning,",
+        "publicDomain":  false
+    },
+    {
+        "number":  686,
+        "title":  "Bless Thou the Gifts",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Bless thou the gifts our hands have brought;",
+        "publicDomain":  false
+    },
+    {
+        "number":  687,
+        "title":  "The Lord Is in His Holy Temple",
+        "category":  "Sentences and Responses",
+        "firstLine":  "The Lord is in HIs holy temple,",
+        "publicDomain":  false
+    },
+    {
+        "number":  688,
+        "title":  "Surely, Surely",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Surely, surely the Lord has been here,",
+        "publicDomain":  false
+    },
+    {
+        "number":  689,
+        "title":  "Day by Day, Dear Lord",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Day by day, Dear Lord, of Thee three things I pray:",
+        "publicDomain":  false
+    },
+    {
+        "number":  690,
+        "title":  "Dismiss Us, Lord With Blessing",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Dismiss us, Lord, with blessing, we pray;",
+        "publicDomain":  false
+    },
+    {
+        "number":  691,
+        "title":  "Lead Me, Lord",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Lead me, Lord, lead me in thy righteousness;",
+        "publicDomain":  false
+    },
+    {
+        "number":  692,
+        "title":  "The Lord Is in His Holy Temple",
+        "category":  "Sentences and Responses",
+        "firstLine":  "The Lord is in His holy temple,",
+        "publicDomain":  false
+    },
+    {
+        "number":  693,
+        "title":  "Almighty Father",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Almighty Father, hear our prayer,",
+        "publicDomain":  false
+    },
+    {
+        "number":  694,
+        "title":  "Praise God, From Whom All Blessings",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Praise God, from Whom all blessings flow;",
+        "publicDomain":  false
+    },
+    {
+        "number":  695,
+        "title":  "Praise God, From Whom All Blessings",
+        "category":  "Sentences and Responses",
+        "firstLine":  "Praise God, from Whom all blessings flow;",
+        "publicDomain":  false
+    }
+]
