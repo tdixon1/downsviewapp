@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
+    <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
+    <title>Downsview SDA Admin Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">Downsview SDA</p>
+          <h1>Admin Dashboard</h1>
+        </div>
+        <div class="actions">
+          <button id="refreshButton" class="ghost" type="button">Refresh</button>
+          <button id="signOutButton" class="ghost" type="button">Sign out</button>
+        </div>
+      </section>
+
+      <section id="configPanel" class="panel">
+        <h2>Sign In</h2>
+        <div class="grid two">
+          <label>
+            Email
+            <input id="email" type="email" autocomplete="email" />
+          </label>
+          <label>
+            Password
+            <input id="password" type="password" autocomplete="current-password" />
+          </label>
+        </div>
+        <button id="signInButton" type="button">Sign in</button>
+        <p class="hint">Only users with the admin role can load this dashboard.</p>
+      </section>
+
+      <section id="dashboardPanel" class="hidden">
+        <div id="analytics" class="metrics"></div>
+
+        <section class="panel">
+          <div class="section-head">
+            <div>
+              <h2>Users</h2>
+              <p>Change roles or delete accounts.</p>
+            </div>
+            <input id="userSearch" class="search" placeholder="Search users" />
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Roles</th>
+                  <th>Devices</th>
+                  <th>Last sign in</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="usersBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <div class="grid three">
+          <section class="panel">
+            <h2>Delivery Log</h2>
+            <div id="messagesList" class="stack"></div>
+          </section>
+          <section class="panel">
+            <h2>Follow Ups</h2>
+            <div id="followUpsList" class="stack"></div>
+          </section>
+          <section class="panel">
+            <h2>Audit Log</h2>
+            <div id="auditList" class="stack"></div>
+          </section>
+        </div>
+      </section>
+
+      <div id="toast" class="toast hidden"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

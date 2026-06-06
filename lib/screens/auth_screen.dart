@@ -41,6 +41,7 @@ class _AuthScreenState extends State<AuthScreen> {
           email: _email.text.trim(),
           password: _password.text,
           data: {'full_name': _name.text.trim()},
+          emailRedirectTo: 'https://downsviewsda.org/verified/',
         );
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(

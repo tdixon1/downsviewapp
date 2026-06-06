@@ -1,0 +1,7 @@
+Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex"
+Header set Cache-Control "no-store"
+Options -Indexes
+
+<FilesMatch "\.(html|js|css|txt)$">
+  Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex"
+</FilesMatch>

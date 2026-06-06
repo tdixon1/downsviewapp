@@ -168,6 +168,7 @@ class InfoScreenState extends State<InfoScreen> {
           'url': post.link,
           'title': 'New: ${post.title}',
           'body': post.excerpt,
+          'imageUrl': post.imageUrl,
         },
       });
       await supabase.functions.invoke('send-push-notifications');
@@ -195,6 +196,7 @@ class InfoScreenState extends State<InfoScreen> {
           'eventTimeLabel': event.timeLabel,
           'eventDetails': event.details,
           'eventImageUrl': event.imageUrl,
+          'imageUrl': event.imageUrl,
           'eventIsClosed': event.isClosed.toString(),
         },
       });

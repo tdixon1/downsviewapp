@@ -33,6 +33,15 @@ const stringifyData = (data: Record<string, unknown>) => {
   return output;
 };
 
+const imageUrlFromData = (data?: Record<string, unknown> | null) => {
+  const value = data?.imageUrl ?? data?.eventImageUrl ?? data?.postImageUrl;
+  if (typeof value !== 'string') return null;
+
+  const trimmed = value.trim();
+  if (!/^https?:\/\//i.test(trimmed)) return null;
+  return trimmed;
+};
+
 const base64Url = (input: ArrayBuffer | string) => {
   const bytes = typeof input === 'string' ? new TextEncoder().encode(input) : new Uint8Array(input);
   let binary = '';
@@ -197,6 +206,18 @@ Deno.serve(async (request) => {
 
     for (const tokenChunk of chunk(tokens, 100)) {
       await Promise.all(tokenChunk.map(async (tokenRow) => {
+        const imageUrl = imageUrlFromData(message.data);
+        const data = stringifyData({
+          ...(message.data ?? {}),
+          ...(imageUrl ? { imageUrl } : {}),
+          messageId: message.id,
+          title: message.title,
+          body: message.body,
+        });
+        const notification = imageUrl
+          ? { title: message.title, body: message.body, image: imageUrl }
+          : { title: message.title, body: message.body };
+
         const response = await fetch(
           `https://fcm.googleapis.com/v1/projects/${projectId}/messages:send`,
           {
@@ -208,20 +229,35 @@ Deno.serve(async (request) => {
             body: JSON.stringify({
               message: {
                 token: tokenRow.fcm_token,
-                notification: { title: message.title, body: message.body },
-                data: stringifyData({
-                  ...(message.data ?? {}),
-                  messageId: message.id,
-                  title: message.title,
-                  body: message.body,
-                }),
+                notification,
+                data,
                 android: {
                   priority: 'HIGH',
                   notification: {
                     channel_id: 'church-push',
                     sound: 'default',
+                    ...(imageUrl ? { image: imageUrl } : {}),
                   },
                 },
+                apns: imageUrl
+                  ? {
+                      payload: {
+                        aps: {
+                          'mutable-content': 1,
+                        },
+                      },
+                      fcm_options: {
+                        image: imageUrl,
+                      },
+                    }
+                  : undefined,
+                webpush: imageUrl
+                  ? {
+                      notification: {
+                        image: imageUrl,
+                      },
+                    }
+                  : undefined,
               },
             }),
           },

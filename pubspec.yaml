@@ -1,7 +1,7 @@
 name: downsview_sda
 description: Flutter port of the Downsview SDA church app.
 publish_to: "none"
-version: 1.0.2+3
+version: 1.0.3+4
 
 environment:
   sdk: ">=3.4.0 <4.0.0"

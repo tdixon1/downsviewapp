@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:http/http.dart' as http;
 
 import 'notification_navigation_service.dart';
 import 'supabase_service.dart';
@@ -244,11 +245,19 @@ class NotificationService {
     final body = notification?.body ?? message.data['body'] as String?;
     if (title == null && body == null) return;
 
+    final image = await _downloadNotificationImage(
+      message.data['imageUrl'] as String? ??
+          message.data['eventImageUrl'] as String? ??
+          message.data['postImageUrl'] as String? ??
+          notification?.android?.imageUrl ??
+          notification?.apple?.imageUrl,
+    );
+
     await _localNotifications.show(
       id: DateTime.now().millisecondsSinceEpoch.remainder(100000),
       title: title,
       body: body,
-      notificationDetails: const NotificationDetails(
+      notificationDetails: NotificationDetails(
         android: AndroidNotificationDetails(
           'church-push',
           'Church Push Notifications',
@@ -256,12 +265,60 @@ class NotificationService {
           importance: Importance.high,
           priority: Priority.high,
           icon: 'ic_stat_church_notification',
+          styleInformation: image?.androidStyle,
         ),
-        iOS: DarwinNotificationDetails(),
+        iOS: DarwinNotificationDetails(
+          attachments: image?.iosAttachment == null ? null : [image!.iosAttachment!],
+        ),
       ),
       payload: jsonEncode(message.data),
     );
   }
+
+  Future<_NotificationImage?> _downloadNotificationImage(String? url) async {
+    if (url == null || url.isEmpty || !url.startsWith(RegExp(r'https?://'))) {
+      return null;
+    }
+
+    try {
+      final response = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 8));
+      if (response.statusCode < 200 || response.statusCode >= 300 || response.bodyBytes.isEmpty) {
+        return null;
+      }
+
+      final androidStyle = BigPictureStyleInformation(
+        ByteArrayAndroidBitmap(response.bodyBytes),
+        largeIcon: ByteArrayAndroidBitmap(response.bodyBytes),
+      );
+
+      DarwinNotificationAttachment? iosAttachment;
+      if (!kIsWeb && Platform.isIOS) {
+        final extension = Uri.parse(url).path.toLowerCase().endsWith('.png') ? 'png' : 'jpg';
+        final file = File(
+          '${Directory.systemTemp.path}/downsview-notification-${DateTime.now().millisecondsSinceEpoch}.$extension',
+        );
+        await file.writeAsBytes(response.bodyBytes, flush: true);
+        iosAttachment = DarwinNotificationAttachment(file.path);
+      }
+
+      return _NotificationImage(
+        androidStyle: androidStyle,
+        iosAttachment: iosAttachment,
+      );
+    } catch (_) {
+      return null;
+    }
+  }
+}
+
+class _NotificationImage {
+  const _NotificationImage({
+    required this.androidStyle,
+    this.iosAttachment,
+  });
+
+  final BigPictureStyleInformation androidStyle;
+  final DarwinNotificationAttachment? iosAttachment;
 }
 
 bool _looksLikeMissingFcmSchema(Object error) {
