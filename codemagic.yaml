@@ -1,0 +1,95 @@
+workflows:
+  ios-simulator:
+    name: iOS Simulator Build
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      vars:
+        BUNDLE_ID: org.downsviewsda.downsviewSda
+    cache:
+      cache_paths:
+        - ~/.pub-cache
+        - ios/Pods
+    scripts:
+      - name: Create app environment file
+        script: |
+          set -e
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "SUPABASE_URL and SUPABASE_ANON_KEY must be set in Codemagic environment variables."
+            exit 1
+          fi
+          cat > .env <<EOF
+          SUPABASE_URL=$SUPABASE_URL
+          SUPABASE_ANON_KEY=$SUPABASE_ANON_KEY
+          EOF
+      - name: Install Flutter dependencies
+        script: flutter pub get
+      - name: Run analyzer
+        script: flutter analyze
+      - name: Run tests
+        script: flutter test
+      - name: Install iOS pods
+        script: |
+          cd ios
+          pod install
+      - name: Build unsigned simulator app
+        script: flutter build ios --debug --simulator --no-codesign
+      - name: Package simulator app
+        script: |
+          cd build/ios/iphonesimulator
+          zip -yr Runner-simulator.app.zip Runner.app
+    artifacts:
+      - build/ios/iphonesimulator/Runner-simulator.app.zip
+      - build/ios/iphonesimulator/Runner.app
+      - flutter_drive.log
+
+  ios-release:
+    name: iOS Signed IPA
+    instance_type: mac_mini_m2
+    max_build_duration: 90
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      vars:
+        BUNDLE_ID: org.downsviewsda.downsviewSda
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: org.downsviewsda.downsviewSda
+    cache:
+      cache_paths:
+        - ~/.pub-cache
+        - ios/Pods
+    scripts:
+      - name: Create app environment file
+        script: |
+          set -e
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "SUPABASE_URL and SUPABASE_ANON_KEY must be set in Codemagic environment variables."
+            exit 1
+          fi
+          cat > .env <<EOF
+          SUPABASE_URL=$SUPABASE_URL
+          SUPABASE_ANON_KEY=$SUPABASE_ANON_KEY
+          EOF
+      - name: Install Flutter dependencies
+        script: flutter pub get
+      - name: Run analyzer
+        script: flutter analyze
+      - name: Run tests
+        script: flutter test
+      - name: Set up code signing
+        script: xcode-project use-profiles
+      - name: Install iOS pods
+        script: |
+          cd ios
+          pod install
+      - name: Build signed IPA
+        script: flutter build ipa --release --export-options-plist=$CM_EXPORT_OPTIONS_PLIST
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - flutter_drive.log
