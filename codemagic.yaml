@@ -39,12 +39,7 @@ workflows:
           pod install
       - name: Build unsigned simulator app
         script: flutter build ios --debug --simulator --no-codesign
-      - name: Package simulator app
-        script: |
-          cd build/ios/iphonesimulator
-          zip -yr Runner-simulator.app.zip Runner.app
     artifacts:
-      - build/ios/iphonesimulator/Runner-simulator.app.zip
       - build/ios/iphonesimulator/Runner.app
       - flutter_drive.log
 
