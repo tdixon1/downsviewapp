@@ -45,7 +45,9 @@ class _AuthScreenState extends State<AuthScreen> {
         );
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Account created. You can now sign in.')),
+            const SnackBar(
+              content: Text('Account created. Please verify your email before signing in.'),
+            ),
           );
           setState(() => _isLogin = true);
         }
