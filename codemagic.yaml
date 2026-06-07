@@ -7,7 +7,7 @@ workflows:
       groups:
         - app_config
       flutter: stable
-      xcode: latest
+      xcode: 16.4
       cocoapods: default
       vars:
         BUNDLE_ID: org.downsviewsda.downsviewSda
@@ -53,7 +53,7 @@ workflows:
       groups:
         - app_config
       flutter: stable
-      xcode: latest
+      xcode: 16.4
       cocoapods: default
       vars:
         BUNDLE_ID: org.downsviewsda.downsviewSda
