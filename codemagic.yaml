@@ -29,6 +29,7 @@ workflows:
           EOF
       - name: Install Flutter dependencies
         script: |
+          flutter config --no-enable-swift-package-manager
           flutter clean
           flutter pub get
       - name: Run analyzer
@@ -80,6 +81,7 @@ workflows:
           EOF
       - name: Install Flutter dependencies
         script: |
+          flutter config --no-enable-swift-package-manager
           flutter clean
           flutter pub get
       - name: Run analyzer
