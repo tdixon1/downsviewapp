@@ -47,6 +47,8 @@ workflows:
     name: iOS Signed IPA
     instance_type: mac_mini_m2
     max_build_duration: 90
+    integrations:
+      app_store_connect: Codemagic App Manager Key
     environment:
       groups:
         - app_config
@@ -92,3 +94,6 @@ workflows:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
       - flutter_drive.log
+    publishing:
+      app_store_connect:
+        auth: integration
