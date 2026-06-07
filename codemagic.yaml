@@ -89,7 +89,20 @@ workflows:
           cd ios
           pod install
       - name: Build signed IPA
-        script: flutter build ipa --release --export-options-plist=/Users/builder/export_options.plist
+        script: |
+          set -e
+          flutter build ipa --release --export-options-plist=/Users/builder/export_options.plist
+          mkdir -p build/ios/ipa
+          IPA_PATH="$(find build -name "*.ipa" -print -quit)"
+          if [ -z "$IPA_PATH" ]; then
+            echo "No IPA was produced. Build outputs:"
+            find build/ios -maxdepth 5 -type f -print
+            exit 1
+          fi
+          if [ "$IPA_PATH" != "build/ios/ipa/downsview_sda.ipa" ]; then
+            cp "$IPA_PATH" build/ios/ipa/downsview_sda.ipa
+          fi
+          ls -la build/ios/ipa
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
