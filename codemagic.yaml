@@ -87,7 +87,7 @@ workflows:
           cd ios
           pod install
       - name: Build signed IPA
-        script: flutter build ipa --release --export-options-plist=$CM_EXPORT_OPTIONS_PLIST
+        script: flutter build ipa --release --export-options-plist=/Users/builder/export_options.plist
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
