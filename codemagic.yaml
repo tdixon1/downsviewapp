@@ -28,7 +28,9 @@ workflows:
           SUPABASE_ANON_KEY=$SUPABASE_ANON_KEY
           EOF
       - name: Install Flutter dependencies
-        script: flutter pub get
+        script: |
+          flutter clean
+          flutter pub get
       - name: Run analyzer
         script: flutter analyze lib test
       - name: Run tests
@@ -77,7 +79,9 @@ workflows:
           SUPABASE_ANON_KEY=$SUPABASE_ANON_KEY
           EOF
       - name: Install Flutter dependencies
-        script: flutter pub get
+        script: |
+          flutter clean
+          flutter pub get
       - name: Run analyzer
         script: flutter analyze lib test
       - name: Run tests
