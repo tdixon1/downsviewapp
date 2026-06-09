@@ -41,7 +41,7 @@ workflows:
           cd ios
           pod install
       - name: Build unsigned simulator app
-        script: flutter build ios --debug --simulator --no-codesign --build-name=1.0 --build-number=1
+        script: flutter build ios --debug --simulator --no-codesign --build-name=1.0.5 --build-number=6
     artifacts:
       - build/ios/iphonesimulator/Runner.app
       - flutter_drive.log
@@ -97,7 +97,7 @@ workflows:
       - name: Build signed IPA
         script: |
           set -e
-          flutter build ipa --release --build-name=1.0 --build-number=1 --export-options-plist=/Users/builder/export_options.plist
+          flutter build ipa --release --build-name=1.0.5 --build-number=6 --export-options-plist=/Users/builder/export_options.plist
           mkdir -p build/ios/ipa
           IPA_PATH="$(find build -name "*.ipa" -print -quit)"
           if [ -z "$IPA_PATH" ]; then
