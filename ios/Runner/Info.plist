@@ -28,6 +28,10 @@
 	<true/>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Downsview SDA uses calendar access to let you add church events and reminders to your calendar.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Downsview SDA uses the camera so you can take a profile photo.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Downsview SDA uses photo library access so you can choose an existing profile photo.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

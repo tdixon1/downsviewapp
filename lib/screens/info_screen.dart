@@ -971,6 +971,8 @@ class _EventSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
+      height: double.infinity,
       color: const Color(0x85102A43),
       padding: const EdgeInsets.all(24),
       child: Center(

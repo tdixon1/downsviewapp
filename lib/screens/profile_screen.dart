@@ -78,7 +78,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
     _fullName.text = metadata['full_name'] as String? ?? '';
     _birthday.text = metadata['birthday'] as String? ?? '';
     _phone.text = metadata['phone'] as String? ?? '';
-    _preferredContact.text = metadata['preferred_contact_method'] as String? ?? '';
+    _preferredContact.text =
+        metadata['preferred_contact_method'] as String? ?? '';
     _ministryInterest.text = metadata['ministry_interest'] as String? ?? '';
     _householdNotes.text = metadata['household_notes'] as String? ?? '';
     _avatarUrl = metadata['avatar_url'] as String?;
@@ -91,6 +92,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   Future<void> _chooseAvatarSource() async {
+    FocusManager.instance.primaryFocus?.unfocus();
     final source = await showModalBottomSheet<ImageSource>(
       context: context,
       backgroundColor: Colors.white,
@@ -103,7 +105,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text('Profile Photo', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900)),
+              const Text('Profile Photo',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900)),
               const SizedBox(height: 8),
               const Text(
                 'Choose how you would like to update your photo.',
@@ -125,10 +128,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       ),
     );
-    if (source != null) await _pickAvatar(source);
+    if (source == null || !mounted) return;
+    await Future<void>.delayed(const Duration(milliseconds: 120));
+    if (!mounted) return;
+    await _pickAvatar(source);
   }
 
   Future<void> _pickAvatar(ImageSource source) async {
+    FocusManager.instance.primaryFocus?.unfocus();
     try {
       final picker = ImagePicker();
       final image = await picker.pickImage(
@@ -136,14 +143,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
         maxWidth: 900,
         imageQuality: 80,
       );
-      if (image != null) setState(() => _selectedAvatar = image);
+      if (!mounted) return;
+      if (image != null) {
+        setState(() => _selectedAvatar = image);
+        FocusManager.instance.primaryFocus?.unfocus();
+      }
     } on PlatformException {
+      if (!mounted) return;
       _showPermissionMessage(
-        source == ImageSource.camera ? 'Camera Access Needed' : 'Photo Access Needed',
+        source == ImageSource.camera
+            ? 'Camera Access Needed'
+            : 'Photo Access Needed',
         source == ImageSource.camera
             ? 'Open App Settings and allow camera access to take a profile picture.'
             : 'Open App Settings and allow photo access to choose a profile picture.',
-        source == ImageSource.camera ? PermissionSettingsTarget.app : PermissionSettingsTarget.photos,
+        source == ImageSource.camera
+            ? PermissionSettingsTarget.app
+            : PermissionSettingsTarget.photos,
       );
     }
   }
@@ -155,16 +171,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     final bytes = await avatar.readAsBytes();
     if (bytes.isEmpty) {
-      throw Exception('Selected photo could not be read. Please choose another image or take a new photo.');
+      throw Exception(
+          'Selected photo could not be read. Please choose another image or take a new photo.');
     }
-    final extension = avatar.path.toLowerCase().endsWith('.png') ? 'png' : 'jpg';
+    final extension =
+        avatar.path.toLowerCase().endsWith('.png') ? 'png' : 'jpg';
     final contentType = extension == 'png' ? 'image/png' : 'image/jpeg';
-    final path = '${user.id}/${DateTime.now().millisecondsSinceEpoch}.$extension';
+    final path =
+        '${user.id}/${DateTime.now().millisecondsSinceEpoch}.$extension';
     await supabase.storage.from('avatars').uploadBinary(
-      path,
-      bytes,
-      fileOptions: FileOptions(contentType: contentType, upsert: true),
-    );
+          path,
+          bytes,
+          fileOptions: FileOptions(contentType: contentType, upsert: true),
+        );
     return supabase.storage.from('avatars').getPublicUrl(path);
   }
 
@@ -199,13 +218,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
         'email': updatedUser.email,
         'full_name': cleanFullName.isEmpty ? null : cleanFullName,
         'phone': _phone.text.trim().isEmpty ? null : _phone.text.trim(),
-        'preferred_contact_method':
-            _preferredContact.text.trim().isEmpty ? null : _preferredContact.text.trim(),
-        'ministry_interest':
-            _ministryInterest.text.trim().isEmpty ? null : _ministryInterest.text.trim(),
-        'household_notes': _householdNotes.text.trim().isEmpty ? null : _householdNotes.text.trim(),
-        'birthday': _birthday.text.trim().isEmpty ? null : _birthday.text.trim(),
-        'avatar_url': updatedUser.userMetadata?['avatar_url'] ?? uploadedAvatarUrl,
+        'preferred_contact_method': _preferredContact.text.trim().isEmpty
+            ? null
+            : _preferredContact.text.trim(),
+        'ministry_interest': _ministryInterest.text.trim().isEmpty
+            ? null
+            : _ministryInterest.text.trim(),
+        'household_notes': _householdNotes.text.trim().isEmpty
+            ? null
+            : _householdNotes.text.trim(),
+        'birthday':
+            _birthday.text.trim().isEmpty ? null : _birthday.text.trim(),
+        'avatar_url':
+            updatedUser.userMetadata?['avatar_url'] ?? uploadedAvatarUrl,
         'notification_preferences': preferences,
         'updated_at': DateTime.now().toIso8601String(),
       });
@@ -215,7 +240,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
       if (!mounted) return;
       setState(() {
         _user = updatedUser;
-        _avatarUrl = updatedUser.userMetadata?['avatar_url'] as String? ?? uploadedAvatarUrl;
+        _avatarUrl = updatedUser.userMetadata?['avatar_url'] as String? ??
+            uploadedAvatarUrl;
         _selectedAvatar = null;
         _saving = false;
       });
@@ -225,7 +251,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
       setState(() => _saving = false);
       final message = error.toString();
       if (message.toLowerCase().contains('bucket not found')) {
-        _showSnack('Avatar storage is not set up yet. Create the avatars bucket and try again.');
+        _showSnack(
+            'Avatar storage is not set up yet. Create the avatars bucket and try again.');
       } else {
         _showSnack('Could not save profile. Please try again.');
       }
@@ -239,11 +266,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
   void _setPreference(String key, bool value) {
     setState(() {
       _preferences = NotificationPreferences(
-        sabbathMorning: key == 'sabbathMorning' ? value : _preferences.sabbathMorning,
-        worshipReminder: key == 'worshipReminder' ? value : _preferences.worshipReminder,
-        midweekReminder: key == 'midweekReminder' ? value : _preferences.midweekReminder,
+        sabbathMorning:
+            key == 'sabbathMorning' ? value : _preferences.sabbathMorning,
+        worshipReminder:
+            key == 'worshipReminder' ? value : _preferences.worshipReminder,
+        midweekReminder:
+            key == 'midweekReminder' ? value : _preferences.midweekReminder,
         sermonPosted: key == 'sermonPosted' ? value : _preferences.sermonPosted,
-        eventReminders: key == 'eventReminders' ? value : _preferences.eventReminders,
+        eventReminders:
+            key == 'eventReminders' ? value : _preferences.eventReminders,
       );
     });
     if (value) {
@@ -280,7 +311,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             },
             child: const Text('Open Settings'),
           ),
-          TextButton(onPressed: () => Navigator.pop(context), child: const Text('OK')),
+          TextButton(
+              onPressed: () => Navigator.pop(context), child: const Text('OK')),
         ],
       ),
     );
@@ -288,7 +320,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   void _showSnack(String message) {
     if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(message)));
   }
 
   @override
@@ -320,7 +353,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Create an account when ready', style: _panelHeadingStyle),
+                    const Text('Create an account when ready',
+                        style: _panelHeadingStyle),
                     const SizedBox(height: 6),
                     const Text(
                       'Registration helps the pastoral team connect responses with your profile, but guests can still request follow-up by entering contact information on the Response tab.',
@@ -349,12 +383,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
             : (user.email?.isNotEmpty == true ? user.email![0] : '?'))
         .toUpperCase();
     final profileTasks = [
-      _ProfileTask('Add profile photo', _selectedAvatar != null || (_avatarUrl?.isNotEmpty == true)),
+      _ProfileTask('Add profile photo',
+          _selectedAvatar != null || (_avatarUrl?.isNotEmpty == true)),
       _ProfileTask('Add birthday', _birthday.text.trim().isNotEmpty),
-      _ProfileTask('Add contact preference', _preferredContact.text.trim().isNotEmpty),
-      _ProfileTask('Choose notification rhythms', _preferences.toJson().values.any((value) => value == true)),
+      _ProfileTask(
+          'Add contact preference', _preferredContact.text.trim().isNotEmpty),
+      _ProfileTask('Choose notification rhythms',
+          _preferences.toJson().values.any((value) => value == true)),
     ];
-    final completedProfileTasks = profileTasks.where((task) => task.complete).length;
+    final completedProfileTasks =
+        profileTasks.where((task) => task.complete).length;
 
     return Scaffold(
       backgroundColor: const Color(0xFFF6F9FE),
@@ -367,7 +405,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const _ProfileHeader(
               eyebrow: 'Profile',
               title: 'Your account',
-              subtitle: 'Manage your identity and session for the Downsview SDA app.',
+              subtitle:
+                  'Manage your identity and session for the Downsview SDA app.',
               icon: Icons.verified_user_outlined,
             ),
             _ProfilePanel(
@@ -415,9 +454,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 foregroundColor: AppColors.danger,
                 backgroundColor: const Color(0xFFFFF5F5),
                 side: const BorderSide(color: Color(0xFFFECACA)),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(14)),
               ),
-              child: const Text('Sign Out', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900)),
+              child: const Text('Sign Out',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900)),
             ),
           ],
         ),
@@ -457,7 +498,11 @@ class _ProfileHeader extends StatelessWidget {
                 alignment: Alignment.centerLeft,
               ),
               const SizedBox(height: 36),
-              Text(eyebrow, style: const TextStyle(color: AppColors.blue, fontSize: 14, fontWeight: FontWeight.w900)),
+              Text(eyebrow,
+                  style: const TextStyle(
+                      color: AppColors.blue,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w900)),
               const SizedBox(height: 8),
               SizedBox(
                 width: 260,
@@ -476,7 +521,8 @@ class _ProfileHeader extends StatelessWidget {
                 width: 250,
                 child: Text(
                   subtitle,
-                  style: const TextStyle(color: Color(0xFF52647A), fontSize: 16, height: 1.5),
+                  style: const TextStyle(
+                      color: Color(0xFF52647A), fontSize: 16, height: 1.5),
                 ),
               ),
             ],
@@ -535,7 +581,10 @@ class _IdentityColumn extends StatelessWidget {
               Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  _AvatarImage(initial: initial, avatarUrl: avatarUrl, selectedAvatar: selectedAvatar),
+                  _AvatarImage(
+                      initial: initial,
+                      avatarUrl: avatarUrl,
+                      selectedAvatar: selectedAvatar),
                   Positioned(
                     right: -2,
                     bottom: 0,
@@ -547,13 +596,18 @@ class _IdentityColumn extends StatelessWidget {
                         shape: BoxShape.circle,
                         border: Border.all(color: Colors.white, width: 3),
                       ),
-                      child: const Icon(Icons.camera_alt, color: Colors.white, size: 20),
+                      child: const Icon(Icons.camera_alt,
+                          color: Colors.white, size: 20),
                     ),
                   ),
                 ],
               ),
               const SizedBox(height: 8),
-              const Text('Change Photo', style: TextStyle(color: AppColors.blue, fontSize: 13, fontWeight: FontWeight.w900)),
+              const Text('Change Photo',
+                  style: TextStyle(
+                      color: AppColors.blue,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w900)),
             ],
           ),
         ),
@@ -561,23 +615,38 @@ class _IdentityColumn extends StatelessWidget {
         Text(
           displayName ?? 'Church Member',
           textAlign: TextAlign.center,
-          style: const TextStyle(color: Color(0xFF082044), fontSize: 24, fontWeight: FontWeight.w900),
+          style: const TextStyle(
+              color: Color(0xFF082044),
+              fontSize: 24,
+              fontWeight: FontWeight.w900),
         ),
         const SizedBox(height: 4),
-        Text(user.email ?? '', textAlign: TextAlign.center, style: const TextStyle(color: Color(0xFF52647A), fontSize: 14)),
+        Text(user.email ?? '',
+            textAlign: TextAlign.center,
+            style: const TextStyle(color: Color(0xFF52647A), fontSize: 14)),
         const SizedBox(height: 18),
         const Divider(color: Color(0xFFE7EDF6)),
         const SizedBox(height: 14),
-        _ContactSummary(icon: Icons.mail_outline, label: 'Email Address', value: user.email ?? 'Not set'),
-        _ContactSummary(icon: Icons.call_outlined, label: 'Phone', value: phone.isEmpty ? 'Not set' : phone),
-        _ContactSummary(icon: Icons.calendar_month_outlined, label: 'Birthday', value: birthday.isEmpty ? 'Not set' : birthday),
+        _ContactSummary(
+            icon: Icons.mail_outline,
+            label: 'Email Address',
+            value: user.email ?? 'Not set'),
+        _ContactSummary(
+            icon: Icons.call_outlined,
+            label: 'Phone',
+            value: phone.isEmpty ? 'Not set' : phone),
+        _ContactSummary(
+            icon: Icons.calendar_month_outlined,
+            label: 'Birthday',
+            value: birthday.isEmpty ? 'Not set' : birthday),
       ],
     );
   }
 }
 
 class _AvatarImage extends StatelessWidget {
-  const _AvatarImage({required this.initial, this.avatarUrl, this.selectedAvatar});
+  const _AvatarImage(
+      {required this.initial, this.avatarUrl, this.selectedAvatar});
 
   final String initial;
   final String? avatarUrl;
@@ -591,7 +660,10 @@ class _AvatarImage extends StatelessWidget {
             ? NetworkImage(avatarUrl!)
             : null;
     if (image != null) {
-      return CircleAvatar(radius: 54, backgroundImage: image, backgroundColor: AppColors.lightBlue);
+      return CircleAvatar(
+          radius: 54,
+          backgroundImage: image,
+          backgroundColor: AppColors.lightBlue);
     }
     return Container(
       width: 104,
@@ -602,13 +674,18 @@ class _AvatarImage extends StatelessWidget {
         border: Border.all(color: AppColors.blue, width: 2),
       ),
       alignment: Alignment.center,
-      child: Text(initial, style: const TextStyle(color: AppColors.blue, fontSize: 36, fontWeight: FontWeight.w900)),
+      child: Text(initial,
+          style: const TextStyle(
+              color: AppColors.blue,
+              fontSize: 36,
+              fontWeight: FontWeight.w900)),
     );
   }
 }
 
 class _ContactSummary extends StatelessWidget {
-  const _ContactSummary({required this.icon, required this.label, required this.value});
+  const _ContactSummary(
+      {required this.icon, required this.label, required this.value});
 
   final IconData icon;
   final String label;
@@ -620,13 +697,17 @@ class _ContactSummary extends StatelessWidget {
       constraints: const BoxConstraints(minHeight: 66),
       margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-      decoration: BoxDecoration(color: const Color(0xFFF8FAFF), borderRadius: BorderRadius.circular(16)),
+      decoration: BoxDecoration(
+          color: const Color(0xFFF8FAFF),
+          borderRadius: BorderRadius.circular(16)),
       child: Row(
         children: [
           Container(
             width: 44,
             height: 44,
-            decoration: BoxDecoration(color: const Color(0xFFEAF2FF), borderRadius: BorderRadius.circular(12)),
+            decoration: BoxDecoration(
+                color: const Color(0xFFEAF2FF),
+                borderRadius: BorderRadius.circular(12)),
             child: Icon(icon, color: AppColors.blue, size: 24),
           ),
           const SizedBox(width: 12),
@@ -672,28 +753,61 @@ class _ProfileForm extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.only(top: 18),
-      decoration: const BoxDecoration(border: Border(top: BorderSide(color: Color(0xFFE7EDF6)))),
+      decoration: const BoxDecoration(
+          border: Border(top: BorderSide(color: Color(0xFFE7EDF6)))),
       child: Column(
         children: [
-          _ProfileInput(icon: Icons.person, label: 'Full Name', controller: fullName, hint: 'Full name', textCapitalization: TextCapitalization.words),
-          _ProfileInput(icon: Icons.mail, label: 'Preferred Contact', controller: preferredContact, hint: 'Email, call, text...'),
-          _ProfileInput(icon: Icons.favorite, label: 'Ministry / Interest', controller: ministryInterest, hint: 'Music, youth, hospitality...'),
-          _ProfileInput(icon: Icons.description, label: 'Household Notes', controller: householdNotes, hint: 'Optional notes for your profile', minLines: 3),
+          _ProfileInput(
+              icon: Icons.person,
+              label: 'Full Name',
+              controller: fullName,
+              hint: 'Full name',
+              textCapitalization: TextCapitalization.words),
+          _ProfileInput(
+              icon: Icons.mail,
+              label: 'Preferred Contact',
+              controller: preferredContact,
+              hint: 'Email, call, text...'),
+          _ProfileInput(
+              icon: Icons.favorite,
+              label: 'Ministry / Interest',
+              controller: ministryInterest,
+              hint: 'Music, youth, hospitality...'),
+          _ProfileInput(
+              icon: Icons.description,
+              label: 'Household Notes',
+              controller: householdNotes,
+              hint: 'Optional notes for your profile',
+              minLines: 3),
           Row(
             children: [
-              Expanded(child: _CompactInput(label: 'Birthday', controller: birthday, hint: 'YYYY-MM-DD')),
+              Expanded(
+                  child: _CompactInput(
+                      label: 'Birthday',
+                      controller: birthday,
+                      hint: 'YYYY-MM-DD')),
               const SizedBox(width: 10),
-              Expanded(child: _CompactInput(label: 'Phone', controller: phone, hint: 'Phone number', keyboardType: TextInputType.phone)),
+              Expanded(
+                  child: _CompactInput(
+                      label: 'Phone',
+                      controller: phone,
+                      hint: 'Phone number',
+                      keyboardType: TextInputType.phone)),
             ],
           ),
           const SizedBox(height: 18),
           FilledButton.icon(
             onPressed: saving ? null : onSave,
             icon: saving
-                ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                ? const SizedBox(
+                    width: 18,
+                    height: 18,
+                    child: CircularProgressIndicator(
+                        strokeWidth: 2, color: Colors.white))
                 : const Icon(Icons.verified_user),
             label: const Text('Save Profile'),
-            style: FilledButton.styleFrom(backgroundColor: const Color(0xFF0F63F5)),
+            style: FilledButton.styleFrom(
+                backgroundColor: const Color(0xFF0F63F5)),
           ),
         ],
       ),
@@ -738,7 +852,8 @@ class _ProfileInput extends StatelessWidget {
             minLines: minLines,
             maxLines: minLines == 1 ? 1 : 5,
             textCapitalization: textCapitalization,
-            decoration: InputDecoration(hintText: hint, fillColor: Colors.white),
+            decoration:
+                InputDecoration(hintText: hint, fillColor: Colors.white),
           ),
         ],
       ),
@@ -798,7 +913,8 @@ class _SetupPanel extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               for (var i = 0; i < tasks.length; i++)
-                Expanded(child: _SetupStep(task: tasks[i], showConnector: i != 0)),
+                Expanded(
+                    child: _SetupStep(task: tasks[i], showConnector: i != 0)),
             ],
           ),
           const SizedBox(height: 16),
@@ -836,7 +952,9 @@ class _SetupStep extends StatelessWidget {
               width: 32,
               height: 32,
               decoration: BoxDecoration(
-                color: task.complete ? const Color(0xFF2F8F4E) : const Color(0xFFCBD5E1),
+                color: task.complete
+                    ? const Color(0xFF2F8F4E)
+                    : const Color(0xFFCBD5E1),
                 shape: BoxShape.circle,
               ),
               child: const Icon(Icons.check, color: Colors.white, size: 18),
@@ -846,7 +964,9 @@ class _SetupStep extends StatelessWidget {
               task.complete ? 'Done' : 'Open',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: task.complete ? const Color(0xFF166534) : const Color(0xFFB45309),
+                color: task.complete
+                    ? const Color(0xFF166534)
+                    : const Color(0xFFB45309),
                 fontSize: 11,
                 fontWeight: FontWeight.w900,
               ),
@@ -855,7 +975,11 @@ class _SetupStep extends StatelessWidget {
             Text(
               task.label,
               textAlign: TextAlign.center,
-              style: const TextStyle(color: Color(0xFF082044), fontSize: 11, height: 1.35, fontWeight: FontWeight.w800),
+              style: const TextStyle(
+                  color: Color(0xFF082044),
+                  fontSize: 11,
+                  height: 1.35,
+                  fontWeight: FontWeight.w800),
             ),
           ],
         ),
@@ -930,7 +1054,11 @@ class _SwitchRow extends StatelessWidget {
           Icon(icon, color: AppColors.blue, size: 23),
           const SizedBox(width: 12),
           Expanded(
-            child: Text(label, style: const TextStyle(color: Color(0xFF082044), fontSize: 15, fontWeight: FontWeight.w800)),
+            child: Text(label,
+                style: const TextStyle(
+                    color: Color(0xFF082044),
+                    fontSize: 15,
+                    fontWeight: FontWeight.w800)),
           ),
           Switch(
             value: value,
@@ -971,7 +1099,8 @@ class _PanelTitleRow extends StatelessWidget {
             color: lightIcon ? const Color(0xFFEAF2FF) : AppColors.blue,
             shape: BoxShape.circle,
           ),
-          child: Icon(icon, color: lightIcon ? AppColors.blue : Colors.white, size: 28),
+          child: Icon(icon,
+              color: lightIcon ? AppColors.blue : Colors.white, size: 28),
         ),
         const SizedBox(width: 14),
         Expanded(
@@ -1003,7 +1132,8 @@ class _ProfilePanel extends StatelessWidget {
         borderRadius: BorderRadius.circular(24),
         border: Border.all(color: const Color(0xFFE7EDF6)),
         boxShadow: const [
-          BoxShadow(color: Color(0x140B2140), offset: Offset(0, 12), blurRadius: 24),
+          BoxShadow(
+              color: Color(0x140B2140), offset: Offset(0, 12), blurRadius: 24),
         ],
       ),
       child: child,
@@ -1025,7 +1155,8 @@ class _PreferencesPanel extends StatelessWidget {
         borderRadius: BorderRadius.circular(24),
         border: Border.all(color: const Color(0xFFE7EDF6)),
         boxShadow: const [
-          BoxShadow(color: Color(0x0F0B2140), offset: Offset(0, 10), blurRadius: 18),
+          BoxShadow(
+              color: Color(0x0F0B2140), offset: Offset(0, 10), blurRadius: 18),
         ],
       ),
       child: child,

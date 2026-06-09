@@ -46,7 +46,10 @@ class _AuthScreenState extends State<AuthScreen> {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
-              content: Text('Account created. Please verify your email before signing in.'),
+              content: Text(
+                'Account created. Please verify your email before signing in. '
+                'If you do not see it, check your junk or spam folder.',
+              ),
             ),
           );
           setState(() => _isLogin = true);
@@ -95,7 +98,8 @@ class _AuthScreenState extends State<AuthScreen> {
                     _isLogin
                         ? 'Sign in to stay connected with your church community.'
                         : 'Join the app for attendance, appeals, and church updates.',
-                    style: const TextStyle(color: Color(0xFFD8E2EF), fontSize: 16),
+                    style:
+                        const TextStyle(color: Color(0xFFD8E2EF), fontSize: 16),
                   ),
                 ],
               ),
@@ -112,14 +116,16 @@ class _AuthScreenState extends State<AuthScreen> {
                     if (!_isLogin) ...[
                       TextField(
                         controller: _name,
-                        decoration: const InputDecoration(labelText: 'Full Name'),
+                        decoration:
+                            const InputDecoration(labelText: 'Full Name'),
                         textCapitalization: TextCapitalization.words,
                       ),
                       const SizedBox(height: 14),
                     ],
                     TextField(
                       controller: _email,
-                      decoration: const InputDecoration(labelText: 'Email Address'),
+                      decoration:
+                          const InputDecoration(labelText: 'Email Address'),
                       keyboardType: TextInputType.emailAddress,
                       textInputAction: TextInputAction.next,
                     ),
@@ -133,13 +139,14 @@ class _AuthScreenState extends State<AuthScreen> {
                     SizedBox(
                       height: 54,
                       child: FilledButton(
-                      onPressed: _loading ? null : _submit,
-                      child: _loading
-                          ? const SizedBox.square(
-                              dimension: 22,
-                              child: CircularProgressIndicator(strokeWidth: 2),
-                            )
-                          : Text(_isLogin ? 'Sign In' : 'Create Account'),
+                        onPressed: _loading ? null : _submit,
+                        child: _loading
+                            ? const SizedBox.square(
+                                dimension: 22,
+                                child:
+                                    CircularProgressIndicator(strokeWidth: 2),
+                              )
+                            : Text(_isLogin ? 'Sign In' : 'Create Account'),
                       ),
                     ),
                     const SizedBox(height: 18),
@@ -147,14 +154,18 @@ class _AuthScreenState extends State<AuthScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          _isLogin ? "Don't have an account?" : 'Already have an account?',
-                          style: const TextStyle(color: AppColors.muted, fontSize: 14),
+                          _isLogin
+                              ? "Don't have an account?"
+                              : 'Already have an account?',
+                          style: const TextStyle(
+                              color: AppColors.muted, fontSize: 14),
                         ),
                         TextButton(
                           onPressed: () => setState(() => _isLogin = !_isLogin),
                           style: TextButton.styleFrom(
                             minimumSize: Size.zero,
-                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 6, vertical: 4),
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           ),
                           child: Text(
@@ -175,7 +186,8 @@ class _AuthScreenState extends State<AuthScreen> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(AppRadii.input),
                           ),
-                          textStyle: const TextStyle(fontWeight: FontWeight.w900),
+                          textStyle:
+                              const TextStyle(fontWeight: FontWeight.w900),
                         ),
                         child: const Text('Continue as Guest'),
                       ),

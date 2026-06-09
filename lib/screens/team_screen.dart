@@ -143,7 +143,8 @@ class _TeamScreenState extends State<TeamScreen> {
         canPastoral
             ? supabase
                 .from('appeal_responses')
-                .select('id,user_id,requester_name,requester_email,response_data,follow_up_status,follow_up_notes,assigned_to_name,interest_type,contacted_by_name,contacted_at,follow_up_next_action_at,created_at')
+                .select(
+                    'id,user_id,requester_name,requester_email,response_data,follow_up_status,follow_up_notes,assigned_to_name,interest_type,contacted_by_name,contacted_at,follow_up_next_action_at,created_at')
                 .neq('follow_up_status', 'closed')
                 .order('created_at', ascending: false)
                 .limit(30)
@@ -158,21 +159,24 @@ class _TeamScreenState extends State<TeamScreen> {
         canPastoral
             ? supabase
                 .from('profiles')
-                .select('id,email,full_name,phone,preferred_contact_method,ministry_interest,household_notes,birthday,avatar_url')
+                .select(
+                    'id,email,full_name,phone,preferred_contact_method,ministry_interest,household_notes,birthday,avatar_url')
                 .order('full_name', ascending: true)
-                .limit(100)
+                .limit(500)
             : Future.value([]),
         canPush
             ? supabase
                 .from('push_notification_messages')
-                .select('id,title,body,status,sent_by_name,delivered_count,failed_count,error_message,created_at,scheduled_at,sent_at')
+                .select(
+                    'id,title,body,status,sent_by_name,delivered_count,failed_count,error_message,created_at,scheduled_at,sent_at')
                 .order('created_at', ascending: false)
                 .limit(20)
             : Future.value([]),
         canPastoral
             ? supabase
                 .from('follow_up_activity')
-                .select('id,response_id,actor_name,activity_type,note,created_at')
+                .select(
+                    'id,response_id,actor_name,activity_type,note,created_at')
                 .order('created_at', ascending: false)
                 .limit(120)
             : Future.value([]),
@@ -186,17 +190,23 @@ class _TeamScreenState extends State<TeamScreen> {
       ]);
 
       List<_DirectoryUser> directory = const [];
-      if (canAdmin) {
-        final data = await supabase.rpc('get_app_user_directory');
-        directory = (data as List)
-            .map((item) => _DirectoryUser.fromMap(item as Map<String, dynamic>))
-            .toList();
+      if (canPastoral || canAdmin) {
+        try {
+          final data = await supabase.rpc('get_app_user_directory');
+          directory = (data as List)
+              .map((item) =>
+                  _DirectoryUser.fromMap(item as Map<String, dynamic>))
+              .toList();
+        } catch (_) {
+          directory = const [];
+        }
       }
 
       if (!mounted) return;
       setState(() {
         _followUps = (results[0] as List)
-            .map((item) => FollowUpResponse.fromMap(item as Map<String, dynamic>))
+            .map((item) =>
+                FollowUpResponse.fromMap(item as Map<String, dynamic>))
             .toList();
         _attendance = (results[1] as List)
             .map((item) => AttendanceLog.fromMap(item as Map<String, dynamic>))
@@ -208,7 +218,8 @@ class _TeamScreenState extends State<TeamScreen> {
             .map((item) => _PushMessage.fromMap(item as Map<String, dynamic>))
             .toList();
         _activities = (results[4] as List)
-            .map((item) => _FollowUpActivity.fromMap(item as Map<String, dynamic>))
+            .map((item) =>
+                _FollowUpActivity.fromMap(item as Map<String, dynamic>))
             .toList();
         _auditLogs = (results[5] as List)
             .map((item) => _AuditLog.fromMap(item as Map<String, dynamic>))
@@ -220,18 +231,20 @@ class _TeamScreenState extends State<TeamScreen> {
     } catch (error) {
       if (!mounted) return;
       setState(() {
-        _setupMessage = '$error. Run the latest Supabase schema/patch, then reload.';
+        _setupMessage =
+            '$error. Run the latest Supabase schema/patch, then reload.';
         _loading = false;
       });
     }
   }
 
-  Future<void> _updateFollowUp(String responseId, Map<String, dynamic> updates) async {
+  Future<void> _updateFollowUp(
+      String responseId, Map<String, dynamic> updates) async {
     try {
-      await supabase
-          .from('appeal_responses')
-          .update({...updates, 'updated_at': DateTime.now().toIso8601String()})
-          .eq('id', responseId);
+      await supabase.from('appeal_responses').update({
+        ...updates,
+        'updated_at': DateTime.now().toIso8601String()
+      }).eq('id', responseId);
       await _recordActivity(responseId, 'updated', updates.keys.join(', '));
       await _load(quiet: true);
       _syncSelectedFollowUp(responseId);
@@ -240,7 +253,8 @@ class _TeamScreenState extends State<TeamScreen> {
     }
   }
 
-  Future<void> _recordActivity(String responseId, String activityType, String? note) async {
+  Future<void> _recordActivity(
+      String responseId, String activityType, String? note) async {
     final user = supabase.auth.currentUser;
     await supabase.from('follow_up_activity').insert({
       'response_id': responseId,
@@ -258,7 +272,8 @@ class _TeamScreenState extends State<TeamScreen> {
       'assigned_to_name': _userName(user, fallback: 'Team Member'),
       'follow_up_status': 'assigned',
     });
-    await _recordActivity(response.id, 'assigned', 'Assigned to ${_userName(user, fallback: 'Team Member')}');
+    await _recordActivity(response.id, 'assigned',
+        'Assigned to ${_userName(user, fallback: 'Team Member')}');
   }
 
   Future<void> _markContacted(FollowUpResponse response) async {
@@ -276,7 +291,9 @@ class _TeamScreenState extends State<TeamScreen> {
     final response = _selectedFollowUp;
     if (response == null) return;
     await _updateFollowUp(response.id, {
-      'follow_up_notes': _followUpNotes.text.trim().isEmpty ? null : _followUpNotes.text.trim(),
+      'follow_up_notes': _followUpNotes.text.trim().isEmpty
+          ? null
+          : _followUpNotes.text.trim(),
       'follow_up_next_action_at': _nextActionDate.text.trim().isEmpty
           ? null
           : '${_nextActionDate.text.trim()}T12:00:00.000Z',
@@ -314,7 +331,9 @@ class _TeamScreenState extends State<TeamScreen> {
       _pushBody.clear();
       _pushSchedule.clear();
       await _load(quiet: true);
-      _showSnack(invokeNow ? 'The sender processed the message.' : 'Notification scheduled.');
+      _showSnack(invokeNow
+          ? 'The sender processed the message.'
+          : 'Notification scheduled.');
     } catch (error) {
       _showSnack('Could not send: $error');
     } finally {
@@ -338,7 +357,9 @@ class _TeamScreenState extends State<TeamScreen> {
       setState(() {
         _directoryUsers = _directoryUsers
             .map((item) => item.id == targetUser.id
-                ? item.copyWith(role: nextRoles.isEmpty ? null : nextRoles.first, roles: nextRoles)
+                ? item.copyWith(
+                    role: nextRoles.isEmpty ? null : nextRoles.first,
+                    roles: nextRoles)
                 : item)
             .toList();
       });
@@ -359,7 +380,8 @@ class _TeamScreenState extends State<TeamScreen> {
             log.timestamp.toIso8601String(),
           ].map((value) => '"${value.replaceAll('"', '""')}"').join(',')),
     ].join('\n');
-    await SharePlus.instance.share(ShareParams(text: csv, subject: 'Attendance Export'));
+    await SharePlus.instance
+        .share(ShareParams(text: csv, subject: 'Attendance Export'));
   }
 
   void _openFollowUp(FollowUpResponse response) {
@@ -387,12 +409,15 @@ class _TeamScreenState extends State<TeamScreen> {
     final canPush = _canPush(user);
     final canAdmin = _canAdmin(user);
     final stats = _attendanceStats();
-    final visibleFollowUps = _showAllFollowUps ? _followUps : _followUps.take(6).toList();
-    final visibleMessages = _showAllDeliveryLog ? _messages : _messages.take(5).toList();
+    final visibleFollowUps =
+        _showAllFollowUps ? _followUps : _followUps.take(6).toList();
+    final visibleMessages =
+        _showAllDeliveryLog ? _messages : _messages.take(5).toList();
     final filteredMembers = _filteredMembers();
     final filteredDirectoryUsers = _filteredDirectoryUsers();
-    final selectedActivities =
-        _activities.where((activity) => activity.responseId == _selectedFollowUp?.id).toList();
+    final selectedActivities = _activities
+        .where((activity) => activity.responseId == _selectedFollowUp?.id)
+        .toList();
 
     return Scaffold(
       backgroundColor: const Color(0xFFF5F7FB),
@@ -415,10 +440,12 @@ class _TeamScreenState extends State<TeamScreen> {
                     const Center(child: CircularProgressIndicator()),
                   ],
                   const SizedBox(height: 18),
-                  _SyncCard(lastSync: _lastWebsiteSync, onRefresh: () => _load()),
+                  _SyncCard(
+                      lastSync: _lastWebsiteSync, onRefresh: () => _load()),
                   if (canAttendance) ...[
                     const SizedBox(height: 12),
-                    _AttendanceAnalytics(stats: stats, onExport: _exportAttendance),
+                    _AttendanceAnalytics(
+                        stats: stats, onExport: _exportAttendance),
                   ],
                   if (canPastoral) ...[
                     const SizedBox(height: 14),
@@ -427,7 +454,8 @@ class _TeamScreenState extends State<TeamScreen> {
                       visibleFollowUps: visibleFollowUps,
                       members: _members,
                       showAll: _showAllFollowUps,
-                      onToggle: () => setState(() => _showAllFollowUps = !_showAllFollowUps),
+                      onToggle: () => setState(
+                          () => _showAllFollowUps = !_showAllFollowUps),
                       onOpen: _openFollowUp,
                     ),
                   ],
@@ -436,7 +464,8 @@ class _TeamScreenState extends State<TeamScreen> {
                     _MemberDirectoryPanel(
                       controller: _memberSearch,
                       members: filteredMembers.take(4).toList(),
-                      onOpen: (member) => setState(() => _selectedMember = member),
+                      onOpen: (member) =>
+                          setState(() => _selectedMember = member),
                     ),
                   ],
                   if (canPush) ...[
@@ -453,7 +482,8 @@ class _TeamScreenState extends State<TeamScreen> {
                       messages: _messages,
                       visibleMessages: visibleMessages,
                       showAll: _showAllDeliveryLog,
-                      onToggle: () => setState(() => _showAllDeliveryLog = !_showAllDeliveryLog),
+                      onToggle: () => setState(
+                          () => _showAllDeliveryLog = !_showAllDeliveryLog),
                     ),
                   ],
                   if (canAdmin) ...[
@@ -469,7 +499,8 @@ class _TeamScreenState extends State<TeamScreen> {
                     _AuditLogPanel(
                       logs: _auditLogs,
                       show: _showAuditLog,
-                      onToggle: () => setState(() => _showAuditLog = !_showAuditLog),
+                      onToggle: () =>
+                          setState(() => _showAuditLog = !_showAuditLog),
                     ),
                   ],
                 ],
@@ -485,11 +516,13 @@ class _TeamScreenState extends State<TeamScreen> {
               activityNote: _activityNote,
               nextActionDate: _nextActionDate,
               onClose: () => setState(() => _selectedFollowUp = null),
-              onToggleActivity: () => setState(() => _showActivityLog = !_showActivityLog),
+              onToggleActivity: () =>
+                  setState(() => _showActivityLog = !_showActivityLog),
               onSave: _saveFollowUpDetail,
               onAssign: () => _assignToMe(_selectedFollowUp!),
               onContacted: () => _markContacted(_selectedFollowUp!),
-              onInterest: (interest) => _updateFollowUp(_selectedFollowUp!.id, {'interest_type': interest}),
+              onInterest: (interest) => _updateFollowUp(
+                  _selectedFollowUp!.id, {'interest_type': interest}),
             ),
           if (_selectedMember != null)
             _MemberModal(
@@ -520,7 +553,7 @@ class _TeamScreenState extends State<TeamScreen> {
 
   List<MemberProfile> _filteredMembers() {
     final query = _memberSearch.text.toLowerCase();
-    return _members.where((member) {
+    return _membersWithDirectoryFallbacks().where((member) {
       final haystack = [
         member.fullName,
         member.email,
@@ -531,11 +564,48 @@ class _TeamScreenState extends State<TeamScreen> {
     }).toList();
   }
 
+  List<MemberProfile> _membersWithDirectoryFallbacks() {
+    final members = List<MemberProfile>.of(_members);
+    final seenIds = members.map((member) => member.id).toSet();
+    final seenEmails = members
+        .map((member) => member.email?.trim().toLowerCase())
+        .whereType<String>()
+        .where((email) => email.isNotEmpty)
+        .toSet();
+
+    for (final directoryUser in _directoryUsers) {
+      final email = directoryUser.email?.trim().toLowerCase();
+      final hasProfile = seenIds.contains(directoryUser.id) ||
+          (email != null && email.isNotEmpty && seenEmails.contains(email));
+      if (hasProfile) continue;
+
+      members.add(
+        MemberProfile(
+          id: directoryUser.id,
+          email: directoryUser.email,
+          fullName: directoryUser.fullName,
+        ),
+      );
+      seenIds.add(directoryUser.id);
+      if (email != null && email.isNotEmpty) seenEmails.add(email);
+    }
+
+    members.sort((a, b) {
+      final left =
+          (a.fullName?.trim().isNotEmpty == true ? a.fullName : a.email) ?? '';
+      final right =
+          (b.fullName?.trim().isNotEmpty == true ? b.fullName : b.email) ?? '';
+      return left.toLowerCase().compareTo(right.toLowerCase());
+    });
+    return members;
+  }
+
   List<_DirectoryUser> _filteredDirectoryUsers() {
     final query = _roleSearch.text.trim().toLowerCase();
     if (query.isEmpty) return const [];
     return _directoryUsers.where((directoryUser) {
-      final roleLabels = directoryUser.activeRoles.map(_roleLabelForValue).join(' ');
+      final roleLabels =
+          directoryUser.activeRoles.map(_roleLabelForValue).join(' ');
       final haystack = [
         directoryUser.fullName,
         directoryUser.email,
@@ -547,7 +617,8 @@ class _TeamScreenState extends State<TeamScreen> {
 
   void _showSnack(String message) {
     if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(message)));
   }
 }
 
@@ -558,9 +629,8 @@ class _TeamHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final subtitleWidth = constraints.maxWidth < 520
-            ? constraints.maxWidth - 145
-            : 330.0;
+        final subtitleWidth =
+            constraints.maxWidth < 520 ? constraints.maxWidth - 145 : 330.0;
         return SizedBox(
           height: 310,
           child: Stack(
@@ -578,7 +648,10 @@ class _TeamHeader extends StatelessWidget {
                   const SizedBox(height: 26),
                   const Text(
                     'Team',
-                    style: TextStyle(color: AppColors.blue, fontSize: 13, fontWeight: FontWeight.w900),
+                    style: TextStyle(
+                        color: AppColors.blue,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w900),
                   ),
                   const SizedBox(height: 10),
                   const Text(
@@ -595,7 +668,8 @@ class _TeamHeader extends StatelessWidget {
                     width: subtitleWidth.clamp(210.0, 330.0),
                     child: const Text(
                       'Follow up, attendance, member care, member sync, notifications, and roles.',
-                      style: TextStyle(color: AppColors.muted, fontSize: 17, height: 1.58),
+                      style: TextStyle(
+                          color: AppColors.muted, fontSize: 17, height: 1.58),
                     ),
                   ),
                 ],
@@ -619,11 +693,13 @@ class _TeamHeader extends StatelessWidget {
                             border: Border.all(color: const Color(0xFFBFDBFE)),
                           ),
                         ),
-                        const Icon(Icons.groups, color: Color(0xFF3B82F6), size: 66),
+                        const Icon(Icons.groups,
+                            color: Color(0xFF3B82F6), size: 66),
                         const Positioned(
                           right: 20,
                           bottom: 26,
-                          child: Icon(Icons.settings, color: Color(0xFF93C5FD), size: 40),
+                          child: Icon(Icons.settings,
+                              color: Color(0xFF93C5FD), size: 40),
                         ),
                       ],
                     ),
@@ -658,7 +734,8 @@ class _SyncCard extends StatelessWidget {
           Container(
             width: 62,
             height: 62,
-            decoration: const BoxDecoration(color: AppColors.blue, shape: BoxShape.circle),
+            decoration: const BoxDecoration(
+                color: AppColors.blue, shape: BoxShape.circle),
             child: const Icon(Icons.sync, color: Colors.white, size: 30),
           ),
           const SizedBox(width: 16),
@@ -669,32 +746,51 @@ class _SyncCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('Website Sync', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w900)),
+                    const Text('Website Sync',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w900)),
                     TextButton(
                       onPressed: onRefresh,
                       style: TextButton.styleFrom(
                         backgroundColor: Colors.white.withValues(alpha: 0.15),
                         foregroundColor: AppColors.paleBlue,
-                        padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 8),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(999)),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 13, vertical: 8),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(999)),
                       ),
-                      child: const Text('Refresh', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w900)),
+                      child: const Text('Refresh',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w900)),
                     ),
                   ],
                 ),
                 const Text(
                   'News, sermons, and events are synced across the website and app.',
-                  style: TextStyle(color: Color(0xFFE2E8F0), fontSize: 14, height: 1.55, fontWeight: FontWeight.w700),
+                  style: TextStyle(
+                      color: Color(0xFFE2E8F0),
+                      fontSize: 14,
+                      height: 1.55,
+                      fontWeight: FontWeight.w700),
                 ),
-                Container(height: 1, color: Colors.white.withValues(alpha: 0.22), margin: const EdgeInsets.symmetric(vertical: 16)),
+                Container(
+                    height: 1,
+                    color: Colors.white.withValues(alpha: 0.22),
+                    margin: const EdgeInsets.symmetric(vertical: 16)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'Last sync: ${lastSync == null ? 'Just now' : _timeLabel(lastSync!)}',
-                      style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w800),
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w800),
                     ),
-                    const Icon(Icons.check_circle, color: AppColors.success, size: 20),
+                    const Icon(Icons.check_circle,
+                        color: AppColors.success, size: 20),
                   ],
                 ),
               ],
@@ -720,18 +816,33 @@ class _AttendanceAnalytics extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Expanded(child: Text('Attendance Analytics', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900))),
+              const Expanded(
+                  child: Text('Attendance Analytics',
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.w900))),
               _PillButton(label: 'Export', onPressed: onExport),
             ],
           ),
           const SizedBox(height: 12),
           Row(
             children: [
-              Expanded(child: _StatCard(icon: Icons.groups, value: stats['today'] ?? 0, label: 'Today')),
+              Expanded(
+                  child: _StatCard(
+                      icon: Icons.groups,
+                      value: stats['today'] ?? 0,
+                      label: 'Today')),
               const SizedBox(width: 10),
-              Expanded(child: _StatCard(icon: Icons.calendar_month, value: stats['week'] ?? 0, label: '7 days')),
+              Expanded(
+                  child: _StatCard(
+                      icon: Icons.calendar_month,
+                      value: stats['week'] ?? 0,
+                      label: '7 days')),
               const SizedBox(width: 10),
-              Expanded(child: _StatCard(icon: Icons.groups, value: stats['unique'] ?? 0, label: 'People')),
+              Expanded(
+                  child: _StatCard(
+                      icon: Icons.groups,
+                      value: stats['unique'] ?? 0,
+                      label: 'People')),
             ],
           ),
         ],
@@ -769,7 +880,9 @@ class _FollowUpPanel extends StatelessWidget {
                 ? 'Showing ${followUps.length} open items'
                 : 'Showing ${visibleFollowUps.length} of ${followUps.length} open items',
             trailing: followUps.length > 6
-                ? _PillButton(label: showAll ? 'Show Less' : 'View All', onPressed: onToggle)
+                ? _PillButton(
+                    label: showAll ? 'Show Less' : 'View All',
+                    onPressed: onToggle)
                 : null,
           ),
           if (followUps.isEmpty)
@@ -841,7 +954,9 @@ class _NotificationsPanel extends StatelessWidget {
       child: Column(
         children: [
           const _PanelHeader(icon: Icons.notifications, title: 'Notifications'),
-          TextField(controller: title, decoration: const InputDecoration(hintText: 'Title')),
+          TextField(
+              controller: title,
+              decoration: const InputDecoration(hintText: 'Title')),
           const SizedBox(height: 12),
           TextField(
             controller: body,
@@ -850,13 +965,22 @@ class _NotificationsPanel extends StatelessWidget {
             decoration: const InputDecoration(hintText: 'Message'),
           ),
           const SizedBox(height: 12),
-          TextField(controller: schedule, decoration: const InputDecoration(hintText: 'Optional send date: YYYY-MM-DD')),
+          TextField(
+              controller: schedule,
+              decoration: const InputDecoration(
+                  hintText: 'Optional send date: YYYY-MM-DD')),
           const SizedBox(height: 12),
           FilledButton(
             onPressed: sending ? null : onSend,
             child: sending
-                ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
-                : Text(schedule.text.trim().isEmpty ? 'Send Push' : 'Schedule Push'),
+                ? const SizedBox(
+                    width: 18,
+                    height: 18,
+                    child: CircularProgressIndicator(
+                        strokeWidth: 2, color: Colors.white))
+                : Text(schedule.text.trim().isEmpty
+                    ? 'Send Push'
+                    : 'Schedule Push'),
           ),
         ],
       ),
@@ -889,13 +1013,16 @@ class _DeliveryLogPanel extends StatelessWidget {
                 ? 'Showing ${messages.length} delivery items'
                 : 'Showing ${visibleMessages.length} of ${messages.length} delivery items',
             trailing: messages.length > 5
-                ? _PillButton(label: showAll ? 'Show Less' : 'View All', onPressed: onToggle)
+                ? _PillButton(
+                    label: showAll ? 'Show Less' : 'View All',
+                    onPressed: onToggle)
                 : null,
           ),
           if (messages.isEmpty)
             const _EmptyText('Queued and sent messages will appear here.')
           else
-            for (final message in visibleMessages) _DeliveryRow(message: message),
+            for (final message in visibleMessages)
+              _DeliveryRow(message: message),
         ],
       ),
     );
@@ -926,11 +1053,15 @@ class _AdminRolesPanel extends StatelessWidget {
           _PanelHeader(
             icon: Icons.verified_user,
             title: 'Admin Roles',
-            intro: hasSearch ? '${users.length} of $totalUsers users shown' : 'Search $totalUsers users to edit roles',
+            intro: hasSearch
+                ? '${users.length} of $totalUsers users shown'
+                : 'Search $totalUsers users to edit roles',
           ),
-          _SearchField(controller: controller, hint: 'Search by name, email, or role'),
+          _SearchField(
+              controller: controller, hint: 'Search by name, email, or role'),
           if (!hasSearch)
-            const _EmptyText('Start typing a name, email, or role to show matching users.')
+            const _EmptyText(
+                'Start typing a name, email, or role to show matching users.')
           else if (users.isEmpty)
             const _EmptyText('No users match that search.')
           else
@@ -947,7 +1078,8 @@ class _AdminRolesPanel extends StatelessWidget {
 }
 
 class _AuditLogPanel extends StatelessWidget {
-  const _AuditLogPanel({required this.logs, required this.show, required this.onToggle});
+  const _AuditLogPanel(
+      {required this.logs, required this.show, required this.onToggle});
 
   final List<_AuditLog> logs;
   final bool show;
@@ -964,8 +1096,12 @@ class _AuditLogPanel extends StatelessWidget {
             child: _PanelHeader(
               icon: Icons.description,
               title: 'Audit Log',
-              intro: show ? 'Showing recent sensitive app actions' : '${logs.length} recent actions hidden',
-              trailing: Icon(show ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down, color: AppColors.muted),
+              intro: show
+                  ? 'Showing recent sensitive app actions'
+                  : '${logs.length} recent actions hidden',
+              trailing: Icon(
+                  show ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down,
+                  color: AppColors.muted),
             ),
           ),
           if (show)
@@ -975,7 +1111,8 @@ class _AuditLogPanel extends StatelessWidget {
               for (final log in logs)
                 _DividerRow(
                   title: log.action,
-                  meta: '${log.actorName ?? 'System'} | ${log.targetType ?? 'app'} | ${_dateTimeLabel(log.createdAt)}',
+                  meta:
+                      '${log.actorName ?? 'System'} | ${log.targetType ?? 'app'} | ${_dateTimeLabel(log.createdAt)}',
                 ),
         ],
       ),
@@ -1018,7 +1155,9 @@ class _FollowUpModal extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(response.requesterName ?? 'Follow-Up', style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
+          Text(response.requesterName ?? 'Follow-Up',
+              style:
+                  const TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
           if (response.requesterEmail != null) ...[
             const SizedBox(height: 4),
             Text(response.requesterEmail!, style: _metaStyle),
@@ -1030,16 +1169,35 @@ class _FollowUpModal extends StatelessWidget {
             spacing: 8,
             runSpacing: 8,
             children: [
-              for (final interest in const ['prayer', 'visit', 'bible_study', 'baptism'])
-                _RoleChip(label: interest.replaceAll('_', ' '), active: response.interestType == interest, onTap: () => onInterest(interest)),
+              for (final interest in const [
+                'prayer',
+                'visit',
+                'bible_study',
+                'baptism'
+              ])
+                _RoleChip(
+                    label: interest.replaceAll('_', ' '),
+                    active: response.interestType == interest,
+                    onTap: () => onInterest(interest)),
             ],
           ),
           const SizedBox(height: 12),
-          TextField(controller: followUpNotes, minLines: 4, maxLines: 6, decoration: const InputDecoration(hintText: 'Follow-up notes')),
+          TextField(
+              controller: followUpNotes,
+              minLines: 4,
+              maxLines: 6,
+              decoration: const InputDecoration(hintText: 'Follow-up notes')),
           const SizedBox(height: 12),
-          TextField(controller: activityNote, minLines: 4, maxLines: 6, decoration: const InputDecoration(hintText: 'Add timeline note')),
+          TextField(
+              controller: activityNote,
+              minLines: 4,
+              maxLines: 6,
+              decoration: const InputDecoration(hintText: 'Add timeline note')),
           const SizedBox(height: 12),
-          TextField(controller: nextActionDate, decoration: const InputDecoration(hintText: 'Next action date: YYYY-MM-DD')),
+          TextField(
+              controller: nextActionDate,
+              decoration: const InputDecoration(
+                  hintText: 'Next action date: YYYY-MM-DD')),
           const SizedBox(height: 8),
           InkWell(
             borderRadius: BorderRadius.circular(14),
@@ -1047,8 +1205,14 @@ class _FollowUpModal extends StatelessWidget {
             child: _PanelHeader(
               icon: Icons.schedule,
               title: 'Activity Log',
-              intro: showActivityLog ? 'Showing follow-up timeline' : '${activities.length} timeline items hidden',
-              trailing: Icon(showActivityLog ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down, color: AppColors.muted),
+              intro: showActivityLog
+                  ? 'Showing follow-up timeline'
+                  : '${activities.length} timeline items hidden',
+              trailing: Icon(
+                  showActivityLog
+                      ? Icons.keyboard_arrow_up
+                      : Icons.keyboard_arrow_down,
+                  color: AppColors.muted),
             ),
           ),
           if (showActivityLog)
@@ -1060,17 +1224,24 @@ class _FollowUpModal extends StatelessWidget {
           const SizedBox(height: 10),
           Row(
             children: [
-              Expanded(child: _SecondaryButton(label: 'Assign Me', onPressed: onAssign)),
+              Expanded(
+                  child: _SecondaryButton(
+                      label: 'Assign Me', onPressed: onAssign)),
               const SizedBox(width: 10),
-              Expanded(child: _SecondaryButton(label: 'Contacted', onPressed: onContacted)),
+              Expanded(
+                  child: _SecondaryButton(
+                      label: 'Contacted', onPressed: onContacted)),
             ],
           ),
           const SizedBox(height: 10),
           FilledButton(onPressed: onSave, child: const Text('Save Detail')),
           TextButton(
             onPressed: onClose,
-            style: TextButton.styleFrom(minimumSize: const Size.fromHeight(48), foregroundColor: AppColors.muted),
-            child: const Text('Close', style: TextStyle(fontWeight: FontWeight.w900)),
+            style: TextButton.styleFrom(
+                minimumSize: const Size.fromHeight(48),
+                foregroundColor: AppColors.muted),
+            child: const Text('Close',
+                style: TextStyle(fontWeight: FontWeight.w900)),
           ),
         ],
       ),
@@ -1092,7 +1263,11 @@ class _MemberModal extends StatelessWidget {
         children: [
           Row(
             children: [
-              _Avatar(name: member.fullName, email: member.email, imageUrl: member.avatarUrl, size: 68),
+              _Avatar(
+                  name: member.fullName,
+                  email: member.email,
+                  imageUrl: member.avatarUrl,
+                  size: 68),
               const SizedBox(width: 14),
               Expanded(
                 child: Column(
@@ -1100,25 +1275,43 @@ class _MemberModal extends StatelessWidget {
                   children: [
                     Text(
                       member.fullName ?? member.email ?? 'Member',
-                      style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900),
+                      style: const TextStyle(
+                          fontSize: 22, fontWeight: FontWeight.w900),
                     ),
-                    if (member.email != null) Text(member.email!, style: _metaStyle),
+                    if (member.email != null)
+                      Text(member.email!, style: _metaStyle),
                   ],
                 ),
               ),
             ],
           ),
           const SizedBox(height: 14),
-          _DetailLine(icon: Icons.mail_outline, text: member.email ?? 'No email saved'),
-          _DetailLine(icon: Icons.call_outlined, text: member.phone ?? 'No phone saved'),
-          _DetailLine(icon: Icons.favorite_border, text: member.ministryInterest ?? 'No ministry interest saved'),
-          _DetailLine(icon: Icons.chat_bubble_outline, text: member.preferredContactMethod ?? 'No contact preference saved'),
-          _DetailLine(icon: Icons.description_outlined, text: member.householdNotes ?? 'No household notes saved', tall: true),
-          _DetailLine(icon: Icons.calendar_month_outlined, text: member.birthday ?? 'No birthday saved'),
+          _DetailLine(
+              icon: Icons.mail_outline, text: member.email ?? 'No email saved'),
+          _DetailLine(
+              icon: Icons.call_outlined,
+              text: member.phone ?? 'No phone saved'),
+          _DetailLine(
+              icon: Icons.favorite_border,
+              text: member.ministryInterest ?? 'No ministry interest saved'),
+          _DetailLine(
+              icon: Icons.chat_bubble_outline,
+              text: member.preferredContactMethod ??
+                  'No contact preference saved'),
+          _DetailLine(
+              icon: Icons.description_outlined,
+              text: member.householdNotes ?? 'No household notes saved',
+              tall: true),
+          _DetailLine(
+              icon: Icons.calendar_month_outlined,
+              text: member.birthday ?? 'No birthday saved'),
           TextButton(
             onPressed: onClose,
-            style: TextButton.styleFrom(minimumSize: const Size.fromHeight(48), foregroundColor: AppColors.muted),
-            child: const Text('Close', style: TextStyle(fontWeight: FontWeight.w900)),
+            style: TextButton.styleFrom(
+                minimumSize: const Size.fromHeight(48),
+                foregroundColor: AppColors.muted),
+            child: const Text('Close',
+                style: TextStyle(fontWeight: FontWeight.w900)),
           ),
         ],
       ),
@@ -1142,7 +1335,8 @@ class _ModalShell extends StatelessWidget {
           borderRadius: BorderRadius.circular(22),
           clipBehavior: Clip.antiAlias,
           child: ConstrainedBox(
-            constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 0.88),
+            constraints: BoxConstraints(
+                maxHeight: MediaQuery.of(context).size.height * 0.88),
             child: SingleChildScrollView(
               padding: const EdgeInsets.all(18),
               child: child,
@@ -1176,7 +1370,8 @@ class _Panel extends StatelessWidget {
 }
 
 class _PanelHeader extends StatelessWidget {
-  const _PanelHeader({required this.icon, required this.title, this.intro, this.trailing});
+  const _PanelHeader(
+      {required this.icon, required this.title, this.intro, this.trailing});
 
   final IconData icon;
   final String title;
@@ -1194,9 +1389,13 @@ class _PanelHeader extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900)),
+                Text(title,
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.w900)),
                 if (intro != null)
-                  Text(intro!, style: const TextStyle(color: AppColors.muted, fontSize: 14, height: 1.4)),
+                  Text(intro!,
+                      style: const TextStyle(
+                          color: AppColors.muted, fontSize: 14, height: 1.4)),
               ],
             ),
           ),
@@ -1218,14 +1417,16 @@ class _LightIcon extends StatelessWidget {
       width: 38,
       height: 38,
       margin: const EdgeInsets.only(right: 10),
-      decoration: const BoxDecoration(color: AppColors.lightBlue, shape: BoxShape.circle),
+      decoration: const BoxDecoration(
+          color: AppColors.lightBlue, shape: BoxShape.circle),
       child: Icon(icon, color: AppColors.blue, size: 23),
     );
   }
 }
 
 class _FollowUpRow extends StatelessWidget {
-  const _FollowUpRow({required this.response, required this.profile, required this.onTap});
+  const _FollowUpRow(
+      {required this.response, required this.profile, required this.onTap});
 
   final FollowUpResponse response;
   final MemberProfile? profile;
@@ -1251,7 +1452,9 @@ class _FollowUpRow extends StatelessWidget {
               width: 58,
               padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 4),
               decoration: BoxDecoration(
-                color: response.followUpStatus == 'contacted' ? const Color(0xFFD1FAE5) : AppColors.lightBlue,
+                color: response.followUpStatus == 'contacted'
+                    ? const Color(0xFFD1FAE5)
+                    : AppColors.lightBlue,
                 borderRadius: BorderRadius.circular(999),
               ),
               child: Text(
@@ -1260,7 +1463,9 @@ class _FollowUpRow extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: response.followUpStatus == 'contacted' ? AppColors.success : AppColors.blue,
+                  color: response.followUpStatus == 'contacted'
+                      ? AppColors.success
+                      : AppColors.blue,
                   fontSize: 9,
                   fontWeight: FontWeight.w900,
                 ),
@@ -1279,7 +1484,9 @@ class _FollowUpRow extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    response.requesterName ?? response.requesterEmail ?? 'Unknown requester',
+                    response.requesterName ??
+                        response.requesterEmail ??
+                        'Unknown requester',
                     style: _titleStyle,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
@@ -1292,8 +1499,11 @@ class _FollowUpRow extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  Text('Assigned: ${response.assignedToName ?? 'Unassigned'}', style: _smallMetaStyle),
-                  Text('Interest: ${response.interestType?.replaceAll('_', ' ') ?? 'Not set'}', style: _smallMetaStyle),
+                  Text('Assigned: ${response.assignedToName ?? 'Unassigned'}',
+                      style: _smallMetaStyle),
+                  Text(
+                      'Interest: ${response.interestType?.replaceAll('_', ' ') ?? 'Not set'}',
+                      style: _smallMetaStyle),
                 ],
               ),
             ),
@@ -1319,19 +1529,29 @@ class _MemberRow extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.only(top: 8),
         padding: const EdgeInsets.all(12),
-        decoration: BoxDecoration(color: AppColors.inputFill, borderRadius: BorderRadius.circular(16)),
+        decoration: BoxDecoration(
+            color: AppColors.inputFill,
+            borderRadius: BorderRadius.circular(16)),
         child: Row(
           children: [
-            _Avatar(name: member.fullName, email: member.email, imageUrl: member.avatarUrl, size: 54),
+            _Avatar(
+                name: member.fullName,
+                email: member.email,
+                imageUrl: member.avatarUrl,
+                size: 54),
             const SizedBox(width: 12),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(member.fullName ?? member.email ?? 'Member', style: _titleStyle),
-                  if (member.email != null) Text(member.email!, style: _metaStyle),
-                  if (member.phone != null) Text(member.phone!, style: _metaStyle),
-                  if (member.ministryInterest != null) Text(member.ministryInterest!, style: _metaStyle),
+                  Text(member.fullName ?? member.email ?? 'Member',
+                      style: _titleStyle),
+                  if (member.email != null)
+                    Text(member.email!, style: _metaStyle),
+                  if (member.phone != null)
+                    Text(member.phone!, style: _metaStyle),
+                  if (member.ministryInterest != null)
+                    Text(member.ministryInterest!, style: _metaStyle),
                 ],
               ),
             ),
@@ -1352,17 +1572,26 @@ class _DeliveryRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 13),
-      decoration: const BoxDecoration(border: Border(top: BorderSide(color: Color(0xFFEEF2F7)))),
+      decoration: const BoxDecoration(
+          border: Border(top: BorderSide(color: Color(0xFFEEF2F7)))),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(width: 10, height: 10, margin: const EdgeInsets.only(top: 6, right: 14), decoration: const BoxDecoration(color: AppColors.blue, shape: BoxShape.circle)),
+          Container(
+              width: 10,
+              height: 10,
+              margin: const EdgeInsets.only(top: 6, right: 14),
+              decoration: const BoxDecoration(
+                  color: AppColors.blue, shape: BoxShape.circle)),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(message.title, style: _titleStyle),
-                Text(message.body, style: _bodyStyle, maxLines: 2, overflow: TextOverflow.ellipsis),
+                Text(message.body,
+                    style: _bodyStyle,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis),
               ],
             ),
           ),
@@ -1372,9 +1601,14 @@ class _DeliveryRow extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('${message.status} | Delivered', style: _smallMetaStyle),
-                Text(_compactDateTime(message.sentAt ?? message.createdAt), style: _smallMetaStyle),
+                Text(_compactDateTime(message.sentAt ?? message.createdAt),
+                    style: _smallMetaStyle),
                 if (message.errorMessage != null)
-                  Text(message.errorMessage!, style: const TextStyle(color: Color(0xFFB91C1C), fontSize: 12, fontWeight: FontWeight.w800)),
+                  Text(message.errorMessage!,
+                      style: const TextStyle(
+                          color: Color(0xFFB91C1C),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w800)),
               ],
             ),
           ),
@@ -1385,7 +1619,8 @@ class _DeliveryRow extends StatelessWidget {
 }
 
 class _AdminRoleRow extends StatelessWidget {
-  const _AdminRoleRow({required this.user, required this.disabled, required this.onSetRole});
+  const _AdminRoleRow(
+      {required this.user, required this.disabled, required this.onSetRole});
 
   final _DirectoryUser user;
   final bool disabled;
@@ -1396,7 +1631,8 @@ class _AdminRoleRow extends StatelessWidget {
     final activeRoles = user.activeRoles;
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 13),
-      decoration: const BoxDecoration(border: Border(top: BorderSide(color: Color(0xFFEEF2F7)))),
+      decoration: const BoxDecoration(
+          border: Border(top: BorderSide(color: Color(0xFFEEF2F7)))),
       child: Column(
         children: [
           Row(
@@ -1407,20 +1643,28 @@ class _AdminRoleRow extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(user.fullName ?? user.email ?? 'User', style: _titleStyle),
-                    if (user.email != null) Text(user.email!, style: _metaStyle),
+                    Text(user.fullName ?? user.email ?? 'User',
+                        style: _titleStyle),
+                    if (user.email != null)
+                      Text(user.email!, style: _metaStyle),
                   ],
                 ),
               ),
               Container(
                 constraints: const BoxConstraints(maxWidth: 120),
-                padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 7),
-                decoration: BoxDecoration(color: AppColors.lightBlue, borderRadius: BorderRadius.circular(999)),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 13, vertical: 7),
+                decoration: BoxDecoration(
+                    color: AppColors.lightBlue,
+                    borderRadius: BorderRadius.circular(999)),
                 child: Text(
                   _roleLabelForUser(user),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(color: AppColors.blue, fontSize: 12, fontWeight: FontWeight.w900),
+                  style: const TextStyle(
+                      color: AppColors.blue,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w900),
                 ),
               ),
             ],
@@ -1432,8 +1676,13 @@ class _AdminRoleRow extends StatelessWidget {
               spacing: 8,
               runSpacing: 8,
               children: [
-                _RoleChip(label: 'Member', active: activeRoles.isEmpty, disabled: disabled, onTap: () => onSetRole('member')),
-                for (final role in _roleOptions.where((role) => role.value != 'member'))
+                _RoleChip(
+                    label: 'Member',
+                    active: activeRoles.isEmpty,
+                    disabled: disabled,
+                    onTap: () => onSetRole('member')),
+                for (final role
+                    in _roleOptions.where((role) => role.value != 'member'))
                   _RoleChip(
                     label: role.label,
                     active: activeRoles.contains(role.value),
@@ -1467,9 +1716,12 @@ class _TimelineItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(activity.activityType, style: _titleStyle, maxLines: 1, overflow: TextOverflow.ellipsis),
+          Text(activity.activityType,
+              style: _titleStyle, maxLines: 1, overflow: TextOverflow.ellipsis),
           if (activity.note != null) Text(activity.note!, style: _bodyStyle),
-          Text('${activity.actorName ?? 'Team'} | ${_dateTimeLabel(activity.createdAt)}', style: _metaStyle),
+          Text(
+              '${activity.actorName ?? 'Team'} | ${_dateTimeLabel(activity.createdAt)}',
+              style: _metaStyle),
         ],
       ),
     );
@@ -1493,7 +1745,8 @@ class _Avatar extends StatelessWidget {
           width: size,
           height: size,
           fit: BoxFit.cover,
-          errorBuilder: (_, __, ___) => _AvatarFallback(name: name, email: email, size: size),
+          errorBuilder: (_, __, ___) =>
+              _AvatarFallback(name: name, email: email, size: size),
         ),
       );
     }
@@ -1513,9 +1766,14 @@ class _AvatarFallback extends StatelessWidget {
     return Container(
       width: size,
       height: size,
-      decoration: const BoxDecoration(color: AppColors.paleBlue, shape: BoxShape.circle),
+      decoration: const BoxDecoration(
+          color: AppColors.paleBlue, shape: BoxShape.circle),
       alignment: Alignment.center,
-      child: Text(_initials(name, email), style: const TextStyle(color: AppColors.text, fontSize: 15, fontWeight: FontWeight.w900)),
+      child: Text(_initials(name, email),
+          style: const TextStyle(
+              color: AppColors.text,
+              fontSize: 15,
+              fontWeight: FontWeight.w900)),
     );
   }
 }
@@ -1551,7 +1809,10 @@ class _SearchField extends StatelessWidget {
                 focusedBorder: InputBorder.none,
                 filled: false,
               ),
-              style: const TextStyle(color: AppColors.text, fontSize: 15, fontWeight: FontWeight.w700),
+              style: const TextStyle(
+                  color: AppColors.text,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700),
             ),
           ),
         ],
@@ -1561,7 +1822,8 @@ class _SearchField extends StatelessWidget {
 }
 
 class _StatCard extends StatelessWidget {
-  const _StatCard({required this.icon, required this.value, required this.label});
+  const _StatCard(
+      {required this.icon, required this.value, required this.label});
 
   final IconData icon;
   final int value;
@@ -1579,8 +1841,14 @@ class _StatCard extends StatelessWidget {
       child: Column(
         children: [
           Icon(icon, color: AppColors.blue, size: 23),
-          Text('$value', style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
-          Text(label, style: const TextStyle(color: AppColors.muted, fontSize: 11, fontWeight: FontWeight.w900)),
+          Text('$value',
+              style:
+                  const TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
+          Text(label,
+              style: const TextStyle(
+                  color: AppColors.muted,
+                  fontSize: 11,
+                  fontWeight: FontWeight.w900)),
         ],
       ),
     );
@@ -1588,7 +1856,8 @@ class _StatCard extends StatelessWidget {
 }
 
 class _DetailLine extends StatelessWidget {
-  const _DetailLine({required this.icon, required this.text, this.tall = false});
+  const _DetailLine(
+      {required this.icon, required this.text, this.tall = false});
 
   final IconData icon;
   final String text;
@@ -1606,11 +1875,17 @@ class _DetailLine extends StatelessWidget {
         border: Border.all(color: AppColors.border),
       ),
       child: Row(
-        crossAxisAlignment: tall ? CrossAxisAlignment.start : CrossAxisAlignment.center,
+        crossAxisAlignment:
+            tall ? CrossAxisAlignment.start : CrossAxisAlignment.center,
         children: [
           Icon(icon, color: AppColors.blue, size: 20),
           const SizedBox(width: 12),
-          Expanded(child: Text(text, style: const TextStyle(fontSize: 14, height: 1.45, fontWeight: FontWeight.w800))),
+          Expanded(
+              child: Text(text,
+                  style: const TextStyle(
+                      fontSize: 14,
+                      height: 1.45,
+                      fontWeight: FontWeight.w800))),
         ],
       ),
     );
@@ -1627,7 +1902,8 @@ class _DividerRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 13),
-      decoration: const BoxDecoration(border: Border(top: BorderSide(color: Color(0xFFEEF2F7)))),
+      decoration: const BoxDecoration(
+          border: Border(top: BorderSide(color: Color(0xFFEEF2F7)))),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -1640,7 +1916,11 @@ class _DividerRow extends StatelessWidget {
 }
 
 class _RoleChip extends StatelessWidget {
-  const _RoleChip({required this.label, required this.active, required this.onTap, this.disabled = false});
+  const _RoleChip(
+      {required this.label,
+      required this.active,
+      required this.onTap,
+      this.disabled = false});
 
   final String label;
   final bool active;
@@ -1657,7 +1937,8 @@ class _RoleChip extends StatelessWidget {
         decoration: BoxDecoration(
           color: active ? AppColors.text : Colors.white,
           borderRadius: BorderRadius.circular(999),
-          border: Border.all(color: active ? AppColors.text : AppColors.inputBorder),
+          border: Border.all(
+              color: active ? AppColors.text : AppColors.inputBorder),
         ),
         child: Text(
           label,
@@ -1688,7 +1969,8 @@ class _PillButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(999)),
       ),
-      child: Text(label, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w900)),
+      child: Text(label,
+          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w900)),
     );
   }
 }
@@ -1709,7 +1991,8 @@ class _SecondaryButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 12),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
       ),
-      child: Text(label, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w900)),
+      child: Text(label,
+          style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w900)),
     );
   }
 }
@@ -1723,10 +2006,15 @@ class _SetupBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(color: const Color(0xFFFFF7ED), borderRadius: BorderRadius.circular(16)),
+      decoration: BoxDecoration(
+          color: const Color(0xFFFFF7ED),
+          borderRadius: BorderRadius.circular(16)),
       child: Text(
         message,
-        style: const TextStyle(color: Color(0xFF9A3412), fontWeight: FontWeight.w800, height: 1.45),
+        style: const TextStyle(
+            color: Color(0xFF9A3412),
+            fontWeight: FontWeight.w800,
+            height: 1.45),
       ),
     );
   }
@@ -1741,7 +2029,9 @@ class _EmptyText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.centerLeft,
-      child: Text(text, style: const TextStyle(color: AppColors.muted, fontSize: 14, height: 1.5)),
+      child: Text(text,
+          style: const TextStyle(
+              color: AppColors.muted, fontSize: 14, height: 1.5)),
     );
   }
 }
@@ -1789,7 +2079,8 @@ class _PushMessage {
         deliveredCount: map['delivered_count'] as int?,
         failedCount: map['failed_count'] as int?,
         errorMessage: map['error_message'] as String?,
-        createdAt: DateTime.tryParse((map['created_at'] ?? '').toString()) ?? DateTime.now(),
+        createdAt: DateTime.tryParse((map['created_at'] ?? '').toString()) ??
+            DateTime.now(),
         scheduledAt: DateTime.tryParse((map['scheduled_at'] ?? '').toString()),
         sentAt: DateTime.tryParse((map['sent_at'] ?? '').toString()),
       );
@@ -1810,10 +2101,15 @@ class _DirectoryUser {
   final String? role;
   final List<String>? roles;
 
-  List<String> get activeRoles => roles?.isNotEmpty == true ? roles! : role == null ? const [] : [role!];
+  List<String> get activeRoles => roles?.isNotEmpty == true
+      ? roles!
+      : role == null
+          ? const []
+          : [role!];
 
   _DirectoryUser copyWith({String? role, List<String>? roles}) {
-    return _DirectoryUser(id: id, email: email, fullName: fullName, role: role, roles: roles);
+    return _DirectoryUser(
+        id: id, email: email, fullName: fullName, role: role, roles: roles);
   }
 
   factory _DirectoryUser.fromMap(Map<String, dynamic> map) => _DirectoryUser(
@@ -1821,7 +2117,9 @@ class _DirectoryUser {
         email: map['email'] as String?,
         fullName: map['full_name'] as String?,
         role: map['role'] as String?,
-        roles: map['roles'] is List ? (map['roles'] as List).whereType<String>().toList() : null,
+        roles: map['roles'] is List
+            ? (map['roles'] as List).whereType<String>().toList()
+            : null,
       );
 }
 
@@ -1842,13 +2140,15 @@ class _FollowUpActivity {
   final String? note;
   final DateTime createdAt;
 
-  factory _FollowUpActivity.fromMap(Map<String, dynamic> map) => _FollowUpActivity(
+  factory _FollowUpActivity.fromMap(Map<String, dynamic> map) =>
+      _FollowUpActivity(
         id: (map['id'] ?? '').toString(),
         responseId: (map['response_id'] ?? '').toString(),
         actorName: map['actor_name'] as String?,
         activityType: (map['activity_type'] ?? '').toString(),
         note: map['note'] as String?,
-        createdAt: DateTime.tryParse((map['created_at'] ?? '').toString()) ?? DateTime.now(),
+        createdAt: DateTime.tryParse((map['created_at'] ?? '').toString()) ??
+            DateTime.now(),
       );
 }
 
@@ -1872,17 +2172,42 @@ class _AuditLog {
         actorName: map['actor_name'] as String?,
         action: (map['action'] ?? '').toString(),
         targetType: map['target_type'] as String?,
-        createdAt: DateTime.tryParse((map['created_at'] ?? '').toString()) ?? DateTime.now(),
+        createdAt: DateTime.tryParse((map['created_at'] ?? '').toString()) ??
+            DateTime.now(),
       );
 }
 
-const _titleStyle = TextStyle(color: AppColors.text, fontSize: 15, fontWeight: FontWeight.w900);
-const _metaStyle = TextStyle(color: AppColors.muted, fontSize: 12, fontWeight: FontWeight.w800);
-const _smallMetaStyle = TextStyle(color: AppColors.muted, fontSize: 11, height: 1.35, fontWeight: FontWeight.w800);
-const _bodyStyle = TextStyle(color: AppColors.slate, fontSize: 13, height: 1.4, fontWeight: FontWeight.w700);
+const _titleStyle =
+    TextStyle(color: AppColors.text, fontSize: 15, fontWeight: FontWeight.w900);
+const _metaStyle = TextStyle(
+    color: AppColors.muted, fontSize: 12, fontWeight: FontWeight.w800);
+const _smallMetaStyle = TextStyle(
+    color: AppColors.muted,
+    fontSize: 11,
+    height: 1.35,
+    fontWeight: FontWeight.w800);
+const _bodyStyle = TextStyle(
+    color: AppColors.slate,
+    fontSize: 13,
+    height: 1.4,
+    fontWeight: FontWeight.w700);
 
-bool _canPastoral(User? user) => hasAnyRole(user, const ['admin', 'pastor', 'staff', 'interest_coordinator', 'coordinator', 'prayer_team']);
-bool _canAttendance(User? user) => hasAnyRole(user, const ['admin', 'pastor', 'staff', 'property_manager', 'property', 'clerk']);
+bool _canPastoral(User? user) => hasAnyRole(user, const [
+      'admin',
+      'pastor',
+      'staff',
+      'interest_coordinator',
+      'coordinator',
+      'prayer_team'
+    ]);
+bool _canAttendance(User? user) => hasAnyRole(user, const [
+      'admin',
+      'pastor',
+      'staff',
+      'property_manager',
+      'property',
+      'clerk'
+    ]);
 bool _canPush(User? user) => canSendPush(user);
 bool _canAdmin(User? user) => hasAnyRole(user, const ['admin']);
 
@@ -1892,14 +2217,19 @@ String _userName(User? user, {required String fallback}) {
 
 String _initials(String? name, String? email) {
   final source = (name?.isNotEmpty == true ? name : email) ?? 'Member';
-  final parts = source.replaceFirst(RegExp(r'@.+$'), '').split(RegExp(r'\s+|[._-]')).where((part) => part.isNotEmpty);
+  final parts = source
+      .replaceFirst(RegExp(r'@.+$'), '')
+      .split(RegExp(r'\s+|[._-]'))
+      .where((part) => part.isNotEmpty);
   final initials = parts.take(2).map((part) => part[0].toUpperCase()).join();
   return initials.isEmpty ? 'M' : initials;
 }
 
-String _responsePreview(String value) => value.replaceAll(RegExp(r'\s+'), ' ').trim();
+String _responsePreview(String value) =>
+    value.replaceAll(RegExp(r'\s+'), ' ').trim();
 
-MemberProfile? _profileForFollowUp(FollowUpResponse response, List<MemberProfile> members) {
+MemberProfile? _profileForFollowUp(
+    FollowUpResponse response, List<MemberProfile> members) {
   for (final member in members) {
     if (response.userId != null && member.id == response.userId) return member;
     if (response.requesterEmail != null &&
@@ -1911,7 +2241,8 @@ MemberProfile? _profileForFollowUp(FollowUpResponse response, List<MemberProfile
 }
 
 String _roleLabelForValue(String value) {
-  return _roleOptions.where((role) => role.value == value).firstOrNull?.label ?? value.replaceAll('_', ' ');
+  return _roleOptions.where((role) => role.value == value).firstOrNull?.label ??
+      value.replaceAll('_', ' ');
 }
 
 String _roleLabelForUser(_DirectoryUser user) {
@@ -1943,4 +2274,17 @@ String _compactDateTime(DateTime date) {
   return '${_month(local.month)} ${local.day}, ${_timeLabel(local)}';
 }
 
-String _month(int month) => const ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][month - 1];
+String _month(int month) => const [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec'
+    ][month - 1];
